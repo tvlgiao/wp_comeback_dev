@@ -1,0 +1,202 @@
+/**
+ * Main Navigation Style
+ */
+
+.menu-toggle {
+	
+	@include font(
+		$style_menu_root_font_family,
+		$style_menu_root_font_size,
+		$style_menu_root_font_weight,
+		$style_menu_root_font_style,
+		$style_menu_root_line_height,
+		$style_menu_root_text_underline);
+	@include style_menu_root_color1;
+	@include style_menu_root_bgcolor2;
+	@include style_menu_root_bordercolor;
+}
+.toggled-on .menu-toggle {
+	@include style_menu_root_color2;
+	@include style_menu_root_bgcolor1;
+	@include style_menu_root_bordercolor;
+}
+
+
+/**
+ * Phone Device
+ */
+@media (max-width: $screen-xs-max) {
+	div.nav-menu > ul,
+	ul.nav-menu {
+
+		/**
+		 * Root Level Menu attributes
+		 */
+		@include style_menu_root_bordercolor;
+
+		/**
+		 * ALL LEVEL MENUS
+		 * --------------------------------------------------------------------
+		 */
+		li {
+			a {
+				@include font(
+					$style_menu_root_font_family,
+					$style_menu_root_font_size,
+					$style_menu_root_font_weight,
+					$style_menu_root_font_style,
+					$style_menu_root_line_height,
+					$style_menu_root_text_underline);
+			}
+
+			/** Link of the last LI of each menu */
+			&:last-child > a {
+			}
+		}
+
+
+
+		/**
+		 * ROOT LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		> li {
+			> a {
+				@include font(
+					$style_menu_root_font_family,
+					$style_menu_root_font_size,
+					$style_menu_root_font_weight,
+					$style_menu_root_font_style,
+					$style_menu_root_line_height,
+					$style_menu_root_text_underline);
+
+				@include style_menu_root_color1;
+				@include style_menu_root_bgcolor1;
+				@include style_menu_root_bordercolor;
+
+			}
+
+			&.current-menu-item > a,
+			&:focus > a,
+			&.focus > a,
+			> a:active, 
+			> a:hover,
+			> a:focus {
+				@include style_menu_root_color2;
+				@include style_menu_root_bgcolor2;
+			}
+		}
+
+		/**
+		 * SUB LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		ul.sub-menu {
+			@include style_menu_sub_bordercolor;
+
+			li {
+				a {
+					@include font(
+						$style_menu_sub_font_family,
+						$style_menu_sub_font_size,
+						$style_menu_sub_font_weight,
+						$style_menu_sub_font_style,
+						$style_menu_sub_line_height,
+						$style_menu_sub_text_underline);
+
+					@include style_menu_sub_color1;
+					@include style_menu_sub_bgcolor1;
+					@include style_menu_sub_bordercolor;
+				}
+
+				&.current-menu-item > a,
+				&:focus > a,
+				&.focus > a,
+				> a:active,
+				> a:hover,
+				> a:focus {
+					@include style_menu_sub_color2;
+					@include style_menu_sub_bgcolor2;
+				}
+			}
+		}
+		
+	}
+}
+
+/**
+ * Tablet & Desktop Devices
+ */
+@media (min-width: $screen-sm-min) {
+
+	.site-header .navbar {
+		background-color: $style_menu_root_bgcolor1;
+	}
+
+	div.nav-menu > ul,
+	ul.nav-menu {
+
+		/**
+		 * ROOT LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		> li {
+			> a {
+				@include font(
+					$style_menu_root_font_family,
+					$style_menu_root_font_size,
+					$style_menu_root_font_weight,
+					$style_menu_root_font_style,
+					$style_menu_root_line_height,
+					$style_menu_root_text_underline);
+
+				color: $style_menu_root_color1;
+			}
+
+
+			&.current_page_item > a,
+			&.focus > a,
+			&:hover > a,
+			&:focus > a,
+			> a:hover,
+			> a:focus {
+				color: $style_menu_root_color2;
+				background-color: $style_menu_root_bgcolor2;
+				border-color: $style_menu_root_bordercolor;
+			}
+		}
+
+		/**
+		 * SUB LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		.sub-menu,
+		.children {
+			background-color: $style_menu_sub_bgcolor1;
+			border-color: $style_menu_sub_bordercolor;
+
+			li,
+			li a {
+				@include font(
+					$style_menu_sub_font_family,
+					$style_menu_sub_font_size,
+					$style_menu_sub_font_weight,
+					$style_menu_sub_font_style,
+					$style_menu_sub_line_height,
+					$style_menu_sub_text_underline);
+			}
+
+			a {
+				background-color: $style_menu_sub_bgcolor1;
+				color: $style_menu_sub_color1;
+
+				&:hover,
+				&:focus {
+					background-color: $style_menu_sub_bgcolor2;
+					color: $style_menu_sub_color2;
+				}
+			}
+		}
+	}
+
+} // @media (min-width: $screen-sm-min)

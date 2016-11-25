@@ -1,0 +1,3 @@
+- This directory contains files output for our custom shortcodes of Visual Composer.
+- These files will be called automatically by VC when the shortcode is used. No need to call add_shortcode() function.
+- Child theme can be overrided by creating the same directory name.

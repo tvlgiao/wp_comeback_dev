@@ -1,0 +1,310 @@
+/**
+ * Common Widgets Style
+ */
+
+
+
+
+.widget-inner {
+	@include font(
+		$style_widget_content_font_family,
+		$style_widget_content_font_size,
+		$style_widget_content_font_weight,
+		$style_widget_content_font_style,
+		$style_widget_content_line_height,
+		$style_widget_content_text_underline);
+	@extend %wpdanceclaratheme_style_widget_content_color;
+	@extend %wpdanceclaratheme_style_widget_content_bgcolor;
+	
+	@if $style_widget_content_bordercolor {
+		border: 1px solid $style_widget_content_bordercolor;
+	}
+
+	.widget-title {
+		@include font(
+			$style_widget_title_font_family,
+			$style_widget_title_font_size,
+			$style_widget_title_font_weight,
+			$style_widget_title_font_style,
+			$style_widget_title_line_height,
+			$style_widget_title_text_underline);
+		@extend %wpdanceclaratheme_style_widget_title_color;
+		letter-spacing: 1px;
+		text-align: center;
+		text-transform: uppercase;
+
+		span {
+			@extend %wpdanceclaratheme_style_widget_title_bgcolor;
+		}
+	}
+}
+
+
+.site-footer .widgettitle {
+	@include h4;
+	text-transform: uppercase;
+}
+
+/**
+ * Widget Post Categories
+ */
+.widget_categories {
+
+	.widget-inner > ul > li:first-child {
+		border-top: 0;
+	}
+
+	li {
+		@extend %wpdanceclaratheme_style_general_color2;
+		border-top: 1px dotted $style_general_bordercolor4;
+		font-size: 12 / 14 * 1em;
+		text-transform: uppercase;
+
+		a {
+			@include style_general_color4;
+			font-size: 14 / 12 * 1em;
+
+			&:hover, &.focus {
+				@include style_general_link_hover_color;
+			}
+			
+		}
+
+		li {
+			font-size: 1em;
+		}
+	}
+	
+}
+
+
+
+/**
+ * Widget Post Archives (by date)
+ */
+.widget_archive {
+	@extend .widget_categories;
+}
+
+
+
+
+/**
+ * CALENDAR WIDGET
+ */
+.widget_calendar {
+
+	caption {
+		text-transform: uppercase;
+		@include style_general_body_color;
+		@include style_general_body_font_size;
+		border-bottom: 1px solid $style_general_bordercolor4;
+	}
+
+	tbody tr:last-child td,
+	tbody tr:last-child th {
+		padding-bottom: 10px;
+	}
+
+	a {
+		font-weight: bold;
+	}
+	a:hover {
+		@include style_general_bgcolor4;
+		@include style_general_color3;
+	}
+
+	tfoot td,
+	tfoot th {
+		border-top: 1px solid $style_general_bordercolor4;
+	}
+
+	tfoot td:first-child a,
+	tfoot td.last-child a {
+		display: inline-block;
+		@include link-plain;
+		@include btn;
+		@include btn-default;
+		@include btn-xs;
+	}
+
+}
+
+
+
+/**
+ * - Widget Tag Cloud
+ * - Widget F2 Tag Cloud
+ */
+.widget_tag_cloud,
+.widget_f2-tagcloud {
+
+	.tagcloud {
+		text-align: justify;
+
+		a {
+			@extend %link-plain;
+			color: inherit;
+		}
+	}
+
+
+	&.style-outline {
+		.tagcloud {
+			text-align: left;
+			a {
+				display: inline-block;
+				border: 1px solid $style_general_bordercolor4;
+				padding: 3px 6px !important;
+				margin: 0 5px 10px 0;
+				text-transform: lowercase;
+			}
+		}
+	}
+}
+
+
+
+/**
+ * Widget Recent Posts With Thumbnails
+ */
+.rpwwt-widget {
+
+	li {
+		border-top: 1px dotted $style_general_bordercolor4;
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+	
+	a {
+		@extend %link-plain;
+	}
+
+	/**
+	 * Post Title: Inherit from Loop Title
+	 */
+	.rpwwt-post-title {
+		@include font(
+			$style_loop_title_font_family,
+			null,
+			$style_loop_title_font_weight,
+			$style_loop_title_font_style,
+			$style_loop_title_line_height,
+			$style_loop_title_text_underline);
+		@extend %wpdanceclaratheme_style_loop_title_color;
+		font-size: 1.14285em;//1.285em;
+	}
+
+	.rpwwt-post-author,
+	.rpwwt-post-categories,
+	.rpwwt-post-date,
+	.rpwwt-post-comments-number {
+		@include font(
+			$style_loop_meta_font_family,
+			$style_loop_meta_font_size,
+			$style_loop_meta_font_weight,
+			$style_loop_meta_font_style,
+			$style_loop_meta_line_height,
+			$style_loop_meta_text_underline);
+		@extend %wpdanceclaratheme_style_loop_meta_color;
+		text-transform: uppercase;
+	}
+
+	.rpwwt-post-excerpt {
+		@include font(
+			$style_loop_content_font_family,
+			$style_loop_content_font_size,
+			$style_loop_content_font_weight,
+			$style_loop_content_font_style,
+			$style_loop_content_line_height,
+			$style_loop_content_text_underline);
+		@extend %wpdanceclaratheme_style_loop_content_color;
+	}
+}
+
+
+
+/**
+ * Widget Recent Comment Plus
+ */
+.comments_widget_plus {
+	.cwp-li {
+		border-top: 1px dotted $style_general_bordercolor4;
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+
+	.cwp-comment-excerpt {
+		color: inherit;
+	}
+}
+
+/**
+ * WooCommerce Dropdown Cart
+ */
+.widget_shopping_mini_cart.style-icon-qty .dropdown-cart-button .dropdown-total {
+	@include style_general_bgcolor4;
+	@include style_general_color3;
+
+	&:hover,
+	&:focus {
+		@include style_general_bgcolor2;
+		@include style_general_color3;
+	}
+}
+.widget_shopping_mini_cart.style-icon-qty .dropdown-cart-button .dropdown-total .dropdown-cart-qty {
+	@include style_general_bgcolor2;
+	@include style_general_color3;
+}
+
+.widget_shopping_mini_cart.style-icon-left .dropdown-cart-button .dropdown-total:before {
+	@include style_general_color2;
+}
+
+.widget_shopping_mini_cart .dropdown {
+	@include style_general_body_color;
+}
+
+
+/**
+ * Inside Header Section
+ */
+.site-header {
+
+	/**
+	 * Common Widgets when placed on Header section
+	 */
+	.widget-inner {
+		background-color: transparent;
+	}
+
+	/**
+	 * Widget Search form when placed on Header section
+	 */
+	.search-form {
+		.search-field {
+			@extend %wpdanceclaratheme_style_general_bordercolor1;
+		}
+	}
+}
+
+
+
+/**
+ * Inside sidebar Before Content
+ */
+#sidebar_wpdanceclaratheme_before_content {
+
+	.widget-inner {
+		text-align: center;;
+		font-size: 0.857em;
+
+		.widget-title {
+			font-size: 1em;
+		}
+	}
+}

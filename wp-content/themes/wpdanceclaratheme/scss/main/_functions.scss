@@ -1,0 +1,35 @@
+
+/**
+ * Calculate width (%)
+ * @param  {int} $cols                   Number of columns to calculate to width percent 
+ * @param  {int} $total_cols:   12       Total grid columns    
+ * @param  {int} $space:        40       Space (px) between to column
+ * @param  {int} $parent_width: 1140     Width (px) of the container
+ * @return {percent}                     Return width of input columns in percent (%) including spaces
+ */
+@function calc-column-width($cols, $total_cols: 12, $space: 40, $parent_width: 1140) {
+
+
+	$space_percent: $space / $parent_width * 100%;
+	$col_width_percent: (100% - $space_percent * ($total_cols - 1)) / $total_cols;
+
+	@return ($col_width_percent + $space_percent) * $cols - $space_percent;
+}
+
+
+@function fceil($value, $num) {
+	$n: 1;
+	@for $i from 1 through $num {
+		$n:  $n * 10;
+	}
+	@return ceil($value * $n) / $n;
+}
+
+
+@function ffloor($value, $num) {
+	$n: 1;
+	@for $i from 1 through $num {
+		$n:  $n * 10;
+	}
+	@return floor($value * $n) / $n;
+}

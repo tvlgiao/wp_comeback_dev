@@ -1,0 +1,52 @@
+/**
+ * main.scss
+ *
+ * Main SCSS file content all theme style & structure
+ * 
+ * During developing, run the follow command line to compile main.scss to main.css on the fly:
+ * $ sass --scss --style expanded --sourcemap --watch scss/main.scss:css/main.css
+ */
+
+
+@import 'main/functions';
+
+@import 'mixins';
+@import 'main/mixins';
+
+@import 'main/variables';
+
+@import 'main/origin';
+
+@import 'bootstrap/assets/stylesheets/bootstrap';
+// @import 'bootstrap/assets/stylesheets/bootstrap/theme';
+
+// @import 'bootstrap-sass/assets/stylesheets/bootstrap/variables';
+// @import 'bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+@import 'main/theme/helper';
+@import 'main/theme/icons';
+@import 'main/theme/hover-effects';
+@import 'main/theme/base';
+@import 'main/theme/header';
+@import 'main/theme/footer';
+@import 'main/theme/post';
+@import 'main/theme/widget';
+@import 'main/theme/nav';
+@import 'main/theme/shortcodes';
+@import 'main/theme/tagtray';
+@import 'main/theme/portfolio';
+@import 'main/theme/testimonial';
+
+/**
+ * 3rd-party plugins
+ */
+@import 'main/theme/visualcomposer';
+@import 'main/theme/woocommerce';
+@import 'main/theme/ubermenu';
+@import 'main/theme/smsb';
+@import 'main/theme/wishlist';
+
+/**
+ * Style changed depend on which html blocks are used
+ */
+@import 'main/theme/htmlblock';

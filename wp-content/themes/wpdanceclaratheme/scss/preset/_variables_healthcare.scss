@@ -1,0 +1,61 @@
+
+
+$style_general_color2: #5fc78e !default;
+$style_general_bgcolor4: #2cc067 !default;
+$style_general_bordercolor5: #e1e1e1 !default;
+
+$style_header_color1: #fff !default;
+$style_header_color3: #000 !default;
+$style_header_color4: #c2c2c2 !default;
+$style_header_color4: darken($style_header_color1, 20%) !default;
+$style_header_color5: darken($style_header_color1, 62.5%) !default;
+$style_header_bgcolor1: lighten(#000, 10%) !default;
+$style_header_bgcolor2: #fff !default;
+$style_header_bgcolor3: lighten(#000, 15%) !default;
+$style_header_bordercolor1: lighten(#000, 20%);
+
+
+$style_footer_color1: #a1a1a1 !default;
+$style_footer_color3: #000 !default;
+$style_footer_color4: darken(#fff, 25%) !default; 		// #c2c2c2
+$style_footer_color5: #fff !default;
+$style_footer_bgcolor1: lighten(#000, 15%) !default; 	// #262626
+$style_footer_bgcolor2: #fff !default;
+$style_footer_bgcolor3: lighten(#000, 20%) !default; 	// #343434
+$style_footer_bordercolor1: lighten(#000, 20%);
+
+
+
+$style_menu_root_color1: $style_header_color1 !default;
+$style_menu_root_bgcolor2: $style_header_bgcolor2 !default;
+$style_menu_root_bordercolor: $style_general_color2 !default;
+$style_menu_root_font_weight: 300 !default;
+$style_menu_sub_color1: #666 !default;
+$style_menu_sub_color2: #000 !default;
+$style_menu_sub_bgcolor1: #fff !default;
+$style_menu_sub_bgcolor2: #fff !default;
+$style_menu_sub_bordercolor: transparent !default;
+
+$style_general_body_font_size: 14px !default;
+
+$style_general_h1_font_size: 28 / 10 * 1rem;
+$style_general_h2_font_size: 24 / 10 * 1rem;
+$style_general_h3_font_size: 20 / 10 * 1rem;
+$style_general_h4_font_size: 16 / 10 * 1rem;
+$style_general_h5_font_size: 14 / 10 * 1rem;
+$style_general_h6_font_size: 12 / 10 * 1rem;
+
+
+$style_product_list_title_font_family: Raleway !default;
+$style_product_list_title_font_size: $style_general_body_font_size !default;
+
+$style_loop_title_font_family: Raleway !default;
+$style_loop_title_font_size: ($style_general_body_font_size * 16 / 14) !default;
+$style_loop_content_font_family: Lato !default;
+$style_single_content_font_size: $style_general_body_font_size !default;
+
+$theme_star_color: #f8c53c !default;
+
+
+
+

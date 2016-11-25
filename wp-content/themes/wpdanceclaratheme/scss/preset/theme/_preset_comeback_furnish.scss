@@ -1,0 +1,100 @@
+
+
+
+/**
+ * Add seperator | between list inline items on the Header section
+ */
+.site-header {
+	.list-inline,
+	.wpdanceclaratheme-user-links.inline {
+		li::after {
+			content: '|';
+			display: inline;
+			padding-left: 10px;
+		}
+		li:last-child::after {
+			content: '';
+			padding-left: 0;
+		}
+	}
+}
+
+
+
+
+/**
+ * VC Icon with class 'wpdanceclaratheme-icon' in Footer
+ */
+.site-footer .vc_icon_element.vc_icon_element-outer.wpdanceclaratheme-icon {
+	.vc_icon_element-inner.vc_icon_element-outline {
+		border-color: $style_footer_color4;
+		border-width: 1px;
+
+		&:hover, &:focus, &.focus {
+			border-color: $style_footer_color2;
+
+			&[class*='vc_icon_element-color-'] .vc_icon_element-icon {
+				@include style_footer_color2;
+			}
+		}
+	}
+
+	.vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
+		width: 30px !important;
+		height: 30px !important;
+	}
+
+	.vc_icon_element-inner[class*='vc_icon_element-color-'] .vc_icon_element-icon {
+		@include style_footer_color4;
+	}
+}
+
+
+
+
+/**
+ * VC Single Banner Image shortcode
+ * ----------------------------------------------------------------------------
+ */
+ .wpdanceclaratheme_single_image_hover .btn {
+	font-weight: bold;
+ }
+
+
+
+
+
+/**
+ * WooCommerce Products
+ * ----------------------------------------------------------------------------
+ */
+
+.woocommerce ul.products li.product {
+	@include style_general_bgcolor3;
+
+	h3 {
+		padding: 2em 0 1em;
+	}
+
+	.wpdanceclaratheme-product-details {
+		.star-rating {
+			font-size: 9px;
+			letter-spacing: 0.2em;
+			margin-bottom: 1em;
+
+			@at-root .woocommerce .star-rating {
+				color: #ffad10;
+				width: 6.4em;
+			}
+		}
+
+		.price {
+			font-size: 1em;
+			margin-bottom: 2em;
+		}
+	}
+	
+}
+
+
+

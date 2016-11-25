@@ -1,0 +1,16 @@
+<wpml-config>
+    
+    <custom-fields>
+        <custom-field action="translate">wpdanceclaratheme_layout</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_image_position</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_hide_title</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_custom_header</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_custom_footer</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_image_style</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_col</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_masonry</custom-field>
+        <custom-field action="translate">wpdanceclaratheme_excerpt</custom-field>
+    </custom-fields>
+</wpml-config>
+
+

@@ -1,0 +1,377 @@
+/**
+ * Helpful CSS Classes can be used in your content (page, post, etc...)
+ */
+
+
+%link-plain,
+%link-plan a {
+	@include link-plain;
+}
+a.link-plain,
+.link-plain a {
+	@extend %link-plain;
+}
+
+a.link-plain-important,
+.link-plain-important a {
+	@include link-plain-important;
+}
+
+
+
+%wpdanceclaratheme_meta,
+.wpdanceclaratheme_meta {
+	@extend %wpdanceclaratheme_single_post_meta;
+}
+
+
+
+/**
+ * PLAIN TEXT BUTTON
+ */
+%wpdanceclaratheme_btn_plain,
+.wpdanceclaratheme_btn_plain {
+	@include btn;
+	@include button-variant($style_general_color5, transparent, transparent);
+}
+
+/**
+ * PLAIN TEXT BUTTON - DARKER TEXT COLOR
+ */
+%wpdanceclaratheme_btn_plain_darker,
+.wpdanceclaratheme_btn_plain_darker {
+	@include btn;
+	@include button-variant($style_general_color4, transparent, transparent);
+}
+
+
+/**
+ * Helper to make a button smaller
+ */
+%wpdanceclaratheme_btn_small {
+	text-transform: uppercase;
+	padding: 0.25em 0.5em;
+	font-size: if($style_general_button_font_size, $style_general_button_font_size, 1em) * $small_scale;
+	&:hover, &:focus {
+		@if $style_general_button_hover_font_size {
+			font-size: $style_general_button_hover_font_size * $small_scale;
+		}
+	}
+}
+
+
+/**
+ * PLAIN TEXT BUTTON - SMALL SIZE
+ */
+%wpdanceclaratheme_btn_plain_small,
+.wpdanceclaratheme_btn_plain_small {
+	@extend %wpdanceclaratheme_btn_plain;
+	@extend %wpdanceclaratheme_btn_small;
+}
+
+/**
+ * PLAIN TEXT BUTTON - SMALL SIZE - DARKER TEXT COLOR
+ */
+%wpdanceclaratheme_btn_plain_small_darker,
+.wpdanceclaratheme_btn_plain_small_darker {
+	@extend %wpdanceclaratheme_btn_plain_darker;
+	@extend %wpdanceclaratheme_btn_small;
+}
+
+
+
+.wpdanceclaratheme_style_general_body {
+	@include font(
+		$style_general_body_font_family,
+		$style_general_body_font_size,
+		$style_general_body_font_weight,
+		$style_general_body_font_style,
+		$style_general_body_line_height,
+		$style_general_body_text_underline);
+	@extend %wpdanceclaratheme_style_general_body_color;
+}
+
+
+
+/**
+ * HELPER CLASSES FOR POSTS IN LOOP
+ * ============================================================================
+ */
+
+/**
+ * Helper class for Post entry
+ */
+%wpdanceclaratheme_post_hentry,
+.wpdanceclaratheme_post_hentry {
+	border-top: 1px dotted $style_general_bordercolor1;
+
+	&:first-child,
+	&.sticky + * {
+		border-top-width: 0;
+	}
+}
+
+/**
+ * Helper class for Post Meta
+ */
+%wpdanceclaratheme_post_meta,
+.wpdanceclaratheme_post_meta,
+%wpdanceclaratheme_post_meta_date,
+.wpdanceclaratheme_post_meta_date,
+%wpdanceclaratheme_post_meta_category,
+.wpdanceclaratheme_post_meta_category,
+%wpdanceclaratheme_post_meta_comment_count,
+.wpdanceclaratheme_post_meta_comment_count,
+%wpdanceclaratheme_post_meta_author,
+.wpdanceclaratheme_post_meta_author {
+	@include font(
+		$style_loop_meta_font_family,
+		$style_loop_meta_font_size,
+		$style_loop_meta_font_weight,
+		$style_loop_meta_font_style,
+		$style_loop_meta_line_height,
+		$style_loop_meta_text_underline);
+	@extend %wpdanceclaratheme_style_loop_meta_color;
+	text-transform: uppercase;
+}
+
+/**
+ * Helper class for Post Title
+ */
+%wpdanceclaratheme_post_title,
+.wpdanceclaratheme_post_title {
+	@include font(
+		$style_loop_title_font_family,
+		$style_loop_title_font_size,
+		$style_loop_title_font_weight,
+		$style_loop_title_font_style,
+		$style_loop_title_line_height,
+		$style_loop_title_text_underline);
+	@extend %wpdanceclaratheme_style_loop_title_color;
+	text-transform: uppercase;
+}
+
+/**
+ * Helper class for Post Content
+ */
+%wpdanceclaratheme_post_content,
+.wpdanceclaratheme_post_content {
+	@include font(
+		$style_loop_content_font_family,
+		$style_loop_content_font_size,
+		$style_loop_content_font_weight,
+		$style_loop_content_font_style,
+		$style_loop_content_line_height,
+		$style_loop_content_text_underline);
+	@extend %wpdanceclaratheme_style_loop_content_color;
+}
+
+
+/**
+ * Make all links inside Post Meta & Post Title has inherited colors
+ */
+%wpdanceclaratheme_post_meta,
+.wpdanceclaratheme_post_meta,
+%wpdanceclaratheme_post_meta_date,
+.wpdanceclaratheme_post_meta_date,
+%wpdanceclaratheme_post_meta_category,
+.wpdanceclaratheme_post_meta_category,
+%wpdanceclaratheme_post_meta_author,
+.wpdanceclaratheme_post_meta_author,
+%wpdanceclaratheme_post_meta_comment_count,
+.wpdanceclaratheme_post_meta_comment_count,
+%wpdanceclaratheme_post_title,
+.wpdanceclaratheme_post_title {
+	a {
+		color: inherit;
+		text-decoration: inherit;
+
+		&:hover, &:focus {
+			@extend %wpdanceclaratheme_style_general_link_color;
+			text-decoration: inherit;
+		}
+	}
+}
+
+
+/**
+ * HELPER CLASSES FOR SINGLE POST
+ * ============================================================================
+ */
+
+
+/**
+ * Helper class for Post Meta in Single page
+ */
+%wpdanceclaratheme_single_post_meta,
+.wpdanceclaratheme_single_post_meta,
+%wpdanceclaratheme_single_post_meta_date,
+.wpdanceclaratheme_single_post_meta_date,
+%wpdanceclaratheme_single_post_meta_category,
+.wpdanceclaratheme_single_post_meta_category,
+%wpdanceclaratheme_single_post_meta_comment_count,
+.wpdanceclaratheme_single_post_meta_comment_count,
+%wpdanceclaratheme_single_post_meta_author,
+.wpdanceclaratheme_single_post_meta_author {
+	@extend %wpdanceclaratheme_post_meta;
+	@include font(
+		$style_single_meta_font_family,
+		$style_single_meta_font_size,
+		$style_single_meta_font_weight,
+		$style_single_meta_font_style,
+		$style_single_meta_line_height,
+		$style_single_meta_text_underline);
+	@extend %wpdanceclaratheme_style_single_meta_color;
+}
+
+/**
+ * Helper class for Post Title in Single page
+ */
+%wpdanceclaratheme_single_post_title,
+.wpdanceclaratheme_single_post_title {
+	@extend %wpdanceclaratheme_post_title;
+
+	@include font(
+		$style_single_title_font_family,
+		$style_single_title_font_size,
+		$style_single_title_font_weight,
+		$style_single_title_font_style,
+		$style_single_title_line_height,
+		$style_single_title_text_underline);
+	@extend %wpdanceclaratheme_style_single_title_color;
+	text-transform: none;
+}
+
+
+/**
+ * Helper class for Post Content in Single page
+ */
+%wpdanceclaratheme_single_post_content,
+.wpdanceclaratheme_single_post_content {
+	@extend %wpdanceclaratheme_post_content;
+
+	@include font(
+		$style_single_content_font_family,
+		$style_single_content_font_size,
+		$style_single_content_font_weight,
+		$style_single_content_font_style,
+		$style_single_content_line_height,
+		$style_single_content_text_underline);
+	@extend %wpdanceclaratheme_style_single_content_color;
+}
+
+
+
+
+
+
+
+/**
+ * HEADING TEXT WITH LINE STRIKETROUGH
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-sep-holder-left,
+.wpdanceclaratheme-sep-holder-right {
+	border-top: 2px dotted $style_general_bordercolor3;
+	margin-top: 0.7em;
+}
+
+%wpdanceclaratheme-seperating-h3,
+.wpdanceclaratheme-seperating-h3 {
+	@include h3;
+	text-transform: uppercase;
+}
+
+
+
+/**
+ * PRICE TABLE
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-price-table-column {
+	> .vc_column-inner > .wpb_wrapper,
+		> .wpb_wrapper {
+			@include style_general_bordercolor4;
+		}
+
+	.wpb_content_element > .wpb_wrapper {
+		text-align: center;
+
+		> ul,
+		> ol {
+			> li:first-child {
+				@include style_general_bgcolor2;
+				@include style_general_color3;
+			}
+
+			> li:nth-child(2) {
+				@include style_general_bgcolor3;
+				@include style_general_color1;
+			}
+		}
+	}
+
+	&.active {
+		.wpb_content_element > .wpb_wrapper {
+			> ul,
+			> ol {
+				> li:first-child {
+					@include style_general_bgcolor4;
+				}
+			}
+		}
+	}
+}
+
+@for $i from 0 through $color_num {
+	
+	/**
+	 * Border Color
+	 */
+	.wpdanceclaratheme-price-table-column.wpdanceclaratheme_style_general_bordercolor#{$i} {
+		> .vc_column-inner > .wpb_wrapper,
+		> .wpb_wrapper {
+			@include style_general_bordercolor($i);
+		}
+	}
+
+
+}
+
+
+
+/**
+ * COMING SOON PAGE
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-comingsoon-newsletter {
+	input[type=text], input[type=email] {
+		background-color: rgba($style_general_bgcolor1, 0.2);
+		border-color: transparent;
+		box-shadow: none;
+		@include style_general_color3;
+	}
+
+	button, input[type=button], input[type=submit], .btn, .button {
+		text-transform: uppercase;
+		@include style_general_body_font_size_important;
+	}
+}
+
+
+/**
+ * VISUAL COMPOSER
+ *
+ * Helper to make vc_column-inner has color inherited from preset colors
+ * ----------------------------------------------------------------------------
+ */
+@each $grp in 'general', 'header', 'footer' {
+	@for $i from 1 through $color_num {
+		.wpdanceclaratheme_style_#{$grp}_bgcolor#{$i}_inner.vc_column_container > .vc_column-inner {
+			@extend %wpdanceclaratheme_style_#{$grp}_bgcolor#{$i};
+		}
+	}
+}  
+
+

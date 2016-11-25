@@ -1,0 +1,46 @@
+
+.postbox[id*=wpdanceclaratheme] {
+	box-shadow: 0 0 0 3px #ec008c;
+}
+
+.postbox[id*=wpdanceclaratheme] > h2 > span:before {
+	background-color: #ec008c;
+	border-radius: 3px;
+	color: #fff;
+	content: 'CLARA';
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 1;
+	padding: 3px 6px;
+	margin-right: 0.5em;
+	-webkit-webkit-font-smoothing: antialiased;
+	-moz-webkit-font-smoothing: antialiased;
+	-ms-webkit-font-smoothing: antialiased;
+	-o-webkit-font-smoothing: antialiased;
+	webkit-font-smoothing: antialiased;
+}
+
+.cmb2-metabox[id*=wpdanceclaratheme][id*=taxonomy] {
+	/*box-shadow: 0 0 0 2px #ec008c;*/
+	border-right: 3px solid #ec008c;
+	padding: 0 10px;
+	margin-bottom: 1em;
+}
+
+.cmb2-metabox[id*=wpdanceclaratheme][id*=taxonomy]:before {
+	background-color: #ec008c;
+	color: #fff;
+	content: 'CLARA';
+	float: right;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 1;
+	padding: 3px 6px;
+	margin-right: -10px;
+	-webkit-webkit-font-smoothing: antialiased;
+	-moz-webkit-font-smoothing: antialiased;
+	-ms-webkit-font-smoothing: antialiased;
+	-o-webkit-font-smoothing: antialiased;
+	webkit-font-smoothing: antialiased;
+}

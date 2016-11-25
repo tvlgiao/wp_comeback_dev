@@ -1,0 +1,412 @@
+@mixin _wc_hide {
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+}
+
+@mixin _wc_show {
+	overflow: inherit;
+	clip: inherit;
+}
+
+
+/**
+ * Mixin show element when over the item's container
+ * 
+ * @param  {string} $element element to show
+ */
+@mixin _wc_show_on_hover($element) {
+	&:hover, &:focus, &.focus {
+		#{$element} {
+			@include _wc_show;
+
+			&.hide {
+				display: none !important;
+			}
+		}
+	}
+}
+
+@mixin _wc_btn_show_on_hover($element) {
+	#{$element} {
+		@include _wc_hide;
+		position: absolute;
+		bottom: 0;
+		padding: 5px 10px;
+		margin: 0;
+		line-height: 1 !important;
+
+		
+
+		&:before {
+			font-family: FontAwesome;
+			display: inline-block;
+			visibility: visible;
+			font-size: 14px; // TODO: move to preset
+			line-height: 1 !important
+		}
+	}
+
+	@include _wc_show_on_hover($element);
+}
+
+
+/**
+ * Make animation moveUp for the element when hover product item
+ *
+ * Mixin should be included in 'li.product'
+ */
+@mixin _wc_btn_animation_moveup_on_hover($element, $transition_delay: 0) {
+	#{$element} {
+		@include prefixed(transform, translateY(30px));
+		opacity: 0;
+	}
+
+	&:hover, &:focus, &.focus {
+		#{$element} {
+			@include prefixed(transition-duration, 200ms);
+			@include prefixed(transition-property, 'transform, opacity');
+			@include prefixed(transition-delay, $transition_delay);
+			@include prefixed(transform, translateY(0));
+			opacity: 1;
+		}
+	}
+}
+
+/**
+ * Show products details by default and align it center
+ */
+@mixin wc_list_product_details_1 {
+	.wpdanceclaratheme-product-details {
+		text-align: center;
+
+		.star-rating {
+			margin: 0 auto 0.5em;
+		}
+
+		.price {
+			del {
+				display: inline;
+			}
+		}
+	}
+}
+
+/**
+ * Hide product details by default (title, rating, price). Show on hover a product item
+ * Mixin should put in '.woocommerce ul.products li.product'
+ */
+@mixin wc_list_product_details_2 {
+	/**
+	 * Group contains: title, rating, price
+	 */
+	.wpdanceclaratheme-product-details {
+		@include _wc_hide;
+		position: absolute;
+		width: 100%;
+		background-color: $gray;
+		padding: 10px;
+
+		/**
+		 * Product title
+		 */
+		h3 {
+			float: left;
+			padding: 0;
+			margin: 0 0 5px 10px;
+		}
+
+		/**
+		 * Rating
+		 */
+		.star-rating {
+			float: left;
+			clear: both;
+			margin: 0 0 0 10px;
+		}
+
+		/**
+		 * Price
+		 */
+		.price {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 10px 20px 0 0;
+		}
+	} // .wpdanceclaratheme-product-details
+
+
+	@include _wc_show_on_hover('.wpdanceclaratheme-product-details');
+}
+
+
+
+
+/**
+ * Hide product details by default (title, rating, price). Show up center when hover a product item
+ * Mixin should put in '.woocommerce ul.products li.product'
+ */
+@mixin wc_list_product_details_3 {
+	/**
+	 * Group contains: title, rating, price
+	 */
+	.wpdanceclaratheme-product-details {
+		@include _wc_hide;
+		position: absolute;
+		width: 100%;
+		padding: 0 10px;
+
+		/**
+		 * Product title
+		 */
+		h3 {
+			padding: 0;
+			margin: 0 auto 1em;
+		}
+
+		/**
+		 * Rating
+		 */
+		.star-rating {
+			margin: 0 auto 1em;
+		}
+
+		/**
+		 * Price
+		 */
+		.price {
+			margin: 0 auto 1em;
+		}
+	} // .wpdanceclaratheme-product-details
+
+
+	/**
+	 * Make animations on hover product item
+	 */
+	.wpdanceclaratheme-product-details {
+		clip: inherit;
+		opacity: 0;
+		@include prefixed(transform, scale(0.5));
+		@include prefixed(transition, all 200ms);
+	}
+	&:hover, 
+	&:focus,
+	&.focus {
+		.wpdanceclaratheme-product-details {
+			opacity: 1;
+			@include prefixed(transform, scale(1));
+		}
+	}
+
+
+	@include _wc_show_on_hover('.wpdanceclaratheme-product-details');
+}
+
+
+/**
+ * Hide 'Add To Cart' button by default. Show when hover the product item.
+ * Mixin should put in '.woocommerce ul.products li.product'
+ */
+@mixin wc_list_product_addtocart {
+	/**
+	 * Hide button 'Section options' of product not available to purchase
+	 */
+	.wpdanceclaratheme-product-buttons {
+		> .button.product_type_variable:not([class~='add_to_cart_button']) {
+			display: none;
+		}
+	}
+
+	@include _wc_btn_show_on_hover('.add_to_cart_button');
+	@include _wc_btn_animation_moveup_on_hover('.add_to_cart_button');
+
+	/**
+	 * Button Add to cart
+	 */
+	.add_to_cart_button {
+		left: 0;
+		width: 100%;
+		text-align: left;
+		
+		&:before {
+			content: "\f07a";
+			padding-right: 7px;
+		}
+	}
+}
+
+
+/**
+ * Hide 'QuickView' button by default. Show when hover the product item.
+ * Mixin should put in '.woocommerce ul.products li.product'
+ */
+@mixin wc_list_product_quickview {
+	@include _wc_btn_show_on_hover('.yith-wcqv-button');
+	@include _wc_btn_animation_moveup_on_hover('.yith-wcqv-button', 100ms);
+
+	/**
+	 * Button Quickview
+	 */
+	.yith-wcqv-button {
+		right: 0;
+		font-size: 0 !important;
+
+		&:before {
+			content: "\f06e";
+		}
+	}
+}
+
+
+/**
+ * Hide 'Wishlist' button by default. Show when hover the product item.
+ * Mixin should put in '.woocommerce ul.products li.product'
+ */
+@mixin wc_list_product_wishlist {
+
+	@each $el in '.yith-wcwl-add-button', '.yith-wcwl-wishlistexistsbrowse a', 'yith-wcwl-wishlistaddedbrowse a' {
+		@include _wc_btn_show_on_hover(#{$el});	
+		@include _wc_btn_animation_moveup_on_hover(#{$el}, 200ms);
+	}
+	// @include _wc_btn_show_on_hover('.yith-wcwl-add-button', 400ms);
+	// @include _wc_btn_show_on_hover('.yith-wcwl-wishlistexistsbrowse a', 400ms);
+	// @include _wc_btn_show_on_hover('.yith-wcwl-wishlistaddedbrowse a', 400ms);
+
+	/**
+	 * Outer div of button Wishlist
+	 */
+	.yith-wcwl-add-to-wishlist {
+		margin-top: 0;
+	}
+
+	/**
+	 * Button Wishlist
+	 */
+	.yith-wcwl-add-button {
+		right: 30px;
+		font-size: 0 !important;
+
+		&:before {
+			content: "\f004";
+		}
+
+		/**
+		 * Link of Add to wishlist
+		 */
+		a {
+			width: 100%;
+			height: 100%;
+			font-size: 0;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		/**
+		 * Loading idicator while waiting for adding wishlist
+		 */
+		img.ajax-loading {
+			position: absolute;
+			left: 5px;
+			top: -20px;
+		}
+	} // .yith-wcwl-add-button
+
+	// .yith-wcwl-wishlistaddedbrowse {
+	// 	position: absolute;
+	// 	bottom: 50px;
+	// 	left: 0;
+	// 	font-size: .857em;
+	// }
+
+	/**
+	 * Button wishlist already added
+	 */
+	.yith-wcwl-wishlistexistsbrowse,
+	.yith-wcwl-wishlistaddedbrowse {
+
+		.feedback {
+			display: none;
+		}
+		
+		/**
+		 * Make it always show even not hover product item
+		 */
+		a {
+			@include _wc_show;
+			right: 30px;
+			font-size: 0 !important;
+
+			&:before {
+				content: "\f004";
+			}
+
+			&.hide {
+				display: none !important;
+			}
+		}
+	}
+}
+
+
+/**
+ * Styling buttons (add to cart, wishlist, quickview...) showing icons only.
+ *
+ * Mixin should put in '.woocommerce ul.products li.product'.
+ *
+ * @see .wpdanceclaratheme-products-layout-9
+ * @see .wpdanceclaratheme-products-layout-10
+ */
+@mixin wc_list_product_buttons_1($top: auto, $bottom: auto, $w: 35px, $h: 35px, $space: 10px) {
+
+	%btn {
+		top         : $top;
+		bottom      : $bottom;
+		width       : $w;
+		height      : $h;
+		line-height : $h !important;
+		margin-left : 50%;
+		border      : 1px solid;
+	}
+
+	/**
+	 * Button Add to cart
+	 */
+	.add_to_cart_button {
+		@extend %btn;
+
+		left        : -($w * 3 + $space * 2) / 2;
+		text-indent : -9999px;
+		padding     : 0;
+
+		&::before {
+			text-indent : 0;
+			float       : left;
+			width       : $w;
+			line-height : $h !important;
+			text-align  : center;
+			font-size   : 18px;
+			display     : block;
+			padding     : 0;
+		}
+	}
+
+	/**
+	 * Button Quickview
+	 */
+	.yith-wcqv-button {
+		@extend %btn;
+		left : $w / 2 + $space;		
+	}
+
+	/**
+	 * Button Wishlist & Button wishlist already added
+	 */
+	.yith-wcwl-add-button,
+	.yith-wcwl-wishlistexistsbrowse a,
+	.yith-wcwl-wishlistaddedbrowse a {
+		@extend %btn;
+		left : -$w / 2;
+	}
+}

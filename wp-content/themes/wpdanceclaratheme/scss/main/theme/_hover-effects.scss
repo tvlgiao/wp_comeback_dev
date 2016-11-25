@@ -1,0 +1,53 @@
+
+
+
+.wpdanceclaratheme-hover-zoom-in-bg {
+
+	&:not([class*="vc_column_container"]),
+	&.vc_column_container > .vc_column-inner {
+
+		background-size: auto 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: background-size 0.3s ease-in-out;
+	}
+
+}
+
+.wpdanceclaratheme-hover-container.wpdanceclaratheme-hover-zoom-in-bg:hover,
+.wpdanceclaratheme-hover-container.wpdanceclaratheme-hover-zoom-in-bg:focus,
+.wpdanceclaratheme-hover-container:hover .wpdanceclaratheme-hover-zoom-in-bg,
+.wpdanceclaratheme-hover-container:focus .wpdanceclaratheme-hover-zoom-in-bg {
+
+	&:not([class*="vc_column_container"]),
+	&.vc_column_container > .vc_column-inner {
+		background-size: auto 120%;
+	}
+}
+
+
+.wpdanceclaratheme-hover-grow {
+	@include hover-effect-grow;
+}
+
+
+.wpdanceclaratheme-hover-buzz-out {
+	@include hover-effect-buzz-out;
+}
+
+.wpdanceclaratheme-hover-border2 {
+	@include hover-effect-border2;
+}
+
+@include create-hover-effect-bg-darker(
+	".wpdanceclaratheme-hover-bg-darker:not([class*='vc_col-has-fill'])",
+	'.wpdanceclaratheme-hover-container'
+);
+
+@include create-hover-effect-bg-darker(
+	'.wpdanceclaratheme-hover-bg-darker.vc_column_container.vc_col-has-fill > .vc_column-inner',
+	'.wpdanceclaratheme-hover-container'
+);
+
+
+

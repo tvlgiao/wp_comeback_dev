@@ -1,0 +1,458 @@
+/**
+ * Helpful CSS Classes can be used in your content (page, post etc...)
+ */
+
+.remove-padding {
+	padding: 0;
+
+	.widget {
+		padding: 0;
+	}
+}
+
+.remove-margin {
+	margin: 0;
+
+	.widget {
+		margin: 0;
+	}
+}
+
+.form-control-plain.form-control {
+	&,
+	&:focus {
+		background-color: transparent;
+		border-color: transparent;
+		box-shadow: none;
+		color: inherit;
+	}
+}
+
+.inline {
+	display: inline-block !important;
+}
+
+.text-normal {
+	font-weight: normal !important;
+}
+
+.text-bold,
+.bold {
+	font-weight: bold !important;
+}
+
+.text-italic,
+.italic {
+	font-style: italic !important;
+}
+
+.small09 {
+	font-size: 0.9em;
+}
+
+.list-spacing li {
+	margin-bottom: 0.5em !important;
+}
+
+.list-spacing-x2 li {
+	margin-bottom: 1em !important;
+}
+
+.list-spacing-x3 li {
+	margin-bottom: 1.5em !important;
+}
+
+.list-spacing-x4 li {
+	margin-bottom: 2em !important;
+}
+
+
+
+@each $align in left, right, center, justify {
+	.text-#{$align}-important {
+		text-align: $align !important;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		.text-#{$align}-xs {
+			text-align: $align;
+		}
+
+		.text-#{$align}-xs-important {
+			text-align: $align !important;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		.text-#{$align}-sm {
+			text-align: $align;
+		}
+
+		.text-#{$align}-sm-important {
+			text-align: $align !important;
+		}
+	}
+
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		.text-#{$align}-md {
+			text-align: $align;
+		}
+
+		.text-#{$align}-md-important {
+			text-align: $align !important;
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		.text-#{$align}-lg {
+			text-align: $align;
+		}
+
+		.text-#{$align}-lg-important {
+			text-align: $align !important;
+		}
+	}
+}
+
+
+
+/**
+ * Full width image responsive ultilities
+ */
+
+@media (max-width: $screen-xs-max) {
+	.fullwidth-xs {
+		&, img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.fullwidth-sm {
+		&, img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	.fullwidth-md {
+		&, img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.fullwidth-lg {
+		&, img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+/**
+ * Use to fix overflow:hidden of visual composer: .vc_row[data-vc-full-width]
+ */
+.overflow-visible {
+	overflow: visible !important;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.drop-cap:first-letter {
+	float: left;
+	font-size: 335%;
+	line-height: 100%;
+	margin: 0 7px -5px 0;
+}
+
+img.img-fullwidth,
+.img-fullwidth img {
+	width: 100%;
+	max-width: none;
+}
+
+
+@each $s in top, bottom, middle, baseline {
+	.vertical-align-#{$s} {
+		vertical-align: $s;
+	}
+}
+
+/**
+ * Remove padding of widgets or other items inside VC container
+ */
+.vc-remove-item-padding {
+	.wpb_wrapper {
+		> *,
+		.widget {
+			padding: 0;
+		}
+	}
+}
+
+
+/**
+ * Make all elements in VC column has vertical align: middle
+ */
+.vc-vertical-align-middle {
+	.wpb_wrapper > * {
+		vertical-align: middle;
+	}
+}
+
+
+
+
+/**
+ * HEADING TEXT WITH LINE STRIKETROUGH
+ * 
+ * - Center: --------- Title ----------
+ * - Left:   Title --------------------
+ * - Right:  ---------------------Title
+ *
+ * Syntax:
+ * 
+ * <div class="wpdanceclaratheme-strikethrough-[left|right|center]">
+ *   <span class="wpdanceclaratheme-sep-holder-left"></span>
+ *   <span class="wpdanceclaratheme-sep-holder-center">The Heading</span>
+ *   <span class="wpdanceclaratheme-sep-holder-right"></span>
+ * </div>
+ */
+
+@each $align in left, right, center {
+	.wpdanceclaratheme-strikethrough-#{$align} {
+		display: flex;
+		flex-direction: row;
+
+		.wpdanceclaratheme-sep-holder-left {
+			display: block;
+			flex: 1 1 auto;
+			height: 0;
+		}
+		.wpdanceclaratheme-sep-holder-center {
+			display: block;
+			flex: 0 1 auto;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.wpdanceclaratheme-sep-holder-right {
+			display: block;
+			flex: 1 1 auto;
+			height: 0;
+		}
+	}
+}
+
+@each $align in left, right {
+	.wpdanceclaratheme-strikethrough-#{$align} {
+		.wpdanceclaratheme-sep-holder-#{$align} {
+			display: none;
+		}
+
+		.wpdanceclaratheme-sep-holder-center {
+			padding-#{$align}: 0;
+		}
+	}
+}
+
+
+.wpdanceclaratheme-seperating-h3 {
+	@include wpdanceclaratheme-seperating-h3;
+}
+
+
+
+
+@each $s in 10, 20, 30, 40, 50, 60, 70, 80, 90 {	
+	/**
+	 * Make background image darker
+	 */
+	.bglighter#{$s},
+	.bgdarker#{$s} {
+
+		&:not([class*="vc_column_container"]),
+		&.vc_column_container > .vc_column-inner {
+
+			position: relative;;
+
+			&:before {
+			    content: ' ' !important;
+			    display: block !important;
+			    visibility: visible !important;
+			    position: absolute !important;
+			    top: 0 !important;
+			    bottom: 0 !important;
+			    left: 0 !important;
+			    right: 0 !important;
+			    height: 100% !important;
+			    width: 100% !important;
+			    opacity: ($s / 100) !important;
+			    border-radius: inherit;
+			}
+		}
+
+		// Workaround the layer ovelays content inside
+		&.vc_column_container > .vc_column-inner > * {
+			position: relative;
+		}
+	}
+
+	.bgdarker#{$s} {
+		&:not([class*="vc_column_container"]):before,
+		&.vc_column_container > .vc_column-inner:before {
+			background: #000 !important;
+		}
+	}
+
+	.bglighter#{$s}:before {
+		&:not([class*="vc_column_container"]):before,
+		&.vc_column_container > .vc_column-inner:before {
+			background: #fff !important;
+		}
+	}
+}
+
+
+
+.font-antialiased {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+}
+
+
+.widget-hide-title {
+	.widget-title,
+	.widgettitle {
+		display: none;
+	}
+}
+
+
+/**
+ * Separator by stars
+ */
+.separator-stars {
+	font-size: 10px;
+	letter-spacing: 2px;
+
+	strong {
+		font-size: 12px;
+	}
+}
+
+.site-footer .separator-stars {
+	font-size: 9px;
+}
+
+
+/**
+ * PRICE TABLE
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-price-table-column {
+
+	> .vc_column-inner > .wpb_wrapper,
+	> .wpb_wrapper {
+		border: 1px solid #ccc;
+		margin-top: 30px;
+	}
+
+	ul, ol {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	.wpb_content_element > .wpb_wrapper {
+		text-align: center;
+
+		> ul,
+		> ol {
+
+			> li {
+				margin: 0;
+				padding: 10px 20px;
+			}
+
+			> li:first-child {
+				padding: 20px;
+				background-color: #000;
+				color: #fff;
+			}
+
+			> li:nth-child(2) {
+				padding: 20px;
+				background-color: #a0a0a0;
+				color: #000;
+			}
+
+			> li:last-child {
+				padding: 20px;
+			}
+		}
+	}
+
+	&.active {
+		> .vc_column-inner > .wpb_wrapper,
+		> .wpb_wrapper {
+			margin-top: 0;
+			@include box-shadow(0px 0px 20px 0px rgba(0,0,0,0.3));
+		}
+
+		.wpb_content_element > .wpb_wrapper {
+			> ul,
+			> ol {
+				> li:first-child {
+					padding: 35px 20px;
+					background-color: #ec008c;
+				}
+
+				> li:nth-child(2) {
+				}
+
+				> li:last-child {
+					padding: 35px 20px;
+				}			
+			}
+		}
+	}
+
+}
+
+
+/**
+ * COMING SOON PAGE
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-comingsoon-layout {
+	&:before {
+	    content: ' ' !important;
+	    display: block !important;
+	    visibility: visible !important;
+	    position: absolute !important;
+	    top: 0 !important;
+	    bottom: 0 !important;
+	    left: 0 !important;
+	    right: 0 !important;
+	    height: 100% !important;
+	    width: 100% !important;
+	    background: #000 !important;
+	    opacity: 0.5 !important;
+	}
+}
+
+.wpdanceclaratheme-comingsoon-newsletter {
+	
+}

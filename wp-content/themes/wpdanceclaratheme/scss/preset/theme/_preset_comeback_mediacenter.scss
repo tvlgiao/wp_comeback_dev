@@ -1,0 +1,226 @@
+
+.site {
+	background: url('../images/bg01.png');
+}
+
+
+
+
+
+/**
+ * Fix hover style of links on the Top Header:
+ * - hover link color is not same background color
+ */
+.site-header .wpdanceclaratheme_style_header_bgcolor2 {
+
+	.link-plain a:hover,
+	.link-plain a:focus,
+	.link-plain a.hover,
+	a.link-plain:hover,
+	a.link-plain:focus,
+	a.link-plain.hover {
+		@include style_header_color1;
+	}
+
+	.link-plain-important a:hover,
+	.link-plain-important a:focus,
+	.link-plain-important a.hover,
+	a.link-plain-important:hover,
+	a.link-plain-important:focus,
+	a.link-plain-important.hover {
+		@include style_header_color1_important;
+	}
+}
+
+/**
+ * Add seperator | between list inline items on the Header section
+ */
+.site-header {
+	.list-inline,
+	.wpdanceclaratheme-user-links.inline {
+		li::after {
+			content: '|';
+			display: inline;
+			padding-left: 10px;
+		}
+		li:last-child::after {
+			content: '';
+			padding-left: 0;
+		}
+	}
+}
+
+/**
+ * Remove background color of site footer
+ */
+.site-footer {
+	background-color: initial;
+
+	/**
+	 * Update text color of input box in Footer section
+	 */
+	input[type="text"], 
+	input[type="search"], 
+	input[type="email"], 
+	input[type="url"], 
+	input[type="number"], 
+	textarea, 
+	.form-control {
+		@include style_footer_color1;
+	}	
+}
+
+
+/**
+ * Add background color to the main content
+ */
+.site-main {
+	@include style_general_bgcolor1;
+}
+
+
+/**
+ * VC Icon with class 'wpdanceclaratheme-icon' in Footer
+ */
+.site-footer .vc_icon_element.vc_icon_element-outer.wpdanceclaratheme-icon {
+	.vc_icon_element-inner.vc_icon_element-outline {
+		border-color: $style_footer_color4;
+		border-width: 1px;
+
+		&:hover, &:focus, &.focus {
+			border-color: $style_footer_color2;
+
+			&[class*='vc_icon_element-color-'] .vc_icon_element-icon {
+				@include style_footer_color2;
+			}
+		}
+	}
+
+	.vc_icon_element-inner.vc_icon_element-size-xs.vc_icon_element-have-style-inner {
+		width: 30px !important;
+		height: 30px !important;
+	}
+
+	.vc_icon_element-inner[class*='vc_icon_element-color-'] .vc_icon_element-icon {
+		@include style_footer_color4;
+	}
+}
+
+
+
+
+/**
+ * VC Single Banner Image shortcode
+ * ----------------------------------------------------------------------------
+ */
+ .wpdanceclaratheme_single_image_hover .btn {
+	font-weight: bold;
+ }
+
+
+
+
+/**
+ * VC Tabs .vc_tta-tabs
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-tabs-style-2.vc_tta-color-grey.vc_tta-style-outline {
+	.vc_tta-tab > a {
+		font-size: $style_general_body_font_size * 14 / 13;
+	}
+}
+
+
+/**
+ * WooCommerce Products
+ * ----------------------------------------------------------------------------
+ */
+
+.woocommerce ul.products li.product {
+
+	h3 {
+		padding: 2em 0 1em;
+	}
+
+	.wpdanceclaratheme-product-details {
+		.star-rating {
+			font-size: 9px;
+			letter-spacing: 0.2em;
+			margin-bottom: 1em;
+
+			@at-root .woocommerce .star-rating {
+				color: #ffad10;
+				width: 6.4em;
+			}
+		}
+
+		.price {
+			font-size: 1em;
+			margin-bottom: 2em;
+		}
+	}
+	
+}
+
+
+
+
+/**
+ * Grid Item: Comeback MediaCenter - Post Image Top
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top {
+	.wpdanceclaratheme_post_title {
+		@include style_general_body_font_size;
+		text-transform: none;
+
+		> * {
+			font: inherit;
+		}
+	}
+
+	.wpdanceclaratheme_post_meta_author {
+		text-transform: none;
+	}
+
+	.wpdanceclaratheme_post_meta_comment_count {
+		text-transform: none;
+	}
+
+	.wpdanceclaratheme_post_meta_category {
+		text-transform: none;
+	}
+
+	.wpdanceclaratheme_post_meta_date {
+		text-transform: none;
+	}
+}
+
+
+
+/**
+ * Brand slider image carousel
+ */
+.wpb_images_carousel.brand-slider {
+	
+	// Hide pagination dots
+	.vc_carousel-indicators {
+		display: none;
+	}
+
+	// Next/Back buttons
+	.vc_carousel-control {
+		width: 30px;
+		height: 30px;
+
+		&.vc_left {
+			left: -30px;
+		}
+
+		&.vc_right {
+			right: -30px;
+		}
+	}
+}

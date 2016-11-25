@@ -1,0 +1,978 @@
+/**
+ * Styling Elements belong to WooCommerce plugin
+ */
+
+
+%wc_list_product_title_a {
+	@include link-plain;
+}
+// have to split into 2 blocks for correcting inclusion
+%wc_list_product_title_a {
+
+	@include font(
+		$style_product_list_title_font_family,
+		$style_product_list_title_font_size,
+		$style_product_list_title_font_weight,
+		$style_product_list_title_font_style,
+		$style_product_list_title_line_height,
+		$style_product_list_title_text_underline);
+	@include style_product_list_title_color;
+
+	&:hover, &:focus {
+	}
+}
+
+
+
+.woocommerce {
+
+
+	/**
+	 * WOOCOMMERCE ELEMENTS
+	 * ------------------------------------------------------------------------
+	 */
+	
+	/**
+	 * Buttons use same style as .button
+	 */
+	a.button {
+		@extend %btn;
+	}
+
+	/**
+	 * Override WooCommerce Primary Buttons using Bootstrap Button styles
+	 */
+	
+	a.button,
+	button.button,
+	input.button {
+		@include btn;
+	}
+
+	#respond input#submit.alt,
+	a.button.alt,
+	button.button.alt,
+	input.button.alt {
+		@include btn-primary;
+
+		&:disabled,
+		&:disabled[disabled] {
+			@include btn-primary;
+		}
+	}
+
+	/**
+	 * ONSALE LABEL
+	 */
+	span.onsale {
+		@extend %wpdanceclaratheme_style_general_color3;
+		@extend %wpdanceclaratheme_style_general_bgcolor4;
+		text-transform: uppercase;
+	}
+
+
+	.star-rating, .star-rating:before {
+		@extend %wpdanceclaratheme_style_general_color2;
+	}
+
+	
+	.star-rating,
+	.woocommerce-review-link {
+		font-size: $style_general_body_font_size * 12 / 14;
+	}
+	.woocommerce-product-rating .star-rating {
+		margin: 0.7em 4px 0 0;
+	}
+
+
+	.woocommerce-result-count {
+		font-size: 0.857em;
+	}
+
+
+	/**
+	 * WooCommerce Message Bars
+	 */
+	.woocommerce-info {
+		/**
+		 * color #333 - bg #f7f7f7 - border #ec008c
+		 */
+		@extend %wpdanceclaratheme_style_general_bgcolor3;
+		@extend %wpdanceclaratheme_style_general_color4;
+		@extend %wpdanceclaratheme_style_general_bordercolor2;
+
+		&:before {
+			@extend %wpdanceclaratheme_style_general_color2;
+		}
+	}
+
+	.woocommerce-message {
+		/**
+		 * color #333 - bg #f7f7f7 - border #333
+		 */
+		@extend %wpdanceclaratheme_style_general_bgcolor3;
+		@extend %wpdanceclaratheme_style_general_color4;
+		@extend %wpdanceclaratheme_style_general_bordercolor3;
+
+		&:before {
+			@extend %wpdanceclaratheme_style_general_color4;
+		}
+	}
+
+	.woocommerce-error {
+		/**
+		 * color #fff - bg #000 - border #000
+		 */
+		@extend %wpdanceclaratheme_style_general_bgcolor2;
+		@extend %wpdanceclaratheme_style_general_color3;
+		@extend %wpdanceclaratheme_style_general_bordercolor1;
+
+		&:before {
+			@extend %wpdanceclaratheme_style_general_color3;
+		}
+	}
+
+
+	/**
+	 * WooCommerce Table (Products Cart Table)
+	 */
+	table.shop_table {
+		border-radius: $default_radius;
+
+		th {
+			text-transform: uppercase;
+		}
+	}
+
+
+	/**
+	 * REVIEWS & REVIEW FORM
+	 * ------------------------------------------------------------------------
+	 */
+	#reviews {
+		#comments {
+			h2 {
+				@extend %wpdanceclaratheme-seperating-h3;
+			}
+
+			ol.commentlist {
+				li {
+					@include style_general_bordercolor4;
+				}
+			}
+		}
+
+		h3 {
+			@extend %wpdanceclaratheme-seperating-h3;
+		}
+	}
+
+
+	/**
+	 * PRODUCT SUBCATEGORY ENTRIES
+	 * ========================================================================
+	 */
+
+	.subcategories {
+		.product-category {
+			a {
+				@extend %link-plain;
+
+				h3 {
+					@include font(
+						$style_general_body_font_family,
+						$style_general_body_font_size,
+						$style_general_body_font_weight,
+						$style_general_body_font_style,
+						$style_general_body_line_height,
+						$style_general_body_text_underline);
+
+					color:inherit;
+					text-align: center;
+					text-transform: uppercase;
+
+					.count {
+						display: block;
+						font-size: 0.857em;
+						background: transparent;
+						text-transform: none;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * SINGLE PRODUCT PAGE
+	 * ========================================================================
+	 */
+	div.product {
+
+		h1.product_title {
+			@include font(
+				$style_product_single_title_font_family,
+				$style_product_single_title_font_size,
+				$style_product_single_title_font_weight,
+				$style_product_single_title_font_style,
+				$style_product_single_title_line_height,
+				$style_product_single_title_text_underline);
+			@extend %wpdanceclaratheme_style_product_single_title_color;
+		}
+
+		p.price,
+		span.price {
+			color: inherit;
+			font-size: $style_general_body_font_size * 22 / 14;
+			font-weight: inherit;
+			
+			del {
+
+			}
+			
+			ins {
+				@extend %wpdanceclaratheme_style_general_body_text_underline;
+				font-weight: inherit;		
+			}
+		}
+
+
+
+		/**
+		 * FORM ADD TO CART & VARIATIONS
+		 * --------------------------------------------------------------------
+		 */
+		form.cart {
+			
+			/** 
+			 * Table Variations
+			 */
+			.variations {
+			
+				.reset_variations {
+					@extend %link-plain;
+					text-transform: uppercase;
+				}
+			}
+		} // form.cart
+
+
+		/**
+		 * MINI BOX SHOW ON RIGHT OF PRODUCT SUMMARY
+		 * ----------------------------------------------------------------
+		 */
+		.wpdanceclaratheme-product-minibox {
+
+			/**
+			 * Add To Wishlist button
+			 */
+			.yith-wcwl-add-to-wishlist {
+				a {
+					@extend %btn;
+					@extend %btn-default;
+				}
+			}
+		}
+
+		/**
+		 * WOOCOMMERCE TABS
+		 * --------------------------------------------------------------------
+		 */
+		.woocommerce-tabs {
+
+			ul.tabs {
+				&:before {
+					border-color: $style_general_bordercolor4;
+				}
+
+				li {
+					border-color: $style_general_bordercolor4;
+					background-color: $style_general_bgcolor1;
+
+					&.active {
+						border-color: $style_general_bgcolor2;
+						background-color: $style_general_bgcolor2;
+
+						a {
+							color: $style_general_color3;
+						}
+					}
+
+					a {
+						@extend %wpdanceclaratheme_style_general_link_color;
+
+						font-weight: if($style_general_link_font_weight, $style_general_link_font_weight, normal);
+						text-transform: uppercase;
+
+						&:hover {
+							@extend %wpdanceclaratheme_style_general_link_hover_color;
+						}
+					}
+				}
+			} // ul.tabs
+
+			#tab-description h2 {
+				/**
+				 * Hide title "Product Description"
+				 */
+				display: none;
+			}
+
+			.panel h2 {
+				@extend %wpdanceclaratheme-seperating-h3;
+			}
+
+		} // .woocommerce-tabs
+
+		/**
+		 * Title of other products list (related, upsells, etc...) inherited from Seperating H3
+		 */
+		.products h2 {
+			@extend %wpdanceclaratheme-seperating-h3;
+		}
+	} // div.product
+} // .woocommerce
+
+
+
+
+/**
+ * PRODUCTS GRID / LIST
+ * ========================================================================
+ */
+.woocommerce {
+	ul.products {
+
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+
+			/**
+			 * Make links have generic text color
+			 */
+			a, a:hover, a:focus {
+				@extend %wpdanceclaratheme_style_general_color4;
+			}
+
+			/**
+			 * Group contains: title, rating, price
+			 */
+			.wpdanceclaratheme-product-details {
+
+				/**
+				 * Product title
+				 */
+				h3 {
+					@extend %wc_list_product_title_a;
+				}
+
+				/**
+				 * Rating
+				 */
+				.star-rating {
+					font-size: 0.643em;
+				}
+
+				/**
+				 * Price
+				 */
+				.price {
+					@extend %wpdanceclaratheme_style_general_color2;
+					font-size: .857em;
+
+					del {
+						@extend %wpdanceclaratheme_style_general_color4;
+					}
+
+					ins {
+						text-decoration: none;
+						font-weight: inherit;
+					}
+				}
+			} // .wpdanceclaratheme-product-details
+
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@extend %button4;
+			}
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@extend %button4;
+			}
+
+			/**
+			 * Button Add to wishlist
+			 */
+			.yith-wcwl-add-button {
+				@extend %button4;
+			}
+
+			/**
+			 * Button wishlist already added
+			 *
+			 * Default: Pink
+			 * Hover: Bg Pink, Txt White
+			 */
+			.yith-wcwl-wishlistexistsbrowse a,
+			.yith-wcwl-wishlistaddedbrowse a {
+				color: $style_general_color2;
+			}
+
+			/**
+			 * Styling when product item is hover
+			 */
+			&:hover, &:focus {
+
+				/**
+				 * Button wishlist alreaded added
+				 */
+				.yith-wcwl-wishlistexistsbrowse a,
+				.yith-wcwl-wishlistaddedbrowse a {
+					@extend %button4;
+				}
+			}
+		} // li.product
+	} // ul.products
+} // .woocommerce
+
+.wpdanceclaratheme-products-layout-2 {
+	ul.products {
+		li.product {
+			.wpdanceclaratheme-product-details {
+				@extend %wpdanceclaratheme_style_general_bgcolor3;
+			}
+		}
+	}
+}
+
+.wpdanceclaratheme-products-layout-5 {
+
+	// When .wpdanceclaratheme-products-layout-1 is declared, extend for this class as well
+	// @extend .wpdanceclaratheme-products-layout-1;
+
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			border: 1px solid $style_general_bordercolor5;
+			border-radius: 5px;
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 6
+ *
+ * Show price online. When hover, show details & buttons.
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * Placeholder for styling button style 6
+ */
+%wpdanceclaratheme-products-layout-6-btn {
+	border: 1px solid $style_general_bordercolor6;
+	border-radius: 3px;
+	@include style_general_color3;
+	background-color: transparent;
+	text-transform: uppercase;
+
+	&:hover,
+	&:active {
+		border-radius: 3px;
+		@include style_general_bordercolor6;
+		@include style_general_color1;
+	}
+}
+
+.wpdanceclaratheme-products-layout-6 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			overflow: hidden;
+			border-radius: 5px;
+
+			.wpdanceclaratheme-product-details {
+				h3,
+				h3:hover,
+				h3:focus {
+					@include style_general_color2;
+				}
+				.price {
+					@include style_general_bgcolor3;
+				}
+			}
+
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+			}
+
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+			}
+
+			/**
+			 * Button Wishlist
+			 */
+			.yith-wcwl-add-button {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			.yith-wcwl-wishlistexistsbrowse a,
+			.yith-wcwl-wishlistaddedbrowse a {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+				@include style_general_color2;
+				border-color: transparent;
+			}
+
+			&:hover,
+			&:active {
+				.yith-wcwl-wishlistexistsbrowse a,
+				.yith-wcwl-wishlistaddedbrowse a {
+					@extend %wpdanceclaratheme-products-layout-6-btn;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 7 & 8
+ *
+ * Show like Style 5 with buttons like Style 6.
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-7,
+.wpdanceclaratheme-products-layout-8 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			overflow: hidden;
+			border-radius: 5px;
+			border: 1px solid $style_general_bordercolor5;
+
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+			}
+
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+			}
+
+			/**
+			 * Button Wishlist
+			 */
+			.yith-wcwl-add-button {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			.yith-wcwl-wishlistexistsbrowse a,
+			.yith-wcwl-wishlistaddedbrowse a {
+				@extend %wpdanceclaratheme-products-layout-6-btn;
+				@include style_general_color2;
+				border-color: transparent;
+			}
+
+			&:hover,
+			&:active {
+				.yith-wcwl-wishlistexistsbrowse a,
+				.yith-wcwl-wishlistaddedbrowse a {
+					@extend %wpdanceclaratheme-products-layout-6-btn;
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * PRODUCT ITEM - STYLE 9
+ *
+ * Show buttons when hover and hide product details
+ * See home-comeback-furniture
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * Placeholder for buttons style 9
+ */
+%wpdanceclaratheme-products-layout-9-btn {
+	@include style_general_bordercolor5;
+	@include style_general_color5;
+	background-color: transparent;
+
+	&:hover, &:focus, &.focus {
+		@include style_general_bordercolor2;
+		@include style_general_color2;
+	}
+}
+
+.wpdanceclaratheme-products-layout-9 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@extend %wpdanceclaratheme-products-layout-9-btn;
+			}
+
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@extend %wpdanceclaratheme-products-layout-9-btn;
+			}
+
+			/**
+			 * Button Wishlist
+			 */
+			.yith-wcwl-add-button {
+				@extend %wpdanceclaratheme-products-layout-9-btn;
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			&,
+			&:hover,
+			&:focus,
+			&.focus {
+				.yith-wcwl-wishlistexistsbrowse a,
+				.yith-wcwl-wishlistaddedbrowse a {
+					@extend %wpdanceclaratheme-products-layout-9-btn;
+					@include style_general_color2;
+					@include style_general_bordercolor2;
+
+					&:hover, &:focus, &.focus {
+						@include style_general_bordercolor5;
+						@include style_general_color5;
+					}
+				}
+			}
+
+			/**
+			 * Label Onsale
+			 */
+			.onsale::before {
+				background-color: #ff0000;
+			}
+
+
+			/**
+			 * Hover product item
+			 */
+			&:hover,
+			&:focus,
+			&.focus {
+				@include style_general_bordercolor2;
+			}
+		}
+	}
+}
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 10
+ *
+ * Default: Show image.
+ * Hover: Show details & buttons
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * Placeholder for buttons style 10
+ */
+%wpdanceclaratheme-products-layout-10-btn {
+	@include style_general_bordercolor5;
+	@include style_general_color5;
+	background-color: transparent;
+
+	&:hover, &:focus, &.focus {
+		@include style_general_bordercolor3;
+		@include style_general_color1;
+	}
+}
+
+.wpdanceclaratheme-products-layout-10 {
+
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@extend %wpdanceclaratheme-products-layout-10-btn;
+			}
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@extend %wpdanceclaratheme-products-layout-10-btn;
+			}
+
+			/**
+			 * Button Wishlist
+			 */
+			.yith-wcwl-add-button {
+				@extend %wpdanceclaratheme-products-layout-10-btn;
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			&,
+			&:hover,
+			&:focus,
+			&.focus {
+				.yith-wcwl-wishlistexistsbrowse a,
+				.yith-wcwl-wishlistaddedbrowse a {
+					@extend %wpdanceclaratheme-products-layout-10-btn;
+					@include style_general_color1;
+					@include style_general_bordercolor3;
+
+					&:hover, &:focus, &.focus {
+						@include style_general_bordercolor5;
+						@include style_general_color5;
+					}
+				}
+			}
+
+
+			/**
+			 * Hover product item
+			 */
+			&:hover,
+			&:focus,
+			&.focus {
+				@include style_general_bordercolor2;
+			}
+		}
+	}
+}
+
+
+/**
+ * On Desktop
+ */
+@media (min-width: $screen-md-min) {
+	.woocommerce {
+		/**
+		 * SINGLE PRODUCT PAGE - CUSTOM LAYOUT 1 - FULL WIDTH
+		 * ====================================================================
+		 */
+		&.layout-fullwidth {
+			div.product.wpdanceclaratheme-single-product-layout-1 {
+				/**
+				 * PRODUCT SUMMARY
+				 * The Block beside Product Image
+				 */
+				.summary {
+					border-right: 1px solid $style_general_bordercolor5;
+
+					/**
+					 * PRODUCT SHORT DESCRIPTION
+					 */
+					div[itemprop="description"] {
+						border-top: 1px solid $style_general_bordercolor5;
+					}
+				}
+
+
+				/**
+				 * MINI BOX SHOW ON RIGHT OF PRODUCT SUMMARY
+				 * ----------------------------------------------------------------
+				 */
+				.wpdanceclaratheme-product-minibox {
+					
+				}
+			} // div.product.wpdanceclaratheme-single-product-layout-1
+		} // &.layout-fullwidth
+	}
+}
+
+
+
+/**
+ * CHECKOUT PAGE (BILLING PAGE)
+ * ============================================================================
+ */
+.woocommerce-checkout #content .woocommerce {
+	h3 {
+		text-transform: uppercase;
+	}
+
+	
+
+	#payment {
+		border-radius: $default_radius;
+		@include style_general_bgcolor3;
+
+		#place_order {
+			@include btn-size(10px 30px, 1.5, 1.5rem);
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ * CART PAGE
+ * ============================================================================
+ */
+.woocommerce-cart #content .woocommerce {
+	h2 {
+		text-transform: uppercase;
+	}
+
+	.cart-collaterals .cart_totals {
+		td {
+			text-align: center;
+		}
+
+		.wc-proceed-to-checkout {
+			text-align: right;
+
+			.checkout-button {
+				@include btn-size(10px 30px, 1.5, 1.5rem);
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+
+/**
+ * Products List Widgets
+ * ----------------------------------------------------------------------------
+ */
+.woocommerce ul.cart_list li, 
+.woocommerce ul.product_list_widget li {
+
+	/**
+	 * Product Title
+	 */
+	a {
+		font-weight: 400; // reset it first
+		@extend %wc_list_product_title_a;
+	}
+
+	/**
+	 * Thumbnail
+	 */
+	img {
+	}
+
+	/**
+	 * Price
+	 */
+
+	.amount {
+		font-size: .857em;
+		@extend %wpdanceclaratheme_style_general_color2;
+	}
+
+	del .amount {
+		@extend %wpdanceclaratheme_style_general_color4;
+	}
+
+	ins {
+		text-decoration: none;
+		font-weight: inherit;
+		
+	}
+
+	/**
+	 * Product Rating
+	 */
+	.star-rating {
+		font-size: 0.643em;
+	}
+
+	.reviewer {
+		@include style_product_list_title_font_size;
+	}
+
+}
+
+
+
+/**
+ * Product Price Slider Widget
+ * ----------------------------------------------------------------------------
+ */
+.woocommerce .widget_price_filter {
+	.price_slider_wrapper .ui-widget-content {
+		background-color: darken($style_general_bgcolor3, 30%);
+	}
+	.ui-slider {
+		.ui-slider-range {
+			@include style_general_bgcolor3;
+		}
+
+		.ui-slider-handle {
+			background-color: darken($style_general_bgcolor3, 30%);
+			border: 4px double $style_general_bgcolor3;
+		}
+	}
+
+	.price_slider_amount .button {
+		border: 1px solid;
+		@include btn-size(1px 5px, 12/14);
+		@include btn-default;
+	}
+}

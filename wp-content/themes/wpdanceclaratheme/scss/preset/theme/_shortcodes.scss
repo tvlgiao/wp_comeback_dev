@@ -1,0 +1,51 @@
+
+.site-header .wpdanceclaratheme-user-links {
+	li, li * {
+		line-height: $style_general_body_font_size;
+	}
+
+	.cmreg-login-button {
+	}
+}
+
+
+.wpdanceclaratheme-owlcarousel {
+	.owl-theme .owl-controls {
+		.owl-buttons div {
+			background-color: transparent;
+			@include style_general_color4;
+		}
+	}
+
+
+	&.style-navigation-top-right .owl-theme .owl-controls .owl-buttons div {
+		@include style_general_bgcolor3;
+
+		&:hover,
+		&:focus {
+			@include style_general_bgcolor4;
+			@include style_general_color3;
+		}
+	}
+}
+
+
+
+@for $i from 1 through $color_num {
+	.wpdanceclaratheme-countdown.wpdanceclaratheme_style_general_color#{$i} {
+		@include style_general_color($i);
+
+		> span {
+			border-color: style_general_color($i);
+		}
+	}
+}
+
+
+@for $i from 1 through $color_num {
+	.wpdanceclaratheme-countdown.wpdanceclaratheme_style_general_bordercolor#{$i} {
+		> span {
+			@include style_general_bordercolor($i);
+		}
+	}
+}

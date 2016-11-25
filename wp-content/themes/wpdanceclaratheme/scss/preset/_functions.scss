@@ -1,0 +1,7 @@
+
+
+
+
+@function style_general_color($i) {
+	@return nth($style_general_color1 $style_general_color2 $style_general_color3 $style_general_color4 $style_general_color5, $i);
+}

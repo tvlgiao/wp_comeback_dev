@@ -1,0 +1,22 @@
+
+
+/**
+ * GRID ITEM: TESTIMONIAL LEFT
+ * 
+ * Like showing on home-garden.
+ * 
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-testimonials-left-2 {
+
+	.vc_pageable-slide-wrapper {
+		border: 1px solid $style_general_bordercolor5;
+		border-radius: $rounded_radius;
+	}
+
+	.vc_grid-item-mini:after {
+
+		border-bottom: 1px dotted $style_general_bordercolor5;
+
+	}
+}

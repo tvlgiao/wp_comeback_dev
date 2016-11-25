@@ -1,0 +1,68 @@
+/**
+ * Styling for plugin WooCommerce Social Sharing Buttons
+ */
+
+.woo-social-buttons > .custom {
+	display: inline-block;
+
+	a {
+		background-color : #000;
+		border-radius    : 14px;
+		display          : inline-block;
+		height           : 28px;
+		margin-left      : 5px;
+		width            : 28px;
+
+		&:before {
+			color       : #fff;
+			content     : '';
+			display     : inline-block;
+			font-family : FontAwesome;
+			line-height : 28px;
+			text-align  : center;
+			visibility  : visible;
+			width       : 28px;
+		}
+	}
+
+	&:first-child {
+		a {
+			margin-left: 0;
+		}
+	}
+
+	img[src*="blank.png"] {
+		display: none;
+	}
+
+	&.smsb_facebook a:before {
+		content: "\f09a";
+	}
+	&.smsb_twitter a:before {
+		content: "\f099";
+	}
+	&.smsb_googleplus a:before {
+		content: "\f0d5"
+	}
+	&.smsb_pinterest a:before {
+		content: "\f231";
+	}
+	&.smsb_youtube a:before {
+		content: "\f167";
+	}
+	&.smsb_vimeo a:before {
+		content: "\f27d";
+	}
+	&.smsb_instagram a:before {
+		content: "\f16d";
+	}
+	&.smsb_linkedin a:before {
+		content: "\f0e1";
+	}
+	&.smsb_tumblr a:before {
+		content: "\f173";
+	}
+	&.smsb_email a:before {
+		content: "\f0e0";
+	}
+}

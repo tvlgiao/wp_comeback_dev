@@ -1,0 +1,199 @@
+/**
+ * Main Navigation Style
+ */
+
+.menu-toggle {
+	padding: 15px 0 15px 20px;
+	text-align: left;
+	text-transform: uppercase;
+	width: 100%;
+	border: 1px solid;
+
+	&:after {
+		content: "\f0c9";
+		float: right;
+		font-family: FontAwesome;
+		font-size: 20px;
+		padding-right: 20px;
+		vertical-align: 0;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include box-shadow(none);
+		border: 1px solid;
+	}
+
+	@at-root .toggled-on &:after {
+		content: "\f00d";
+		vertical-align: 0;
+	}
+}
+
+div.nav-menu > ul,
+ul.nav-menu {
+	
+	> li {
+
+		> a {
+			text-transform: uppercase;
+		}
+	}
+
+
+
+	/**
+	 * SUB MENU
+	 */
+	
+	.sub-menu,
+	.children {
+
+		li {
+			a {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+/**
+ * Phone
+ */
+@media (max-width: $screen-xs-max) {
+	div.nav-menu > ul,
+	ul.nav-menu {
+
+		/**
+		 * Root Level Menu attributes
+		 */
+		border: 1px solid;
+
+		/**
+		 * ALL LEVEL MENUS
+		 * --------------------------------------------------------------------
+		 */
+		li {
+			a {
+				border-bottom: 1px solid;
+				padding: 10px 20px;
+			}
+
+			/** Link of the last LI of each menu */
+			&:last-child > a {
+				border-bottom: 0;
+			}
+		}
+
+		/**
+		 * ROOT LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		> li {
+			> a {
+				
+			}
+		}
+
+		/**
+		 * SUB LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		ul.sub-menu {
+			border-bottom: 1px solid;
+			margin-left: 0;
+
+			li a {
+			}
+
+			li a { padding-left:40px; }
+			li li a { padding-left:60px; }
+			li li li a { padding-left:80px; }
+			li li li li a { padding-left:100px; }
+			li li li li li a { padding-left:120px; }
+		}
+	}
+}
+
+
+
+/**
+ * Tablet & Desktop
+ */
+@media (min-width: $screen-sm-min) {
+	div.nav-menu > ul,
+	ul.nav-menu {
+		
+		display: table;
+		width: 100%;
+
+		/**
+		 * ROOT LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		> li {
+			display: table-cell;
+			text-align: center;
+			// text-transform: uppercase;
+
+			> a {
+				border: 1px solid transparent;
+				padding: 15px;
+			}
+
+			/**
+			 * Fix inline bug on sub menu items: http://prntscr.com/c2m6am
+			 */
+			li {
+				display: block;
+			}
+		}
+
+
+
+		/**
+		 * SUB LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		.sub-menu,
+		.children {
+			border: 1px solid #cccccc;
+			left: 0;
+			margin-top: -1px;
+			padding: 15px 0;
+
+			li {
+				padding: 0;
+				text-align: left;
+
+				a {
+					width: auto;
+					min-width: 200px;
+					padding: 5px 20px;
+				}
+			}
+
+			ul {
+				left: 100%;
+			}
+		}
+	}
+
+
+	/**
+	 * MENU ON DEFAULT HEADER
+	 */
+	.header-default {
+		div.nav-menu > ul,
+		ul.nav-menu {
+			display: block;
+			text-align: center;
+
+			> li {
+				display: inline-block;
+			}
+		}
+	}
+} // @media (min-width: $screen-sm-min)

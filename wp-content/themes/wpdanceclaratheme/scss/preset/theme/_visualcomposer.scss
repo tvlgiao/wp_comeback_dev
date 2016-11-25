@@ -1,0 +1,466 @@
+/**
+ * Styling for Visual Composer elements
+ */
+
+
+/**
+ * VC Icon Shortcode
+ *
+ * Use color from .wpdanceclaratheme_style_general_colorX & wpdanceclaratheme_style_general_bgcolorX
+ * if set.
+ */
+.vc_icon_element {
+	@for $i from 1 through $color_num {
+		@each $s in general, header, footer {
+			&.wpdanceclaratheme_style_#{$s}_color#{$i} {
+				.vc_icon_element-icon {
+					color: inherit !important;
+				}
+			}
+
+			&.wpdanceclaratheme_style_#{$s}_bgcolor#{$i} {
+				background-color: transparent;
+
+				.vc_icon_element-background {
+					@extend %wpdanceclaratheme_style_#{$s}_bgcolor#{$i}_important;
+
+					&:hover, &:focus {
+						@if $style_general_link_color {
+							background-color: $style_general_link_color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.vc_icon_element.wpdanceclaratheme-icon {
+
+}
+
+/**
+ * VC Accordion Shortcode
+ * ----------------------------------------------------------------------------
+ */
+.vc_tta-accordion {
+	.vc_tta-panel {
+
+		/**
+		 * Accordion Title
+		 */
+		.vc_tta-panel-title {
+			@include h5;
+
+	 		> a {
+				@include link-plain;
+			}
+		}
+
+		&.vc_active {
+			.vc_tta-panel-title {
+				> a {
+					@include style_general_link_color_important;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Style: Outline
+	 */
+	&.vc_tta-style-outline {
+		.vc_tta-panel.vc_active .vc_tta-panel-heading {
+			border-bottom: 0 !important;
+		}
+
+		.vc_tta-panel-body {
+			border-top: 0 !important;
+		}
+
+		.vc_tta-panel {
+			.vc_tta-panel-heading {
+				&:focus,
+				&:hover {
+					background-color: transparent !important;
+				}
+			}
+
+			.vc_tta-panel-title > a:hover {
+				@include style_general_link_color_important;
+			}
+		}
+
+		/**
+		 * Override Icons Color by Link Color
+		 */
+		.vc_tta-panel-heading {
+			&:focus,
+			&:hover {
+				.vc_tta-controls-icon {
+					&:after,
+					&:before {
+						border-color: $style_general_link_color !important;
+					}
+				}
+			}
+		}
+
+		
+
+		/**
+		 * Has class 'bordercolor*', apply
+		 */
+		@for $i from 1 through $color_num {
+			&.wpdanceclaratheme_style_general_bordercolor#{$i} {
+
+				/**
+				 * Override Border width of panel's Heading and Body
+				 */
+				.vc_tta-panel-body, 
+				.vc_tta-panel-heading, 
+				.vc_tta-tab > a {
+					border-width: 1px;
+				}
+
+				/**
+				 * Override border color of panel's Heading & Body
+				 */
+				.vc_tta-panel,
+				.vc_tta-panel.vc_active {
+					.vc_tta-panel-heading,
+					.vc_tta-panel-body, 
+					.vc_tta-panel-body:after, 
+					.vc_tta-panel-body:before {
+						@include style_general_bordercolor($i);
+					}
+				}
+
+				/**
+				 * Override Icons Color
+				 */
+				.vc_tta-panel-heading {
+					&:focus,
+					&:hover {
+						.vc_tta-controls-icon {
+							&:after,
+							&:before {
+								@include style_general_bordercolor($i);
+							}
+						}
+					}
+				}
+			}
+		} /* @for */
+
+		/**
+		 * Has class '_color*', apply
+		 */
+		@for $i from 1 through $color_num {
+			&.wpdanceclaratheme_style_general_color#{$i} {
+				/**
+				 * Apply Text Color on Title
+				 */
+				.vc_tta-panel .vc_tta-panel-title > a {
+					@include style_general_color($i);
+				}
+			}
+		} /* @for */
+	}
+}
+
+
+
+
+
+/**
+ * VC Grid Item
+ * ----------------------------------------------------------------------------
+ */
+@for $i from 0 through $color_num {
+	/**
+	 * Grid Item has theme border color classes, apply border color to its child element 
+	 */
+	.vc_grid-item.wpdanceclaratheme_style_general_bordercolor#{$i} > .vc_grid-item-mini {
+		@include style_general_bordercolor($i);
+	}
+}
+
+/**
+ * Change the gray color of outlined button in grid item
+ */
+div[class*='wpdanceclaratheme-grid-item'] .vc_btn3.vc_btn3-color-grey.vc_btn3-style-outline {
+	@include style_general_bordercolor5;
+	@include style_general_color4;
+}
+
+
+/**
+ * Grid Item: Comeback Furniture - Featured Post
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-furniture-featured-post
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-grid-item-comeback-furniture-featured-post {
+
+	.vc_gitem-post-data {
+		@include style_general_color3;
+	}
+
+	.vc_btn3.vc_btn3-style-outline {
+		@include style_general_color3;	
+		border: 2px solid $style_general_color3;
+		
+		&:hover,
+		&:focus,
+		&.focus {
+			@include style_general_color2;
+			border-color: $style_general_color2;
+		}
+	}
+
+
+
+	.vc_gitem-post-data-source-post_author {
+	  text-transform: none;
+	  letter-spacing: 1px;
+	}
+}
+
+
+
+/**
+ * Grid Item: Comeback Furniture - Listed Post
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-furniture-listed-post
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-grid-item-comeback-furniture-listed-post {
+
+	// Icon
+	.vc_gitem-row-position-top > .vc_gitem-col .vc_icon_element .vc_icon_element-color-grey .vc_icon_element-icon {
+		color: lighten($style_general_color1, 75%); // #cccccc
+	}
+
+	// Post Title
+	.vc_gitem-post-data-source-post_title > * {
+		a:hover {
+			color: $style_general_link_hover_color;
+		}
+
+	}
+
+
+	&:hover,
+	&:focus,
+	&.focus {
+
+		// Icon
+		.vc_gitem-row-position-top > .vc_gitem-col .vc_icon_element .vc_icon_element-color-grey .vc_icon_element-icon {
+			color: $style_general_color2;
+		}
+	}
+}
+
+
+
+/**
+ * Grid Item: Comeback Perfume - Post Image Top
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-perfume-post-image-top
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-grid-item-comeback-perfume-post-image-top {
+	.hgroup {
+
+		// Date
+		.vc_gitem-post-data-source-wpdanceclaratheme_post_date_advanced {
+			@include style_general_bgcolor4;
+			@include style_general_color3;
+		}
+	}
+
+	// Button Read More
+	.vc_gitem-link.vc_btn3 {
+		text-transform: uppercase;
+	}
+}
+
+
+
+/**
+ * Grid Item: Comeback MediaCenter - Post Image Top
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top {
+
+	// Post Excerpt
+	.vc_gitem-post-data-source-post_excerpt {
+
+		// Use same color as metadata
+		@include style_loop_meta_color;
+	}
+}
+
+
+
+/**
+ * VC Tabs .vc_tta-tabs
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-tabs-style-1.vc_tta-tabs[class*="vc_tta-color-"][class*="vc_tta-style-"] {
+	.vc_tta-tab > a,
+	.vc_tta-tab.vc_active > a {
+		@include style_general_color4;
+		background-color: transparent;
+		border-color: transparent;
+
+		&:hover,
+		&:focus {
+			@include style_general_color2;
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+
+	.vc_tta-tab.vc_active > a {
+		@include style_general_bordercolor5;
+
+		&:hover,
+		&:focus {
+			@include style_general_bordercolor5;
+			border-bottom-color: transparent;
+		}
+	}
+
+	.vc_tta-panels {
+		background: transparent;
+	}
+}
+
+/**
+ * Table & Desktop
+ */
+@media (min-width: 768px) {
+	.wpdanceclaratheme-tabs-style-1.vc_tta-tabs[class*="vc_tta-color-"][class*="vc_tta-style-"] {
+		.vc_tta-panels {
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+}
+
+/**
+ * Phone
+ */
+@media (max-width: $screen-xs-max) {
+	.wpdanceclaratheme-tabs-style-1.vc_tta-tabs[class*="vc_tta-color-"][class*="vc_tta-style-"] {
+
+		.vc_tta-panel .vc_tta-panel-title > a,
+		.vc_tta-panel.vc_active .vc_tta-panel-title > a {
+			@include style_general_color4;
+		}
+
+		.vc_tta-panel .vc_tta-panel-heading {
+			@include style_general_bgcolor3;
+			@include style_general_bordercolor5;
+			border-radius: 0;
+		}
+
+		.vc_tta-panel.vc_active .vc_tta-panel-heading {
+			background-color: transparent;
+			@include style_general_bordercolor5;
+			border-radius: 0;
+		}
+
+		.vc_tta-panel .vc_tta-panel-body, 
+		.vc_tta-panel .vc_tta-panel-body::after,
+		.vc_tta-panel .vc_tta-panel-body::before {
+			border-color: transparent;
+			background-color: transparent;
+		}
+	}
+}
+
+
+
+.wpdanceclaratheme-tabs-style-2.vc_tta-color-grey.vc_tta-style-outline {
+
+	@mixin _normal {
+		border-color: lighten($style_general_color1, 60%);
+		color: lighten($style_general_color1, 60%);	
+	}
+
+	@mixin _active {
+		color: $style_general_color2;
+		border-color: $style_general_color2;
+		background-color: transparent;
+	}
+	
+	.vc_tta-tab > a {
+		@include _normal;
+
+		text-transform: uppercase;
+		border-width: 1px;
+
+		&:hover, &:focus {
+			@include _active;
+		}
+	}
+
+	.vc_tta-tab.vc_active > a {
+		@include _active;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.wpdanceclaratheme-tabs-style-2.vc_tta-style-outline.vc_tta-tabs[class*="vc_tta-color-"] .vc_tta-panels {
+		border-color: transparent;
+	}
+}
+
+
+/**
+ * VC Single Banner Image shortcode
+ * ----------------------------------------------------------------------------
+ */
+ .wpdanceclaratheme_single_image_hover {
+
+
+ 	&.banner_style_comeback_1 {
+
+ 		.content-wrapper {
+ 			font-size: $style_general_body_font_size * 2;
+ 			color: $style_general_color3;
+ 		}
+
+ 		.content {
+ 			&::after {
+ 				background-color: $style_general_color3;
+ 			}
+
+ 			.main {
+ 				font-size: $style_general_body_font_size * 3;
+ 			}
+ 		}
+
+
+ 		.btn-default {
+ 			border-color: $style_general_color3;
+ 			color: $style_general_color3;
+
+ 			&:hover, &:focus, &.focus {
+ 				color: $style_general_color2;
+ 				border-color: $style_general_color2;
+ 			}
+ 		}
+ 	}
+ }
+
+
+

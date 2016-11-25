@@ -1,0 +1,143 @@
+#customize-theme-controls > ul > li[id*=wpdanceclaratheme] > h3:before {
+	background-color: #ec008c;
+	border-radius: 3px;
+	color: #fff;
+	content: 'CLARA';
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 1;
+	padding: 3px 6px;
+	-webkit-webkit-font-smoothing: antialiased;
+	-moz-webkit-font-smoothing: antialiased;
+	-ms-webkit-font-smoothing: antialiased;
+	-o-webkit-font-smoothing: antialiased;
+	webkit-font-smoothing: antialiased;
+}
+
+/**
+ * MAKE CUSTOMIZER CONTROLS LOOK BETTER
+ */
+li[id*=wpdanceclaratheme] .customize-control {
+	padding: 12px;
+	border: 1px solid #ddd;
+	width: calc(100% - 2*12px - 2px);
+	background-color: #fff;
+}
+
+li[id*=wpdanceclaratheme] .customize-control-title {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: -12px -12px 12px;
+	padding: 6px 12px;
+	border-bottom: 1px solid #ddd;
+	background-color: #f7f7f7;
+}
+
+li[id*=wpdanceclaratheme] span.customize-control-description {
+	font-size: 11px;
+}
+
+li[id*=wpdanceclaratheme] .customize-control-wpdanceclaratheme_group {
+	padding-bottom: 0;
+}
+
+li[id*=wpdanceclaratheme] .customize-control-wpdanceclaratheme_group > .customize-control-title {
+	margin-bottom: 0;
+}
+li[id*=wpdanceclaratheme] .customize-control-wpdanceclaratheme_group > .customize-control-title:after {
+	content: "\f139";
+	font: 20px/24px dashicons;
+	float: right;
+	margin-right: -6px;
+}
+
+li[id*=wpdanceclaratheme] .customize-control-wpdanceclaratheme_group.open > .customize-control-title {
+	margin-bottom: 12px;
+}
+li[id*=wpdanceclaratheme] .customize-control-wpdanceclaratheme_group.open > .customize-control-title:after {
+	content: "\f140";
+}
+
+
+
+
+
+.customize-control-wpdanceclaratheme_group > .customize-control-title {
+	cursor: pointer;
+}
+
+.customize-control-wpdanceclaratheme_group > .customize-control-content {
+	max-height: 0;
+	overflow: hidden;
+	/*-webkit-transition: max-height 0.5s;
+	transition: max-height 0.5s;*/
+}
+
+.customize-control-wpdanceclaratheme_group.open > .customize-control-content {
+	max-height: none;
+}
+
+/*
+#customize-theme-controls > ul > li:nth-child(n + 7) > h3{
+	background-image:url(../images/wordpressLogo.png)!important;
+	background-position: 10px 10px!important;
+	background-repeat:no-repeat!important;
+	padding-left:37px;
+}
+
+#accordion-panel-wpdanceclaratheme_style .accordion-section > .accordion-section-content > li.customize-control > .customize-control-title{
+	margin:-12px -12px 0;
+	padding:10px 10px 11px 14px;
+	color: #555;
+	line-height:21px;
+    background-color:#fff;
+    border-bottom: 1px solid #eee;
+}
+#accordion-panel-wpdanceclaratheme_style .accordion-section > .accordion-section-content > li.customize-control > .customize-control-title:after{
+	content: "\f345";
+	color:#a0a5aa;
+	float:right;
+	display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 20px/1 'dashicons';
+    vertical-align: top;
+}
+
+#accordion-panel-wpdanceclaratheme_style .accordion-section > .accordion-section-content > li.customize-control:focus > .customize-control-title ,
+#accordion-panel-wpdanceclaratheme_style .accordion-section > .accordion-section-content > li.customize-control:hover > .customize-control-title{
+    color: #23282d;
+    background: #f5f5f5
+}
+
+#accordion-panel-wpdanceclaratheme_style .accordion-section > .accordion-section-content > li.customize-control:hover > .customize-control-title:after{
+	 color: #23282d;
+}
+*/
+
+.wpdanceclaratheme-htmlblock-preview {
+	padding: 0 10px 0 0;
+	margin-bottom: 10px;
+	font-size: 11px;
+}
+.wpdanceclaratheme-htmlblock-preview img {
+	width: 100%;
+	border: 5px solid #fff;
+}
+
+.wpdanceclaratheme-htmlblock-preview .select img {
+	border-color: #00a0d2;
+}
+
+
+
+/*
+ * FIX FOR SELECT2 
+ */
+html .select2-dropdown {
+	z-index: 500011;
+}
+
+html .select2-close-mask {
+	z-index: 500001;
+}

@@ -1,0 +1,40 @@
+
+
+
+
+/**
+ * GRID ITEM: TESTIMONIAL LEFT
+ * 
+ * Like showing on home-garden.
+ * 
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-testimonials-left-2 {
+
+	.vc_grid-item-zone-c-right .vc_gitem-animated-block {
+		width: 30%;
+	}
+
+	.vc_grid-item-zone-c-right .vc_gitem-zone-c {
+		width: 70%;
+	}
+
+	.vc_pageable-slide-wrapper {
+		border: 1px solid #eee;
+		border-radius: 5px;
+	}
+
+	.vc_grid-item-mini:after {
+		content: '';
+		display: block;
+		border-bottom: 1px solid #eee;
+		padding-top: 20px;
+		margin-bottom: -20px;
+	}
+
+	.vc_grid-item:last-child .vc_grid-item-mini:after {
+		border-bottom: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+}

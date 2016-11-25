@@ -1,0 +1,106 @@
+
+%btn-default,
+.btn-default {
+	@include btn-default;
+}
+
+%btn-primary,
+.btn-primary {
+	@include btn-primary;
+}
+
+%btn-secondary,
+.btn-secondary {
+	@include btn-secondary;
+}
+
+%form-control,
+.form-control {
+	color: $input-color;
+	border: 1px solid $input-border;
+	background-color: $input-bg;
+	@include form-control-focus;
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Success appears as green
+.btn-success {
+	@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+	@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+	@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+	@include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-link {
+	@include button-variant($style_general_color2, transparent, transparent);
+}
+
+// text: back | bg: transparent | border: #ec008c
+.btn-outline {
+	@include button-variant($style_general_color1, transparent, $style_general_bordercolor2);
+}
+
+// text: back | bg: transparent | border: #ec008c 2px
+.btn-outline-inversed {
+	@include button-variant($style_general_color3, transparent, $style_general_bordercolor2);
+}
+
+// text: black | bg: transparent | border: #ec008c
+.btn-outline2 {
+	@include button-variant($style_general_color1, transparent, $style_general_bordercolor2);
+	border-width: 2px;
+}
+
+// text: white | bg: transparent | border: #ec008c 2px
+.btn-outline2-inversed {
+	@include button-variant($style_general_color3, transparent, $style_general_bordercolor2);
+	border-width: 2px;
+}
+
+// text: white | bg: transparent | border: white
+// HOVER: text: #ec008c | bg: transparent | border: #ec008c
+// 
+.btn-outline3 {
+	@include button-variant($style_general_color3, transparent, $style_general_color3);
+	border-width: 2px;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		color: $style_general_color2;
+		border-color: $style_general_color2;
+	}
+}
+
+// text: #ec008c | bg: transparent | border: #ec008c
+// HOVER: text: white | bg: transparent | border: white
+// 
+.btn-outline3-inversed {
+	@include button-variant($style_general_color2, transparent, $style_general_color2);
+	border-width: 2px;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		color: $style_general_color3;
+		border-color: $style_general_color3;
+	}
+}
+
+
+
+
+

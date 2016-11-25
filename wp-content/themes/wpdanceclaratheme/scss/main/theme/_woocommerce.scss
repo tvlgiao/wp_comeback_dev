@@ -1,0 +1,1457 @@
+/**
+ * Styling Elements belong to WooCommerce plugin
+ */
+
+.woocommerce {
+
+	/**
+	 * WOOCOMMERCE PRIMARY BUTTON
+	 * 
+	 * Override WooCommerce buttons using Bootstrap Button styles
+	 */
+	#respond input#submit.alt, 
+	a.button.alt,
+	button.button.alt,
+	input.button.alt {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+
+
+	/**
+	 * Fix select2 style for Country select drop down field
+	 */
+	.country_select/*.select2-container*/ .select2-choice {
+		border: none;
+		background: transparent;
+		line-height: 34px - 7px * 2;
+		padding-left: 0;
+	}
+
+
+	/**
+	 * ONSALE LABEL
+	 */
+	span.onsale {
+		min-height: auto;
+		min-width: auto;
+		border-radius: 0;
+		line-height: 1;
+		padding: 5px;
+	}
+
+
+
+	/**
+	 * REVIEWS & REVIEW FORM
+	 * ------------------------------------------------------------------------
+	 */
+	#reviews {
+		#comments {
+			h2 {
+				@include wpdanceclaratheme-seperating-h3;
+			}
+
+			ol.commentlist {
+				margin-bottom: 20px;
+				padding: 0;
+
+				li {
+					border: 1px solid $gray-lighter;
+					padding: $space-md;
+					min-height: $avatar-width + $space-md * 2;
+
+					img.avatar {
+						border: 0;
+						padding: 0;
+						position: static;
+						float: left;
+						width: $avatar-width;
+					}
+
+					.comment-text {
+						border-radius: 0;
+						border: 0;
+						margin-left: $avatar-width + $space-md;
+						padding: 0;
+					}
+				} // li
+			} // ol.commentlist
+		} // #comments
+
+		h3 {
+			@include wpdanceclaratheme-seperating-h3;
+		}
+	} // #reviews
+
+
+
+
+	/**
+	 * PRODUCT SUBCATEGORY ENTRIES
+	 * ========================================================================
+	 */
+
+	.subcategories-heading {
+		display: none;
+	}
+
+
+	.subcategories {
+		@include list-unstyled;
+		@include clearfix;
+
+		.product-category {
+			float: left;
+			width: 22.05%;
+			margin: 0 3.8% 2.992em 0;
+
+			&.last {
+				margin-right: 0;
+			}
+
+			/**
+			 * Specify category item width, margin in grid
+			 */
+			@for $cols from 1 through 12 {
+				@at-root .wpdanceclaratheme-wc-shop-columns-#{$cols} .subcategories .product-category {
+					width: calc-column-width(1, $cols, 30, 1140);
+					margin-right: 30 / 1140 * 100%;
+				}
+			}
+
+			a {
+				display: inline-block;
+				overflow: hidden;
+
+				&:hover, &:focus, &.focus {
+					img {
+						@include prefixed(transition-duration, 4000ms);
+						@include prefixed(transition-property, 'transform');
+						@include prefixed(transform, scale(1.5));
+						@include prefixed(transform-origin, 50% 100% 0);
+						@include prefixed(filter, contrast(120%));
+					}
+				}
+			}
+		}
+	}
+
+
+	/**
+	 * SINGLE PRODUCT PAGE
+	 * ========================================================================
+	 */
+	div.product {
+		$space: 20px;
+
+		.product_title {
+			margin-bottom: $space;
+		}
+
+		p.price {
+			margin-bottom: $space;
+		}
+
+		.product_meta {
+			.sku_wrapper,
+			.posted_in,
+			.tagged_as {
+				display: block;
+			}
+		}
+
+
+		/**
+		 * FORM ADD TO CART & VARIATIONS
+		 * --------------------------------------------------------------------
+		 */
+		
+		form.cart,
+		p.cart {
+			margin-top: $space;
+			margin-bottom: $space;
+		}
+
+		form.cart {
+			
+			/** 
+			 * Table Variations
+			 */
+			.variations {
+				margin-bottom: $space;
+
+				td,
+				th {
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+
+				td.label {
+					font-weight: inherit;
+					font-size: inherit;
+					display: table-cell;
+					text-align: inherit;
+					white-space: inherit;
+				}
+
+				label {
+					font-weight: inherit;
+					font-size: inherit;
+					text-transform: capitalize;
+				}
+
+				select {
+					width: calc(100% - 100px);
+				}
+
+				.reset_variations {
+
+				}
+			}
+
+			.single_variation_wrap {
+				display: table;
+				width: 100%;
+
+				> div {
+					display: table-cell !important;
+					vertical-align: middle;
+
+					&:first-child {
+						width: 75%;
+					}
+				}
+			}
+
+			div.quantity {
+				float: right;
+				margin: 0;
+			}
+
+		} // form.cart
+
+
+		/**
+		 * Hide Add To Cart Button because it is replaced by the button on the right Mini Box
+		 */
+		.single_add_to_cart_button {
+			display: none;
+		}
+
+		/**
+		 * MINI BOX SHOW ON RIGHT OF PRODUCT SUMMARY
+		 * ----------------------------------------------------------------
+		 */
+		.wpdanceclaratheme-product-minibox {
+			float: right;
+			width: 48%;
+			margin-bottom: 30px;
+
+			@mixin button($icon: null) {
+				display: block;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+				width: 100%;
+
+				@if $icon {
+					&:before {
+						// content: $icon;
+						font-family: FontAwesome;
+						font-size: 1.285em;
+						padding-right: 10px;
+					}
+				}
+			}
+
+			.btn-addtocart {
+				@include button(true);
+				&:before {
+					content: '\f07a';
+				}
+			}
+
+			.yith-wcwl-add-to-wishlist {
+				a {
+					@extend .btn;
+					@extend .btn-default;
+					@include button(true);
+					&:before {
+						content: '\f07a';
+					}
+				}
+
+				.ajax-loading {
+					position: absolute;
+					right: -20px;
+					margin-top: -30px;
+				}
+			}
+
+			.btn-email {
+				@include button(true);
+				margin-bottom: 30px;
+
+				&:before {
+					content: '\f003';
+				}
+			}
+
+			.woocommerce-product-rating {
+				margin-bottom: 30px;
+			}
+		} // .wpdanceclaratheme-product-minibox
+
+
+		/**
+		 * WOOCOMMERCE TABS:
+		 * 
+		 * - Adjust padding
+		 * - Remove border radius
+		 * - Use colors from Bootstrap
+		 * --------------------------------------------------------------------
+		 */
+		.woocommerce-tabs {
+
+			ul.tabs {
+				&:before {
+					border-color: $nav-tabs-border-color;
+					// border-color: should overwrite in preset
+				}
+
+				li {
+					padding: 0 50px;
+					border-radius: 0;
+					border-color: $nav-tabs-border-color;
+					// border-color: should overwrite in preset
+					// background-color: set in preset
+
+					&:before,
+					&:after {
+						/** Remove round border */
+						display: none;
+					}
+
+					&.active {
+						// border-bottom-color: set in preset
+						// background-color: set in preset
+
+						a {
+							// color: set in preset
+						}
+					}
+
+					a {
+						padding: 10px 0;
+						// color: set in preset
+
+						&:hover {
+							// color: set in prest
+						}
+					}
+				} // li
+			} // ul.tabs
+		} // .woocommerce-tabs
+
+		@at-root {	
+			/**
+			 * On Phone
+			 */
+			@media (max-width: $screen-xs-max) {
+				.woocommerce div.product .woocommerce-tabs ul.tabs {
+					padding: 0;
+				}
+
+				// Have to make complicated css selectors to override WooCommerce original css selectors
+				.woocommerce,
+				.woocommerce-page {
+					#content,
+					& {
+						div.product .woocommerce-tabs ul.tabs li {
+							display: block;
+							margin: 0;
+							padding: 0 20px;
+						}
+					}
+				}
+			}
+		}
+
+
+		/**
+		 * Title of other products list (related, upsells, etc...) inherited Seperated H3
+		 */
+		.products h2 {
+			@include wpdanceclaratheme-seperating-h3;
+		}
+	} // div.product
+
+
+	/**
+	 * WIDGET LAYERED NAV
+	 * ------------------------------------------------------------------------
+	 */
+	.widget_layered_nav {
+		.wpdanceclaratheme-product-attribute-swatches {
+			ul {
+				text-align: center;
+				margin: 0 auto;
+
+				li:after,
+				li:before {
+					display: none;
+					clear: none;
+				}
+			}
+		}
+	}
+
+} // .woocommerce
+
+
+/**
+ * PRODUCTS GRID / LIST
+ * ============================================================================
+ */
+
+/**
+ * COMMON STYLE
+ * ----------------------------------------------------------------------------
+ */
+.woocommerce {
+	ul.products {
+
+		/**
+		 * Specify product width, margin in grid
+		 */
+		@for $cols from 1 through 12 {
+			@at-root .wpdanceclaratheme-wc-shop-columns-#{$cols} ul.products li.product {
+				width: calc-column-width(1, $cols, 30, 1140);
+				margin-right: 30 / 1140 * 100%;
+
+				&.last {
+					margin-right: 0;
+				}
+			}
+		}
+
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			margin-bottom: 50px;
+
+			/**
+			 * Product image
+			 */
+			a img {
+				margin-bottom: 0;
+			}
+
+			/**
+			 * Onsale Label
+			 */
+			.onsale {
+				margin: 0;
+			}
+		}
+
+		/**
+		 * When show inside Owl Carousel
+		 */
+		&.owl-carousel {
+			margin-bottom: 0;
+
+			li.product {
+				//margin-bottom: 0;
+			}
+		}
+	}
+}
+/**
+ * Hide products when Owl Carousel not init yet
+ */
+.wpdanceclaratheme-owlcarousel .woocommerce ul.products { 
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+
+	&.owl-carousel {
+		display: block;
+		opacity: 1;
+	}
+}
+
+
+/**
+ * Add spacing if products inside owl carousel
+ */
+.wpdanceclaratheme-owlcarousel .woocommerce ul.products {
+	margin-left: -10px;
+	margin-right: -10px;
+	width: calc(100% + 10px);
+
+	.owl-item {
+		padding: 0 10px;
+	}
+}
+
+
+
+
+
+/**
+ * On Phone & Tablet
+ */
+@media (max-width: $screen-sm-max) {
+	/**
+	 * If Product Columns is set 1 then make product item full width
+	 */
+	.woocommerce.columns-1 {
+		ul.products {
+			li.product {
+				width: 100%;
+				margin-bottom: 50px;
+			}
+		}
+	}
+}
+
+/**
+ * PRODUCT ITEM - STYLE 1 (DEFAULT)
+ *
+ * Show image, details. When hover show buttons.
+ * ----------------------------------------------------------------------------
+ */
+.woocommerce,
+.wpdanceclaratheme-products-layout-1 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+
+			.wpdanceclaratheme-product-image {
+				position: relative;
+			}
+
+			@include wc_list_product_details_1;
+			@include wc_list_product_addtocart;
+			@include wc_list_product_quickview;
+			@include wc_list_product_wishlist;
+		}
+	}
+}
+
+
+/**
+ * PRODUCT ITEM - STYLE 2
+ *
+ * Show only image. When hover show details and buttons.
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-2 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			@include wc_list_product_details_2;
+		}
+	}
+}
+
+/**
+ * PRODUCTS LIST - STYLE 3
+ *
+ * Show image on left width 25%
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-3 {
+	ul.products {
+		li.product {
+			margin-bottom: 30px;
+
+			.wpdanceclaratheme-product-image {
+				position: static;
+				width: 25%;
+				float: left;
+			}
+
+			.wpdanceclaratheme-product-details {
+				text-align: left;
+				margin-left: 25% + 20 / 360 * 100%;
+				margin-left: calc(25% + 20px);
+				margin-right: 50 / 360 * 100%;
+
+				.star-rating {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * On Phone & Tablet
+ */
+@media (max-width: $screen-sm-max) {
+	.wpdanceclaratheme-products-layout-3 {
+
+		&,
+		.woocommerce {
+			ul.products {
+				li.product {
+					width: 100%;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 4
+ *
+ * Show image on left width 50%
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-4 {
+	ul.products {
+		li.product {
+			margin-bottom: 30px;
+
+			.wpdanceclaratheme-product-image {
+				position: static;
+				width: 50%;
+				float: left;
+			}
+
+			.wpdanceclaratheme-product-details {
+				text-align: left;
+				margin-left: 50% + 20 / 360 * 100%;
+				margin-left: calc(50% + 20px);
+				margin-right: 50 / 360 * 100%;
+
+				.star-rating {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * On Phone & Tablet
+ */
+@media (max-width: $screen-sm-max) {
+	.wpdanceclaratheme-products-layout-4 {
+
+		&,
+		.woocommerce {
+			ul.products {
+				li.product {
+					width: 100%;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * PRODUCTS LIST - STYLE 5
+ *
+ * Show similiar style 1 but with rounded border
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-5 {
+	@extend .wpdanceclaratheme-products-layout-1;
+
+	ul.products li.product {
+		overflow: hidden;
+	}
+
+}
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 6
+ *
+ * Show price only. When hover, show details & buttons.
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-6 {
+
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			@include wc_list_product_details_1;
+
+			/**
+			 * Add a dark layer overlay the image when hover
+			 */
+			&:hover,
+			&:focus {
+				.wpdanceclaratheme-product-image > a::after {
+					content          : '';
+					display          : block;
+
+					position         : absolute;
+					left             : 0;
+					top              : 0;
+					width            : 100%;
+					height           : 100%;
+
+					background-color : #000;
+					opacity          : .7;
+				}
+
+				/**
+				 * Hide price so that it doesn't overlay buttons
+				 */
+				.price {
+					display: none;
+				}
+
+				.wpdanceclaratheme-product-details {
+					/**
+					 * Show title when hover product item
+					 */
+					h3 {
+						@include _wc_show;
+					}
+
+					/**
+					 * Show rating when hover product item
+					 */
+					.star-rating {
+						@include _wc_show;
+						overflow: hidden;
+					}
+				}
+			}
+
+			.wpdanceclaratheme-product-details {
+				position: static;
+
+				/**
+				 * Product Title
+				 */
+				h3 {
+					@include _wc_hide;
+
+					// Position
+					position      : absolute;
+					left          : 0;
+					right         : 0;
+					bottom        : 50%;
+					margin-bottom : -10px;
+					text-align    : center;
+				}
+
+				/**
+				 * Rating
+				 */
+				.star-rating {
+					@include _wc_hide;
+
+					// Position
+					position    : absolute;
+					left        : 50%;
+					margin-left : -2.7em;
+					top         : 50%;
+					margin-top  : 10px;
+				}
+
+				/**
+				 * Price
+				 */
+				.price {
+					// Position
+					position      : absolute;
+					right         : 0;
+					bottom        : 0;
+					margin-bottom : 0;
+					padding       : 10px;
+				}
+			}
+
+			@mixin btn_icon_only {
+				padding : 7px;
+				bottom  : 15px;
+			}
+
+			@mixin btn_icon_text {
+				padding : 7px 15px;
+				bottom  : 15px;
+			}
+			
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@include btn_icon_text;
+				left  : 20px;
+				width : auto;
+			}
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@include btn_icon_only;
+				right : 60px;
+			}
+
+			/**
+			 * Button Wishlist
+			 */
+			.yith-wcwl-add-button {
+				@include btn_icon_only;
+				right : 20px
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			.yith-wcwl-wishlistexistsbrowse a,
+			.yith-wcwl-wishlistaddedbrowse a {
+				@include btn_icon_only;
+				right : 20px
+			}
+		}
+	}
+}
+
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 7 & STYLE 8
+ *
+ * Show like style 5 but buttons like style 6
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-7,
+.wpdanceclaratheme-products-layout-8 {
+
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			border-radius: 5px;
+			overflow: hidden;
+
+			/**
+			 * Add a dark layer overlay the image when hover
+			 */
+			&:hover,
+			&:focus {
+				.wpdanceclaratheme-product-image > a::after {
+					content          : '';
+					display          : block;
+
+					position         : absolute;
+					left             : 0;
+					top              : 0;
+					width            : 100%;
+					height           : 100%;
+
+					background-color : #000;
+					opacity          : .7;
+				}
+			}
+
+			@mixin btn_icon_only {
+				padding : 7px;
+				bottom  : 15px;
+			}
+
+			@mixin btn_icon_text {
+				padding : 7px 15px;
+				bottom  : 15px;
+			}
+			
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@include btn_icon_only;
+				left  : 30px;
+				width : auto;
+			}
+
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@include btn_icon_only;
+				right : 60px;
+			}
+
+			/**
+			 * Button Wishlist
+			 */
+			.yith-wcwl-add-button {
+				@include btn_icon_only;
+				right : 20px
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			.yith-wcwl-wishlistexistsbrowse a,
+			.yith-wcwl-wishlistaddedbrowse a {
+				@include btn_icon_only;
+				right : 20px
+			}
+		}
+	}
+}
+
+
+.wpdanceclaratheme-products-layout-8 {
+	ul.products {
+		li.product {
+
+			
+			/**
+			 * Button Add to cart show only icon like other buttons
+			 */
+			.add_to_cart_button {
+				font-size : 0 !important;
+
+				&::before {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/**
+ * PRODUCT ITEM - STYLE 9
+ *
+ * Show buttons when hover and hide product details
+ * See home-comeback-furniture
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-products-layout-9 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			border: 1px solid transparent;
+
+			/**
+			 * Showing buttons as icons only
+			 */
+			@include wc_list_product_buttons_1(auto, -70px);
+			
+
+			/**
+			 * Contains title, price, rating
+			 */
+			.wpdanceclaratheme-product-details {
+				transition: transform 300ms;
+			}
+
+			&:hover, &:focus, &.focus {
+				.wpdanceclaratheme-product-details {
+					transform: scaleY(0);
+				}
+			}
+
+
+			$lb_w: 40px;
+
+			/**
+			 * Label Onsale: diamond shape
+			 */
+			.onsale {
+				top             : 15px;
+				right           : 15px;
+				width           : $lb_w;
+				height          : $lb_w;
+				line-height     : $lb_w;
+				padding         : 0;
+				background      : none;
+
+				@include prefixed(transform-style, preserve-3d);
+
+				&::before {
+					content          : '';
+					display          :block;
+					position         :absolute;
+					top              : 0;
+					bottom           : 0;
+					width            : 100%;
+					height           : 100%;
+					border-radius    : 5px;
+					background-color : #333;
+					z-index          : -1;
+
+					@include prefixed(transform, rotate(45deg));
+					@include prefixed(transform-origin, 50%);
+				}
+			}
+		}
+	}
+}
+
+
+
+/**
+ * PRODUCT ITEM - STYLE 10
+ *
+ * Default: Show image.
+ * Hover: Show details & buttons
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-10,
+.wpdanceclaratheme-products-layout-10 .woocommerce {
+
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			border: 1px solid transparent;
+			
+			/**
+			 * Hide product details by default, show up on hover.
+			 */
+			@include wc_list_product_details_3;
+
+			/**
+			 * Position product details block
+			 */
+			.wpdanceclaratheme-product-details {
+				top   : 50%;
+				left  : 0;
+				width : 100%;
+			}
+
+			/**
+			 * Showing buttons as icons only
+			 */
+			@include wc_list_product_buttons_1(70px);
+
+			/**
+			 * Add a white layer overlay the image when hover
+			 */
+			&:hover,
+			&:focus,
+			&.focus {
+				.wpdanceclaratheme-product-image > a::after {
+					content          : '';
+					display          : block;
+
+					position         : absolute;
+					left             : 0;
+					top              : 0;
+					width            : 100%;
+					height           : 100%;
+
+					background-color : #fff;
+					opacity          : .8;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/**
+ * On Desktop
+ */
+@media (min-width: $screen-md-min) {
+	.woocommerce {
+		/**
+		 * SINGLE PRODUCT PAGE - CUSTOM LAYOUT 1 - FULL WIDTH
+		 *
+		 * Main Selector: .wpdanceclaratheme-single-product-layout-1
+		 * ====================================================================
+		 */
+		&.layout-fullwidth {
+
+			// Add #content so it has higher priority than WooCommerce styles
+			#content div.product.wpdanceclaratheme-single-product-layout-1 {
+
+				$space: 60 / 1140 * 100%;
+				@function column-width($col) {
+					@return calc-column-width($col, 10, 60, 1140);
+				}
+
+
+				/**
+				 * Product Image
+				 */
+				div.images {
+					width:  column-width(4);
+				}
+
+				/**
+				 * Product Summary
+				 */
+				div.summary {
+					float: left;
+					margin-left: $space;
+					overflow: hidden;
+					padding-right: $space / 2;
+					width: column-width(4) + $space / 2;
+
+					.product_title {
+						float: left;
+						padding-left: 10px;
+					}
+
+					div[itemprop="offers"] {
+						float: right;
+					}
+
+					div[itemprop="description"] {
+						clear: both;
+						margin-right: -60px;
+						padding-right: 60px;
+						padding-top: 20px;
+					}
+				}
+
+
+				/**
+				 * FORM ADD TO CART & VARIATIONS
+				 * --------------------------------------------------------------------
+				 */
+				form.cart {
+					text-align: right;
+
+					/**
+					 * Quantity Control Box
+					 */
+					div.quantity {
+						float: none;
+						display: inline-block;
+					}
+
+					/**
+					 * Add To Cart Button
+					 */
+					.button {
+						float: none;
+					}
+
+					/** 
+					 * Table Variations
+					 */
+					.variations {
+						text-align: left;
+						text-align: initial;
+					}
+
+					.single_variation_wrap {
+						display: table;
+						margin-bottom: $space;
+						width: 100%;
+
+						.woocommerce-variation {
+							display: table-cell;
+							text-align: left;
+							text-align: initial;
+						}
+
+						.woocommerce-variation-add-to-cart {
+							display: table-cell;
+						}
+					}
+
+				} // form.cart
+
+
+				/**
+				 * MINI BOX SHOW ON RIGHT OF PRODUCT SUMMARY
+				 * ----------------------------------------------------------------
+				 */
+				.wpdanceclaratheme-product-minibox {
+					width: column-width(2);
+
+				} // .wpdanceclaratheme-product-minibox
+
+				/**
+				 * REVIEWS & REVIEW FORM
+				 * ------------------------------------------------------------------------
+				 */
+				#reviews {
+					#comments {
+						float: left;
+						width: calc-column-width(6, 10, 40, 1140);
+					}
+
+					#review_form_wrapper {
+						float: right;
+						width: calc-column-width(4, 10, 40, 1140);	
+					}
+				}
+			} // #content div.product.wpdanceclaratheme-single-product-layout-1
+		} // &.layout-fullwidth
+	} // .woocommerce
+} // @media (min-width: $screen-md-min)
+
+
+
+
+/**
+ * On Tablet
+ */
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+	/**
+	 * SINGLE PRODUCT PAGE
+	 * 
+	 * image on left, summary & minibox on right
+	 * ------------------------------------------------------------------------
+	 */
+	.woocommerce,
+	.woocommerce-page {
+		#content,
+		& {
+			div.product {
+				div.images {
+					float: left;
+					width: 48%;
+				}
+
+				div.summary {
+					float: right;
+					width: 48%;
+				}
+			}
+		}
+	}
+
+}
+
+
+/**
+ * On Phone
+ */
+@media (max-width: $screen-xs-max) {
+
+	.woocommerce {
+		.subcategories {
+			/**
+			 * Make product category thubmail take 2 columns only
+			 */
+			.product-category {
+				width: 48%;
+				clear:both;
+				margin: 0 0 1em;
+
+				&:nth-child(2n) {
+					float: right;
+					clear: none !important;
+				}
+			}
+		}
+
+		/**
+		 * SINGLE PRODUCT PAGE
+		 * --------------------------------------------------------------------
+		 */
+		div.product {
+
+			/**
+			 * Make mini box full width
+			 */
+			.wpdanceclaratheme-product-minibox {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ * IN SIDEBAR "BEFORE CONTENT"
+ * ============================================================================
+ */
+#sidebar_wpdanceclaratheme_before_content {
+
+	/**
+	 * Widget Product Search
+	 */
+	.widget_product_search {
+		input[type="submit"] {
+			display: none;
+		}
+	}
+}
+
+
+
+/**
+ * IMAGE / COLOR SWATCHES FOR PRODUCT ATTRIBUTES
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-product-attribute-swatches {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline;
+	}
+
+	a {
+		display: inline-block;
+		margin: 0 5px 5px 0;
+		border: 1px solid #ccc;
+
+		&.picked {
+			border-color: #000;
+		}
+	}
+	@at-root {
+		.woocommerce .widget_layered_nav .wpdanceclaratheme-product-attribute-swatches ul li a {
+			padding: 0;
+		}
+	}
+
+	&.color-picker {
+		a {
+			width: 35px;
+			height: 35px;
+		}
+	}
+}
+
+
+
+/**
+ * PRODUCTS CART TABLE
+ * ----------------------------------------------------------------------------
+ */
+
+/**
+ * On Desktop
+ */
+@media (min-width: $screen-md-min) {
+	.woocommerce table.shop_table {
+		th, td {
+			&.product-remove {
+				width: 50px;
+			}
+
+			&.product-thumbnail,
+			&.product-price,
+			&.product-quantity,
+			&.product-subtotal {
+				width: 120px;
+				text-align: center;
+			}
+		}
+	}
+
+	/**
+	 * Product thumbnail
+	 */
+	.woocommerce-cart table.shop_table img {
+		width: auto;
+	}
+
+	/**
+	 * Coupon Code textbox
+	 */
+	.woocommerce #content table.cart td.actions .input-text, 
+	.woocommerce table.cart td.actions .input-text, 
+	.woocommerce-page #content table.cart td.actions .input-text, 
+	.woocommerce-page table.cart td.actions .input-text {
+		width: 160px;
+	}
+}
+
+
+
+/**
+ * Products List Widgets
+ * ----------------------------------------------------------------------------
+ */
+.woocommerce ul.cart_list li, 
+.woocommerce ul.product_list_widget li {
+	margin: 10px 0;
+
+	/**
+	 * Product Title
+	 */
+	a {
+		margin: 10px 0;
+	}
+
+	/**
+	 * Thumbnail
+	 */
+	img {
+		width: 100px;
+		margin: -10px 0 0 10px;
+	}
+
+	/**
+	 * Price
+	 */
+
+	.amount {
+		margin: 0 0 10px;
+	}
+
+	/**
+	 * Product Rating
+	 */
+	.star-rating {
+		margin: 0 0 10px;
+	}
+
+	.reviewer {
+		margin: 0 0 10px;
+	}
+
+}
+
+
+
+/**
+ * Product Search Widget
+ */
+.woocommerce-product-search {
+	display: flex;
+
+	.search-field {
+		flex: 1;
+	}
+
+	input[type="submit"] {
+		flex: 0;
+	}
+}
+
+

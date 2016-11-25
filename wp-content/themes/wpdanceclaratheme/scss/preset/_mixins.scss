@@ -1,0 +1,184 @@
+
+@mixin btn {
+	@include font(
+		$style_general_button_font_family,
+		$style_general_button_font_size,
+		$style_general_button_font_weight,
+		$style_general_button_font_style,
+		$style_general_button_line_height,
+		$style_general_button_text_underline);
+
+	@include style_general_button_bgcolor;
+	@include style_general_button_color;
+	@include style_general_button_bordercolor;
+	@include style_general_button_borderradius;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+
+	&:hover, &:focus {
+		@include font(
+			$style_general_button_hover_font_family,
+			$style_general_button_hover_font_size,
+			$style_general_button_hover_font_weight,
+			$style_general_button_hover_font_style,
+			$style_general_button_hover_line_height,
+			$style_general_button_hover_text_underline);
+
+		@include style_general_button_hover_bgcolor;
+		@include style_general_button_hover_color;
+		@include style_general_button_hover_bordercolor;
+		@include style_general_button_hover_borderradius;
+	}
+}
+
+
+@mixin btn-size($padding, $font-size-scale, $default-font-size: 1em) {
+	padding: $padding;
+	font-size: if($style_general_button_font_size, $style_general_button_font_size * $font-size-scale, $default-font-size);
+	&:hover,
+	&:focus {
+		@if ($style_general_button_hover_font_size) {
+			font-size: $style_general_button_hover_font_size * $font-size-scale;
+		}
+	}
+}
+
+@mixin btn-xs {
+	@include btn-size(1px 5px, $small_scale);
+}
+
+@mixin h1 {
+	@include font(
+		$style_general_h1_font_family,
+		$style_general_h1_font_size,
+		$style_general_h1_font_weight,
+		$style_general_h1_font_style,
+		$style_general_h1_line_height,
+		$style_general_h1_text_underline);
+	@extend .wpdanceclaratheme_style_general_h1_color;
+}
+
+@mixin h2 {
+	@include font(
+		$style_general_h2_font_family,
+		$style_general_h2_font_size,
+		$style_general_h2_font_weight,
+		$style_general_h2_font_style,
+		$style_general_h2_line_height,
+		$style_general_h2_text_underline);
+	@extend .wpdanceclaratheme_style_general_h2_color;
+}
+
+@mixin h3 {
+	@include font(
+		$style_general_h3_font_family,
+		$style_general_h3_font_size,
+		$style_general_h3_font_weight,
+		$style_general_h3_font_style,
+		$style_general_h3_line_height,
+		$style_general_h3_text_underline);
+	@extend .wpdanceclaratheme_style_general_h3_color;
+}
+
+@mixin h4 {
+	@include font(
+		$style_general_h4_font_family,
+		$style_general_h4_font_size,
+		$style_general_h4_font_weight,
+		$style_general_h4_font_style,
+		$style_general_h4_line_height,
+		$style_general_h4_text_underline);
+	@extend .wpdanceclaratheme_style_general_h4_color;
+}
+
+@mixin h5 {
+	@include font(
+		$style_general_h5_font_family,
+		$style_general_h5_font_size,
+		$style_general_h5_font_weight,
+		$style_general_h5_font_style,
+		$style_general_h5_line_height,
+		$style_general_h5_text_underline);
+	@extend .wpdanceclaratheme_style_general_h5_color;
+}
+
+@mixin h6 {
+	@include font(
+		$style_general_h6_font_family,
+		$style_general_h6_font_size,
+		$style_general_h6_font_weight,
+		$style_general_h6_font_style,
+		$style_general_h6_line_height,
+		$style_general_h6_text_underline);
+	@extend .wpdanceclaratheme_style_general_h6_color;
+}
+
+
+
+@mixin link-plain {
+	&, a {
+		color: inherit;
+
+		&:hover, &:focus {
+			@extend .wpdanceclaratheme_style_general_link_color;
+			@include style_general_link_text_underline;
+		}
+	}
+}
+
+@mixin link-plain-important {
+	&, a {
+		color: inherit !important;
+
+		&:hover, &:focus {
+			@extend .wpdanceclaratheme_style_general_link_color_important;
+			@include style_general_link_text_underline_important;
+		}
+	}	
+}
+
+
+@mixin btn-default {
+	// #333, #fff, #000
+	@include button-variant($style_general_color4, $style_general_bgcolor1, $style_general_bordercolor1);
+}
+
+@mixin btn-primary {
+	// #fff, #ec008c, #ec008c
+	@include button-variant($style_general_color3, $style_general_bgcolor4, $style_general_bordercolor2);
+}
+
+@mixin btn-secondary {
+	// #fff, #000, #000
+	@include button-variant($style_general_color3, $style_general_bgcolor2, $style_general_bordercolor1);
+}
+
+
+
+@mixin style_general_bordercolor($i) {
+	@if $i == 1 { @include style_general_bordercolor1; }
+	@if $i == 2 { @include style_general_bordercolor2; }
+	@if $i == 3 { @include style_general_bordercolor3; }
+	@if $i == 4 { @include style_general_bordercolor4; }
+	@if $i == 5 { @include style_general_bordercolor5; }
+}
+
+@mixin style_general_color($i) {
+	@if $i == 1 { @include style_general_color1; }
+	@if $i == 2 { @include style_general_color2; }
+	@if $i == 3 { @include style_general_color3; }
+	@if $i == 4 { @include style_general_color4; }
+	@if $i == 5 { @include style_general_color5; }
+}
+
+@mixin style_general_bgcolor($i) {
+	@if $i == 1 { @include style_general_bgcolor1; }
+	@if $i == 2 { @include style_general_bgcolor2; }
+	@if $i == 3 { @include style_general_bgcolor3; }
+	@if $i == 4 { @include style_general_bgcolor4; }
+	@if $i == 5 { @include style_general_bgcolor5; }
+}
+

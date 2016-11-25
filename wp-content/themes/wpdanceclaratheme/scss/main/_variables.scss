@@ -1,0 +1,22 @@
+/**
+ * Theme CSS Variables & Bootstrap variables to override
+ */
+
+
+$avatar-width: 60px !default;
+$space-md: 20px !default;
+
+/**
+ * BOOTSTRAP VARIABLES
+ * ----------------------------------------------------------------------------
+ */
+
+$icon-font-path: "../bootstrap/fonts/" !default;
+
+$btn-border-radius-base: 0 !default;
+$btn-border-radius-large: 0 !default;
+$btn-border-radius-small: 0 !default;
+
+$input-border-radius: 0 !default;
+$input-border-radius-large: 0 !default;
+$input-border-radius-small: 0 !default;

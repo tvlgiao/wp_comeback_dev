@@ -1,0 +1,231 @@
+/**
+ * Styling for Posts
+ */
+
+
+
+
+.hentry.post {
+	@extend %wpdanceclaratheme_post_hentry;
+
+	/**
+	 * Post Title default in loops
+	 */
+	.entry-title {
+		@extend %wpdanceclaratheme_post_title;
+	}
+	@at-root {
+		@media (max-width: $screen-xs-max) {
+			.hentry.post .entry-title {
+				@if ($style_loop_title_font_size) {
+					font-size: $style_loop_title_font_size * 2 / 3;
+				}
+				@else if ($style_general_h3_font_size) {
+					font-size: $style_general_h3_font_size * 2 / 3;
+				}
+				@else {
+					font-size: $style_general_body_font_size * 2 / 3;
+				}
+			}
+		}
+	}
+
+		
+	/**
+	 * Post Meta data default in loops
+	 */
+	.entry-meta {
+		@extend %wpdanceclaratheme_post_meta;
+	}
+
+	/**
+	 * Post Content default in loops
+	 */
+	.entry-content {
+		@extend %wpdanceclaratheme_post_content;
+	}
+
+	/**
+	 * Post Excerpt default in loops
+	 */
+	.entry-summary {
+		@extend %wpdanceclaratheme_post_content;
+		text-align: justify;
+	}
+}
+
+/**
+ * Sticky Post
+ */
+.hentry.post.sticky {
+	margin-bottom: 40px;
+	border-bottom: 2px solid $style_general_bordercolor1;
+
+	/**
+	 * Title of Sticky Post in the loops
+	 */
+	.entry-title {
+		font-size: if($style_loop_title_font_size, $style_loop_title_font_size, $style_general_body_font_size) * 1.5;
+		color: $style_general_bgcolor1;
+		a {
+			background-color: if($style_loop_title_color, $style_loop_title_color, $style_general_bgcolor1);
+			padding: 0 0.5em;
+		}
+	}
+
+	/**
+	 * Content and Excerpt of Sticky Post in the loops
+	 */
+	.entry-content,
+	.entry-summary {
+		font-size: if($style_loop_content_font_size, $style_loop_content_font_size, $style_general_body_font_size) * 16 / 14;
+	}
+}
+
+/**
+ * Remove top border and padding-top of the first row post hentry
+ */
+@for $i from 1 through 12 {
+	#content .grid-#{$i} {
+		@for $j from 1 through $i {
+			> .hentry:nth-child(#{$j}) {
+				border-top-width: 0;
+				padding-top: 0;
+
+				.entry-thumbnail {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/**
+ * SINGLE POST
+ * ============================================================================
+ */
+body.single-post {
+
+	/** 
+	 * Title in Site Header secion
+	 */
+	h1.entry-title {
+		@extend %wpdanceclaratheme_single_post_title;
+	}
+	@at-root {
+		@media (max-width: $screen-xs-max) {
+			body.single-post h1.entry-title {
+				@if ($style_single_title_font_size) {
+					font-size: $style_single_title_font_size * 2 / 3;
+				}
+				@else if ($style_general_h1_font_size) {
+					font-size: $style_general_h1_font_size * 2 / 3;
+				}
+				@else {
+					font-size: $style_general_body_font_size * 2 / 3;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Inside the first post entry
+	 */
+	#content .hentry.post:first-child {
+
+		&:not(.has-post-thumbnail) {
+			padding-top: 0;
+		}
+
+		/**
+		 * Add border top to single post which has featured image
+		 */
+		&.has-post-thumbnail {
+			// Uncomment below line to add top border of single post
+			// border-top-width: 1px;
+
+			&.post-thumbnail-center {
+				padding-top: 0;
+
+				.entry-thumbnail {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.entry-title {
+			@extend %wpdanceclaratheme_single_post_title;
+		}
+		.entry-meta {
+			@extend %wpdanceclaratheme_single_post_meta;
+		}
+		.entry-content {
+			@extend %wpdanceclaratheme_single_post_content;
+		}
+	}
+}
+
+/**
+ * Post Navigation
+ */
+.post-navigation {
+	@include style_loop_meta_color;
+	@include style_single_meta_color;
+
+	a {
+		@extend %link-plain;
+		text-transform: uppercase;
+		font-size: $style_general_body_font_size * $small_scale;
+	}
+
+	.meta-nav {
+		@include style_general_bordercolor5;
+	}
+}
+
+
+
+
+/**
+ * Page Pagination
+ */
+.paging-navigation {
+	a {
+		@extend %link-plain;
+	}
+}
+
+
+/**
+ * COMMENTS REPLY AND COMMENT FORM
+ * ============================================================================
+ */
+
+.comments-title, 
+.comment-reply-title {
+	@extend %wpdanceclaratheme-seperating-h3;
+}
+
+.comment-metadata {
+	@extend %wpdanceclaratheme_single_post_meta;
+}
+
+.comment-author {
+	@extend %wpdanceclaratheme_single_post_meta;
+}
+
+.comment-body {
+	border: 1px solid $style_general_bordercolor4;
+}
+
+.comment-list .reply {
+	text-transform: uppercase;
+	font-size: if(style_general_button_font_size, $style_general_button_font_size, $style_general_body_font_size) * $small_scale;
+
+	a {
+		@extend %link-plain;
+	}
+}

@@ -1,0 +1,67 @@
+
+.hentry.wpdance_portfolio {
+
+	.entry-meta {
+		@include style_general_bordercolor4;
+		
+		dd {
+			@include style_general_link_color;
+		}
+	}
+}
+
+
+.portfolio-navigation {
+	.nav-links {
+		a {
+			@include btn;
+			@include btn-secondary;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	.single-wpdance_portfolio {
+		.single-header {
+			.entry-title {
+				font-size: $style_heading_title_font_size * 2 / 3;
+			}
+		}
+	}
+}
+
+/**
+ * PORTFOLIOS IN THE MAIN LOOP
+ * ============================================================================
+ */
+
+body.post-type-archive-wpdance_portfolio #content,
+body.tax-wpdance_portfolio_category #content,
+body.tax-wpdance_portfolio_client #content,
+body.tax-wpdance_portfolio_skill #content {
+
+	.hentry {
+
+
+
+		.entry-title {
+			text-transform: uppercase;
+			font-size: $style_general_body_font_size * $small_scale;
+		}
+
+		.entry-links {
+			a {
+				@include style_general_bgcolor1;
+				@include style_general_bordercolor2;
+
+				&:hover, &:focus {
+					@include style_general_color3;
+					@include style_general_bgcolor4;
+				}
+			}
+		}
+	}
+}
+
+

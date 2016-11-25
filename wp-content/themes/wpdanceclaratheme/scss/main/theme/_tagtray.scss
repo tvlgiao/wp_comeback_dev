@@ -1,0 +1,31 @@
+/**
+ * Styling for Instagram streaming from tagtray.com
+ */
+
+.tagtray-gallery .ttbx-wrapper {
+	@include box-shadow(none);
+	border: 0;
+	background: transparent;
+}
+
+
+.tagtray-gallery-passive {
+	@for $i from 1 through 9 {
+		&.columns-#{$i} {
+			.tagtray-gallery-item {
+				width: (100% - ($i - 1) *  5%) / $i; // fallback if browser not support calc()
+				width: calc((100% - (#{$i} - 1) * 10px) / #{$i});
+				margin-right: 5%; // fallback if browser not support calc()
+				margin-right: calc(10px);
+
+				&:nth-child(#{$i}n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.tagtray-gallery.hide-load-more + .tagtray-load-more-block {
+	display: none !important;
+}

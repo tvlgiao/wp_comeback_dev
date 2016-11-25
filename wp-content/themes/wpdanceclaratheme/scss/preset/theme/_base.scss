@@ -1,0 +1,271 @@
+body {
+
+	@include font(
+		$style_general_body_font_family,
+		$style_general_body_font_size,
+		$style_general_body_font_weight,
+		$style_general_body_font_style,
+		$style_general_body_line_height,
+		$style_general_body_text_underline);
+
+	@extend %wpdanceclaratheme_style_general_body_color;
+	@extend %wpdanceclaratheme_style_general_bgcolor1;
+}
+
+.site {
+	@extend %wpdanceclaratheme_style_general_bgcolor1;	
+}
+
+h1, .h1 { @include h1; }
+h2, .h2 { @include h2; }
+h3, .h3 { @include h3; }
+h4, .h4 { @include h4; }
+h5, .h5 { @include h5; }
+h6, .h6 { @include h6; }
+
+
+
+a {
+	@include font(
+		$style_general_link_font_family,
+		$style_general_link_font_size,
+		$style_general_link_font_weight,
+		$style_general_link_font_style,
+		$style_general_link_line_height,
+		$style_general_link_text_underline);
+
+	@extend %wpdanceclaratheme_style_general_link_color;
+
+	&:hover, &:active, &:focus {
+			@include font(
+			$style_general_link_hover_font_family,
+			$style_general_link_hover_font_size,
+			$style_general_link_hover_font_weight,
+			$style_general_link_hover_font_style,
+			$style_general_link_hover_line_height,
+			$style_general_link_hover_text_underline);
+
+		@extend %wpdanceclaratheme_style_general_link_hover_color;
+	}
+}
+
+
+
+
+input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="number"],
+textarea {
+	@extend %form-control;
+	@include style_general_button_line_height;
+}
+
+%btn,
+.btn,
+%button,
+.button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	@include btn;
+}
+
+
+/**
+ * Button Gray -> Black
+ */
+%button2,
+.button2 {
+	@include btn;
+	background-color: $style_general_bgcolor3;
+	color: $style_general_color4;
+
+	&:hover, &:focus {
+		background-color: $style_general_bgcolor2;
+		color: $style_general_color3;
+	}
+}
+
+/**
+ * Button Gray -> Pink
+ */
+%button3,
+.button3 {
+	@extend %button2;
+	&:hover, &:focus {
+		background-color: $style_general_bgcolor4;
+	}
+}
+
+
+/**
+ * Button Pink -> Gray
+ */
+%button4,
+.button4 {
+	@include btn;
+	background-color: $style_general_bgcolor4;
+	color: $style_general_color3;
+
+	&:hover, &:focus {
+		background-color: $style_general_bgcolor3;
+		color: $style_general_color4;
+	}
+}
+
+/**
+ * Button Pink -> Black
+ */
+%button5,
+.button5 {
+	@include btn;
+	background-color: $style_general_bgcolor4;
+	color: $style_general_color3;
+
+	&:hover, &:focus {
+		background-color: $style_general_bgcolor2;
+		color: $style_general_color3;
+	}
+}
+
+/**
+ * Make biggest button
+ */
+.btn-hero {
+	@include btn-size(20px 70px, 2, 2rem);
+}
+
+
+/**
+ * Page Heading Section
+ */
+.archive-header,
+.single-header,
+
+/** Header of single Page has layout Page Title Top */
+.page.page-title-standard #content .entry-header {
+	@extend %wpdanceclaratheme_style_heading_bgcolor;
+	@extend %wpdanceclaratheme_style_heading_bgimage;
+
+	border-bottom: 2px solid $style_general_bordercolor4;
+
+	/**
+	 * Title
+	 */
+	.archive-title,
+	.page-title,
+	.entry-title {
+
+		/** First, inherit all styling from H1 */
+		@include h1;
+
+		/** Use style from its variables */
+		@include font(
+			$style_heading_title_font_family,
+			$style_heading_title_font_size,
+			$style_heading_title_font_weight,
+			$style_heading_title_font_style,
+			$style_heading_title_line_height,
+			$style_heading_title_text_underline,
+			$style_heading_title_text_transform);
+		@extend %wpdanceclaratheme_style_heading_title_color;
+	}
+	@at-root {
+		@media (max-width: $screen-xs-max) {
+			.archive-header,
+			.single-header {
+				.archive-title,
+				.page-title {
+					font-size: $style_heading_title_font_size * 2 / 3;
+				}
+			}
+		}
+	}
+
+
+	/**
+	 * Description
+	 */
+	.archive-meta {
+		@include font(
+			$style_heading_content_font_family,
+			$style_heading_content_font_size,
+			$style_heading_content_font_weight,
+			$style_heading_content_font_style,
+			$style_heading_content_line_height,
+			$style_heading_content_text_underline);
+		@extend %wpdanceclaratheme_style_heading_content_color;
+	}
+}
+
+
+
+
+/**
+ * Breadcrumbs
+ */
+.breadcrumbs {
+	@include font(
+		$style_breadcrumb_parent_font_family,
+		$style_breadcrumb_parent_font_size,
+		$style_breadcrumb_parent_font_weight,
+		$style_breadcrumb_parent_font_style,
+		$style_breadcrumb_parent_line_height,
+		$style_breadcrumb_parent_text_underline);
+	@extend %wpdanceclaratheme_style_breadcrumb_parent_color;
+	
+	text-transform: uppercase;
+
+	span {
+		@include font(
+			$style_breadcrumb_current_font_family,
+			$style_breadcrumb_current_font_size,
+			$style_breadcrumb_current_font_weight,
+			$style_breadcrumb_current_font_style,
+			$style_breadcrumb_current_line_height,
+			$style_breadcrumb_current_text_underline);
+		@extend %wpdanceclaratheme_style_breadcrumb_current_color;
+	}
+
+	a {
+		@extend %link-plain;
+
+		span {
+			@include font(
+				$style_breadcrumb_parent_font_family,
+				$style_breadcrumb_parent_font_size,
+				$style_breadcrumb_parent_font_weight,
+				$style_breadcrumb_parent_font_style,
+				$style_breadcrumb_parent_line_height,
+				$style_breadcrumb_parent_text_underline);
+			@extend %wpdanceclaratheme_style_breadcrumb_parent_color;
+		}
+	}
+}
+
+.woocommerce .woocommerce-breadcrumb {
+	@include font(
+		$style_breadcrumb_current_font_family,
+		$style_breadcrumb_current_font_size,
+		$style_breadcrumb_current_font_weight,
+		$style_breadcrumb_current_font_style,
+		$style_breadcrumb_current_line_height,
+		$style_breadcrumb_current_text_underline);
+	@extend %wpdanceclaratheme_style_breadcrumb_current_color;
+
+	text-transform: uppercase;
+
+	a {
+		@extend %link-plain;
+		@include font(
+			$style_breadcrumb_parent_font_family,
+			$style_breadcrumb_parent_font_size,
+			$style_breadcrumb_parent_font_weight,
+			$style_breadcrumb_parent_font_style,
+			$style_breadcrumb_parent_line_height,
+			$style_breadcrumb_parent_text_underline);
+		@extend %wpdanceclaratheme_style_breadcrumb_parent_color;
+	}
+}
+
+
+

@@ -1,0 +1,157 @@
+
+iframe {
+	border: 0;
+}
+
+
+input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="number"],
+textarea {
+	@extend .form-control;
+}
+
+.btn,
+.button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	@extend .btn;
+}
+
+
+label {
+	font-weight: inherit;
+}
+
+/** fix bootstrap */
+.label:not([class*='label-']) {
+	color: inherit;
+}
+
+
+
+.page-title {
+}
+.page-title-top {
+	.page-title {
+		padding: 0;
+	}
+}
+
+/**
+ * Page Heading Section
+ */
+.archive-header,
+.single-header {
+	padding: 20px 0;
+
+	/**
+	 * Title
+	 */
+	.archive-title,
+	.page-title,
+	.entry-title {
+		margin: 0 0 15px;
+	}
+
+	/**
+	 * Description
+	 */
+	.archive-meta {
+		margin: 10px 0 0;
+	}
+}
+
+/**
+ * Page Heading Section - When configured at top position
+ * ----------------------------------------------------------------------------
+ */
+.page-title-top {
+
+	.archive-header,
+	.single-header {
+		display: table;
+		width: 100%;
+
+		.archive-title,
+		.page-title,
+		.entry-title {
+			display: table-cell;
+			vertical-align: middle;
+			min-width: 65%;
+			text-align: left;
+		}
+
+		.breadcrumbs,
+		.woocommerce-breadcrumb {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: right;
+			padding-left: 20px;
+		}
+	}
+}
+
+/**
+ * On Phone
+ */
+@media (max-width: $screen-xs-max) {
+	.page-title-top {
+		.archive-header,
+		.single-header {
+			display: block;
+
+			.archive-title,
+			.page-title,
+			.entry-title {
+				display: block;
+				text-align: center;
+			}
+
+			.breadcrumbs,
+			.woocommerce-breadcrumb {
+				display: block;
+				text-align: center;
+				padding-left: 0;
+
+			}
+		}
+	}
+}
+
+.page-title-top-center {
+
+	.archive-header,
+	.single-header {
+		display: block;
+
+		.archive-title,
+		.page-title,
+		.entry-title {
+			text-align: center;
+		}
+
+		.breadcrumbs,
+		.woocommerce-breadcrumb {
+			padding-left: 0;
+			text-align: center;
+			width: auto;
+		}
+	}
+}
+
+
+
+/**
+ * Breadcrumbs
+ */
+.breadcrumbs > span {
+	padding: 0 5px;
+
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+
+

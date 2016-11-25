@@ -1,0 +1,24 @@
+
+
+
+/**
+ * Styling when HTMLBlock Footer 01 is used
+ */
+.wpdanceclaratheme-htmlblock-footer-01 {
+
+	.site-footer {
+
+		/**
+		 * VC Icon Shortcode with Small Icon + Background in Footer
+		 * Make it smaller
+		 */
+		.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-sm.vc_icon_element-have-style-inner {
+			width: 1.7em !important;
+			height: 1.7em !important;
+
+			.vc_icon_element-icon {
+				font-size: 1.2em !important;
+			}
+		}
+	}
+}

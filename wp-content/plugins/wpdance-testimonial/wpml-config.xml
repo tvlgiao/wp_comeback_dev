@@ -1,0 +1,13 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="translate">wpdance_testimonial_additional_author</custom-field>
+        <custom-field action="translate">wpdance_testimonial_additional_jobtitle</custom-field>
+        <custom-field action="translate">wpdance_testimonial_additional_website</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">wpdance_testimonial</custom-type>
+    </custom-types>    
+    <taxonomies>
+        <taxonomy translate="1">wpdance_testimonial_category</taxonomy>
+    </taxonomies>
+</wpml-config>

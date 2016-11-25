@@ -1,0 +1,38 @@
+
+
+.site-header {
+	@extend %wpdanceclaratheme_style_header_color4;
+	// @extend %wpdanceclaratheme_style_header_bgcolor1;
+
+	.home-link {
+		@extend %wpdanceclaratheme_style_header_color2;
+	}
+}
+
+.site-title {
+	font-size: $style_general_body_font_size * 48 / 14;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1;
+	letter-spacing: -2px;
+}
+
+.site-description {
+	margin-top: 10px;
+	@extend %wpdanceclaratheme_style_header_color5;
+	font-style: italic;
+}
+
+
+
+/**
+ * DEFAULT HEADER
+ * ============================================================================
+ */
+.header-default {
+
+	.header-section-1 {
+
+	}
+
+}

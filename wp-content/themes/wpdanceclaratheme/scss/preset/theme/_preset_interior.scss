@@ -1,0 +1,75 @@
+
+
+/**
+ * DROP DOWN CART IN HEADER
+ */
+.site-header .widget_shopping_mini_cart.style-icon-qty .dropdown-cart-button .dropdown-total {
+	@include style_header_bgcolor4;
+	@include style_header_color1;
+
+	&:hover,
+	&:focus {
+		@include style_header_bgcolor1;
+	}
+    
+    .dropdown-cart-qty {
+    	@include style_header_bgcolor2;
+		@include style_header_color3;	
+    }
+}
+
+
+/**
+ * UBER MENU
+ */
+.ubermenu.ubermenu-skin-none.ubermenu-horizontal .ubermenu-nav > .ubermenu-item > .ubermenu-target {
+	border-width: 2px 0 0;
+	letter-spacing: 1px;
+}
+
+
+
+/**
+ * PRODUCTS
+ */
+.woocommerce ul.products li.product .wpdanceclaratheme-product-details {
+	padding: 15px 0;
+
+	h3 {
+		padding: 10px 0;
+	}
+
+	.star-rating {
+		font-size: 12px;
+		@include prefixed(font-smoothing, antialiased);
+		margin-bottom: 10px;
+	}
+
+	.price {
+		font-size: $style_general_body_font_size * 18 / 14;
+		color: $style_general_color4;
+		margin-bottom: 10px;
+	}
+}
+
+.woocommerce .star-rating, 
+.woocommerce .star-rating:before {
+	color: $theme_star_color;
+}
+
+
+
+/**
+ * POSTS
+ */
+body.single-post h1.entry-title, 
+body.single-post #content .hentry.post:first-child .entry-title, 
+.wpdanceclaratheme_single_post_title, 
+.hentry.post .entry-title, 
+.wpdanceclaratheme_post_title {
+	text-transform: none;
+}
+
+
+
+

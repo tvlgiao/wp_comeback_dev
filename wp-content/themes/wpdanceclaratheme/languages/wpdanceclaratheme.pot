@@ -1,0 +1,2823 @@
+# Copyright (C) 2016 tvlgiao
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPDanceClaraTheme 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wpdanceclaratheme\n"
+"POT-Creation-Date: 2016-10-30 16:47:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:17
+msgid "Not Found"
+msgstr ""
+
+#: 404.php:22
+msgctxt "404 page"
+msgid "404"
+msgstr ""
+
+#: 404.php:23
+msgctxt "404 page"
+msgid "Oops! Page not found."
+msgstr ""
+
+#: 404.php:24
+msgctxt "404 page"
+msgid ""
+"Sorry, but the page you are looking for is not found. please, make sure you "
+"have typed the current URL."
+msgstr ""
+
+#: archive-wpdance_portfolio.php:33
+msgctxt "portfolio title"
+msgid "Category: %s"
+msgstr ""
+
+#: archive-wpdance_portfolio.php:36
+msgctxt "portfolio title"
+msgid "Client: %s"
+msgstr ""
+
+#: archive-wpdance_portfolio.php:39
+msgctxt "portfolio title"
+msgid "Skill: %s"
+msgstr ""
+
+#: archive-wpdance_portfolio.php:42 inc/wpdanceclaratheme/customizer.php:855
+msgid "Portfolio"
+msgstr ""
+
+#: archive-wpdance_portfolio.php:68
+msgctxt "portfolio entry links"
+msgid "Preview: %s"
+msgstr ""
+
+#: archive.php:30
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:34
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:34
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:36
+msgid "Archives"
+msgstr ""
+
+#: author-bio.php:26
+msgid "About %s"
+msgstr ""
+
+#: author-bio.php:30
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: author.php:33
+msgid "All posts by %s"
+msgstr ""
+
+#: category.php:20
+msgid "Category: %s"
+msgstr ""
+
+#: comments.php:25
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:45
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:46
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:17 content-aside.php:36 content-audio.php:18
+#: content-chat.php:18 content-gallery.php:24 content-image.php:24
+#: content-link.php:18 content-quote.php:21 content-status.php:15
+#: content-video.php:21 content.php:25 image.php:45 page-teaser.php:60
+#: page.php:43 single-wpdance_portfolio.php:85
+msgid "Edit"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: content-aside.php:25 content-audio.php:36 content-chat.php:40
+#: content-gallery.php:42 content-image.php:41 content-link.php:30
+#: content-quote.php:28 content-status.php:22 content-video.php:39
+#: content.php:54 inc/wpdanceclaratheme/filter.php:149
+#: single-wpdance_portfolio.php:50
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:29 content-audio.php:40 content-chat.php:44
+#: content-gallery.php:46 content-image.php:45 content-link.php:34
+#: content-quote.php:32 content-status.php:26 content-video.php:43
+#: content.php:58 image.php:71 page-teaser.php:56 page.php:39
+#: single-wpdance_portfolio.php:54
+msgid "Pages:"
+msgstr ""
+
+#: content-gallery.php:21 content-image.php:21 content-quote.php:18
+#: content-video.php:18 content.php:29
+msgid "Leave a comment"
+msgstr ""
+
+#: content-gallery.php:21 content-image.php:21 content-quote.php:18
+#: content-video.php:18 content.php:29
+msgid "One comment so far"
+msgstr ""
+
+#: content-gallery.php:21 content-image.php:21 content-quote.php:18
+#: content-video.php:18 content.php:29
+msgid "View all % comments"
+msgstr ""
+
+#: content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:18
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+
+#: content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: footer.php:24
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:24
+msgid "Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:24
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:26
+msgid "http://www.wpdance.com/"
+msgstr ""
+
+#: footer.php:26
+msgid "WPDanceClaraTheme WordPress Theme"
+msgstr ""
+
+#: header-style01.php:54
+msgid "Menu"
+msgstr ""
+
+#: header-style01.php:55
+msgid "Skip to content"
+msgstr ""
+
+#: image.php:23
+msgid ""
+"<span class=\"attachment-meta\">Published on <time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time> in <a href=\"%3$s\" title=\"Return to %4$s\" "
+"rel=\"gallery\">%5$s</a></span>"
+msgstr ""
+
+#: image.php:39
+msgid "Link to full-size image"
+msgstr ""
+
+#: image.php:40
+msgid "Full resolution"
+msgstr ""
+
+#: image.php:52
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: image.php:53
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/class-tgm-plugin-activation.php:337
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/class-tgm-plugin-activation.php:339
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:377
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:393
+#: inc/class-tgm-plugin-activation.php:916
+#: inc/class-tgm-plugin-activation.php:2622
+#: inc/class-tgm-plugin-activation.php:3669
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+#: inc/class-tgm-plugin-activation.php:3248
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+#: inc/class-tgm-plugin-activation.php:3041
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:397
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:399
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: inc/class-tgm-plugin-activation.php:401
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1023
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1023
+#: inc/class-tgm-plugin-activation.php:1026
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1026
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1210
+#: inc/class-tgm-plugin-activation.php:3037
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: inc/class-tgm-plugin-activation.php:2071
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2362
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2365
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2381
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2384
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2387
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2404
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2408
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2410
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2416
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2419
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2422
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/class-tgm-plugin-activation.php:2431
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2477
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2481
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2485
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2489
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2571
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2579
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2587
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2599
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2622
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2636
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2637
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2638
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2642
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2643
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2692
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2697
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2703
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2773
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2806
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2812
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2815
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2846
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2848
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2889
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2891
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2997
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3023
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3247
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3587
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/class-tgm-plugin-activation.php:3590
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3592
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3596
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3598
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3598
+#: inc/class-tgm-plugin-activation.php:3606
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3598
+#: inc/class-tgm-plugin-activation.php:3606
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3599
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3601
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3604
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3606
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3607
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3609
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/wpdanceclaratheme/action.php:165
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/wpdanceclaratheme/action.php:167
+msgid "Appears on posts and pages in the sidebar."
+msgstr ""
+
+#: inc/wpdanceclaratheme/action.php:175
+msgid "Before Main Content"
+msgstr ""
+
+#: inc/wpdanceclaratheme/action.php:177
+msgid "Appears before output main content"
+msgstr ""
+
+#: inc/wpdanceclaratheme/action.php:185
+msgid "After Main Content"
+msgstr ""
+
+#: inc/wpdanceclaratheme/action.php:187
+msgid "Appears after output main content"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:20
+msgid "WPDanceClaraTheme: Walkthrough"
+msgstr ""
+
+#. #-#-#-#-#  a.pot (WPDanceClaraTheme 1.0)  #-#-#-#-#
+#. Theme Name of the plugin/theme
+#: inc/wpdanceclaratheme/adminpage.php:21
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:13
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:122
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:14
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:29
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:56
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:119
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:153
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:218
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:533
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:651
+msgid "WPDanceClaraTheme"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:81
+msgid ""
+"Theme WPDanceClaraTheme is activated. We highly recommend to check out the "
+"Quickstart guide now! Go to <strong>Appearance</strong> &gt; "
+"<strong>WPDanceClaraTheme</strong> or click button <a href='%s' "
+"class='button button-primary'>Theme Quickstart</a>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:325
+msgid ""
+"Theme Walkthough is in progress. <a href='%s' class='button button-"
+"primary'>Return Theme Walkthrough</a>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:337
+msgid "WPDanceClaraTheme - Get Started"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:354
+msgid ""
+"This short guide will help you get started and quickly familiar with the "
+"theme. Teach you step by step how to build site like your demo site in few "
+"minutes without technical knowledge. Help you elimite too much time to read "
+"the complete user guide."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:356
+msgid "Let's get started now"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:375
+msgid "Congraturation! You have completed the tutorial."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:376
+msgid "Show check list"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:403
+msgid "All recommended plugins are already activated"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:410
+msgid "Install and activate all recommended plugins"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:415
+msgid "Some plugins are still not activated: <strong>%s</strong>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:417
+#: inc/wpdanceclaratheme/adminpage.php:536
+msgid ""
+"Please go to <strong><a href=\"%s\">Install Plugins</a></strong> page to "
+"start install and activate the missing plugins."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:419
+msgid ""
+"If plugin is <strong>commercial</strong> and <strong>not included</strong> "
+"in the theme you can ignore it."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:421
+#: inc/wpdanceclaratheme/adminpage.php:538
+msgid "Go to Install Plugins"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:423
+#: inc/wpdanceclaratheme/adminpage.php:493
+#: inc/wpdanceclaratheme/adminpage.php:540
+#: inc/wpdanceclaratheme/adminpage.php:567
+#: inc/wpdanceclaratheme/adminpage.php:633
+#: inc/wpdanceclaratheme/adminpage.php:700
+#: inc/wpdanceclaratheme/adminpage.php:757
+#: inc/wpdanceclaratheme/adminpage.php:822
+#: inc/wpdanceclaratheme/adminpage.php:885
+msgid "Skip this step"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:461
+msgid "All default data come with the theme are already imported"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:468
+msgid "Import default data come with the theme"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:473
+msgid "The follow content is missing:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:477
+msgid "Header / Footer Items: <code>%s</code>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:481
+msgid "Visual Composer Grid Types: <code>%s</code>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:485
+msgid "Menu Configurations: <code>%s</code>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:489
+msgid ""
+"Please click button <strong>Import Now</strong> to start importing theme "
+"data."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:491
+msgid "Import Now"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:529
+msgid "Slider Revolution plugin is not activated"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:535
+msgid ""
+"<strong>Slider Revolution</strong> plugin must be installed and activated "
+"before checking sliders come with the theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:549
+msgid "All sample Revolution sliders are already imported"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:556
+msgid "Import sample Revolution sliders come with the theme"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:561
+msgid "Some sample sliders are missing: <code>%s</code>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:562
+msgid ""
+"Please go to <strong><a href=\"%s\">Slider Revolution</a></strong>, choose "
+"<strong>Import Slider</strong> to start importing sample sliders come with "
+"the theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:563
+msgid ""
+"Each sample slider is a zip file in the directory <code>sample-data/"
+"revslider/</code> inside the zip file <strong>\"All files and documentation"
+"\"</strong>, you should have downloaded it when you purchased the theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:565
+msgid "Go to Slider Revolution"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:602
+msgid "You have completed learning about importing sample data"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:609
+msgid "Instruction for importing sample data"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:617
+msgid ""
+"Sample data are provided inside the directory <code>sample-data/</code> of "
+"the zip file \"All files and documentation\" which you should have "
+"downloaded when purchased the theme. Sample data include:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:619
+msgid "<code>pages.xml</code> for sample pages include various homepages."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:620
+msgid "<code>contact-forms.xml</code> for sample contact form."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:621
+msgid "<code>testimonials.xml</code> for sample testimonial posts."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:622
+msgid "<code>portfolios.xml</code> for sample portfolio posts."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:623
+msgid "<code>products.xml</code> for sample WooCommerce products."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:627
+msgid ""
+"To import the sample data, go to <strong>Tools</strong> &gt; <strong>Import</"
+"strong> &gt; and choose <strong>WordPress</strong> &gt; select the XML file "
+"which you want to import."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:629
+msgid "Go to WordPress Import Tool"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:631
+#: inc/wpdanceclaratheme/adminpage.php:820
+#: inc/wpdanceclaratheme/adminpage.php:883
+msgid "Confirm you got it"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:666
+msgid "Custom Header & Footer are already configured in Customizer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:673
+msgid "Configure a default Header & Footer style in Customizer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:681
+msgid ""
+"Below instruction will teach you how to set a header and footer for your "
+"site, pick from our headers and footers' styles packed with the theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:687
+msgid ""
+"Go to <strong>Appearance</strong> &gt; <strong>Customize</strong> &gt; "
+"<strong>Theme - Header</strong> &gt; select a header in option "
+"<strong>Header HTML Block</strong>. Click <strong>Save</strong> button to "
+"save."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:694
+msgid ""
+"Go to <strong>Appearance</strong> &gt; <strong>Customize</strong> &gt; "
+"<strong>Theme - Footer</strong> &gt; select a footer in option "
+"<strong>Footer HTML Block</strong>. Click <strong>Save</strong> button to "
+"save."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:698
+#: inc/wpdanceclaratheme/adminpage.php:755
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:733
+msgid "The homepage is a static page already"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:740
+msgid "Set a static page as homepage"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:748
+msgid "Below instruction will teach you configure a static page as homepage:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:750
+msgid ""
+"Go to <strong>Appearance</strong> &gt; <strong>Customize</strong> &gt; "
+"<strong>Static Front Page</strong> &gt; choose <strong>Front page displays</"
+"strong> option is <strong>A static page</strong>. Then select a page in the "
+"dropdown option <strong>Front page</strong>. Click <strong>Save</strong> "
+"button to save."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:752
+msgid "/images/walkthrough/set-homepage.jpg"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:790
+msgid "You have completed learning about theme settings in Customizer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:797
+msgid "Instruction about configuring theme in Customizer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:805
+msgid ""
+"The theme provides many options to utilize. Almost theme options can be "
+"found in the native <strong>Customizer</strong> panels."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:807
+msgid "/images/walkthrough/customize-typo.jpg"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:809
+msgid ""
+"Section <strong>Theme - Typography &amp; Color</strong>: Let you change "
+"typography, fonts, colors of each elements of your site. The theme also "
+"supplies a few presets to quickly change typography &amp; colors of all "
+"elements."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:811
+msgid ""
+"Section <strong>Theme - Header</strong>: Let you pick a site logo, choose a "
+"default page header from dozens pre-made headers come with the theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:813
+msgid ""
+"Section <strong>Theme - Footer</strong>: Let you choose a default page "
+"footer from dozens pre-made footers."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:815
+msgid ""
+"Section <strong>Theme - Layout</strong>: Let you change page layout of "
+"default page as well as specific pages. Decide the main sidebar showing on "
+"left or right column, for just showing full width. Assign different sidebar "
+"for each page, etc..."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:817
+msgid ""
+"Section <strong>Theme - Advance</strong>: Let you Import/Export theme "
+"settings as well as reset all theme settings to factory default. "
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:855
+msgid ""
+"Completed learning about extra options for <em>post, page, category, tag, "
+"taxonomy, term</em>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:862
+msgid ""
+"Theme adds extra options for <em>post, page, category, tag, taxonomy, term</"
+"em> you should know"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:870
+msgid ""
+"Theme add new extra options for customizing <strong>layout, header, footer</"
+"strong>... of a specific post, page, category, tag, taxonomy, term, product."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:873
+msgid "/images/walkthrough/extra-options-for-post.png"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:878
+msgid "/images/walkthrough/extra-options-for-category.png"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:906
+msgid "Start over this tutorial"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:914
+msgid "Read the complete user guide"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:914
+msgid "Read user guide"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:922
+msgid "Got trouble? Contact us for support here"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:922
+msgid "Submit a ticket"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:924
+msgid ""
+"Please make sure you add our email <strong>support@wpdance.com</strong> to "
+"whitelist so that our response email does not drop into your julk mailbox"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:926
+msgid ""
+"If the ticket system somehow doesn't work, please contact us via direct "
+"email <a href=\"mailto:tvlgiao@gmail.com?subject=[wpdanceclaratheme-"
+"support]\">tvlgiao@gmail.com</a>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:935
+msgid "Please review & rate our theme"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:935
+msgid "Rate for us"
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:936
+msgid ""
+"Thank you for choosing our theme. Please you like this theme please rate for "
+"us."
+msgstr ""
+
+#: inc/wpdanceclaratheme/adminpage.php:940
+msgid "Your feedback will help us improve product better!"
+msgstr ""
+
+#: inc/wpdanceclaratheme/cm-registration.php:20
+msgid "Login / Register"
+msgstr ""
+
+#: inc/wpdanceclaratheme/cm-registration.php:22
+#: inc/wpdanceclaratheme/helper.php:1337
+msgid "Login"
+msgstr ""
+
+#: inc/wpdanceclaratheme/cm-registration.php:53
+#: inc/wpdanceclaratheme/helper.php:1350
+msgid "Logout"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/export_control.class.php:65
+msgid "Export theme settings"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/export_control.class.php:69
+msgid ""
+"Export all themes settings for back up or upgrade site. You can import back "
+"this file when needed. Note: It only exports settings belong to the theme, "
+"exclude site's other settings."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/export_control.class.php:72
+msgid "Export"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/font_control.class.php:41
+msgid "Web Fonts"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/font_control.class.php:59
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/htmlblock_control.class.php:93
+msgid "Edit this block"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/import_control.class.php:89
+msgid "Error settings file. Please check the uploaded file is settings file."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/import_control.class.php:123
+msgid "Imported theme settings successfully."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/import_control.class.php:160
+msgid "Import theme settings"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/import_control.class.php:164
+msgid "Upload a file to import settings for this theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/import_control.class.php:171
+msgid "Import"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/import_control.class.php:172
+msgid "Uploading..."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/macrocustomizer.class.php:221
+msgid "Font size in pixel &#40;px&#41;."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/macrocustomizer.class.php:282
+msgid "Input number include unit. e.i. 1.5, 1.5em, 30px"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/reset_control.class.php:61
+msgid "All theme settings are reset."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/reset_control.class.php:83
+msgid "Restore theme settings to default"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/reset_control.class.php:87
+msgid "Factory reset: restore all theme settings to default value."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer/reset_control.class.php:90
+msgid "Restore"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:462
+msgctxt "customizer"
+msgid "Header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:470
+msgid "Header Logo"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:471
+msgid "Upload a logo image to display on header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:480
+msgid "Hide Site Title"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:481
+msgid "If check, hide site title on the header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:490
+msgid "Hide Site Description"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:491
+msgid "If check, hide site description on the header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:502
+msgid "Header HTML Block"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:503
+msgid "Select HTML Block that shows on the header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:527
+msgctxt "customizer"
+msgid "Footer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:536
+msgid "Footer HTML Block"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:537
+msgid "Select HTML Block that shows on the footer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:547
+msgid "Hide Credit Links"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:548
+msgid "Check to hide WordPress Power By credit link and the theme credit link"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:571
+msgctxt "customizer"
+msgid "Layout"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:579
+msgid "General"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:588
+msgid "Page Title Position"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:593
+msgid "Standard"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:594
+#: inc/wpdanceclaratheme/customizer.php:1104
+msgid "Top"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:595
+msgid "Top-center"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:603
+msgid "Posts Pagination Type"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:608
+msgid "Next / Previous"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:609
+msgid "Numbers"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:626
+msgid "Don't excerpt for the_content()"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:627
+msgid ""
+"Plugin <strong>advanced-excerpt</strong> occurs error when preview page in "
+"WordPress Customizer. A workaround is excluding excerpt filter for "
+"the_content()."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:640
+msgid "Homepage"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:658
+msgid "Post Categories"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:675
+msgid "Archive Pages"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:691
+msgid "Tag Page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:707
+msgid "Author Page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:722
+msgid "Single Post"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:770
+msgid "WooCommece"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:779
+msgid "Products Per Page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:780
+msgid ""
+"Number of products per page show on WooCommerce shop page and category pages."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:791
+msgid "Products Column"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:792
+msgid ""
+"Number of products per row show on WooCommerce shop page and category pages."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:818
+msgid "Color Attributes"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:819
+msgid ""
+"Specify product attributes convert to color options picker. You can type a "
+"string and press <code>Enter</code> to add more items."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:832
+msgid "Image Attributes"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:833
+msgid ""
+"Specify product attributes convert to image options picker. You can type a "
+"string and press <code>Enter</code> to add more items."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:862
+msgid "Portfolio Items Per Page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:863
+msgid ""
+"Number of portfolio items per page show on category page and archive pages. "
+"If empty, use value from <strong>Blog pages show at most</strong> specified "
+"in <strong>Settings</strong> &gt; <strong>Reading</strong>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:891
+msgid "404 Not Found"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:898
+msgid "Static Page for 404 Not Found"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:899
+msgid "Select a page to show when user access to broken links."
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:918
+msgctxt "customizer"
+msgid "Advance"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:922
+msgid "Import / Export Settings"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:946
+msgid "Reset All Settings"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:975
+#: inc/wpdanceclaratheme/customizer.php:1018
+#: inc/wpdanceclaratheme/customizer.php:1048
+#: inc/wpdanceclaratheme/customizer.php:1099
+#: inc/wpdanceclaratheme/metabox.php:51 inc/wpdanceclaratheme/metabox.php:64
+#: inc/wpdanceclaratheme/metabox.php:126 inc/wpdanceclaratheme/metabox.php:186
+#: inc/wpdanceclaratheme/metabox.php:222 inc/wpdanceclaratheme/metabox.php:236
+#: inc/wpdanceclaratheme/metabox.php:246
+msgid "Default"
+msgstr ""
+
+#. #-#-#-#-#  a.pot (WPDanceClaraTheme 1.0)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: inc/wpdanceclaratheme/customizer.php:978
+#: inc/wpdanceclaratheme/metabox.php:52 inc/wpdanceclaratheme/metabox.php:127
+#: inc/wpdanceclaratheme/metabox.php:187
+msgid "Left Sidebar"
+msgstr ""
+
+#. #-#-#-#-#  a.pot (WPDanceClaraTheme 1.0)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: inc/wpdanceclaratheme/customizer.php:979
+#: inc/wpdanceclaratheme/metabox.php:53 inc/wpdanceclaratheme/metabox.php:128
+#: inc/wpdanceclaratheme/metabox.php:188
+msgid "Right Sidebar"
+msgstr ""
+
+#. #-#-#-#-#  a.pot (WPDanceClaraTheme 1.0)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: inc/wpdanceclaratheme/customizer.php:980
+#: inc/wpdanceclaratheme/metabox.php:54 inc/wpdanceclaratheme/metabox.php:129
+#: inc/wpdanceclaratheme/metabox.php:189
+msgid "Full Width"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:986
+#: inc/wpdanceclaratheme/metabox.php:181
+msgid "Layout"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1012
+#: inc/wpdanceclaratheme/metabox.php:231
+msgid "Masonry"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1013
+msgid "Show masonry layout on archive pages?"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1019
+#: inc/wpdanceclaratheme/customizer.php:1049
+#: inc/wpdanceclaratheme/metabox.php:237 inc/wpdanceclaratheme/metabox.php:247
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:60
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:89
+msgid "Yes"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1020
+#: inc/wpdanceclaratheme/customizer.php:1050
+#: inc/wpdanceclaratheme/metabox.php:238 inc/wpdanceclaratheme/metabox.php:248
+msgid "No"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1042
+msgid "Excerpt"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1043
+msgid "Show excerpt instead of content on archive pages?"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1071
+msgid "Column"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1072
+msgid "Number of columns in the main loop"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1102
+#: inc/wpdanceclaratheme/metabox.php:65 inc/wpdanceclaratheme/metabox.php:223
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:143
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:180
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:723
+msgid "Left"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1103
+#: inc/wpdanceclaratheme/metabox.php:66 inc/wpdanceclaratheme/metabox.php:224
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:144
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:181
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:725
+msgid "Right"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1105
+msgid "Odd Left & Event Right"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1106
+msgid "Odd Right & Event Left"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1112
+#: inc/wpdanceclaratheme/metabox.php:59 inc/wpdanceclaratheme/metabox.php:217
+msgid "Image Position"
+msgstr ""
+
+#: inc/wpdanceclaratheme/customizer.php:1113
+msgid "Position of post image in the main loop"
+msgstr ""
+
+#: inc/wpdanceclaratheme/filter.php:61
+msgid "Page %s"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:351
+msgid "Previous"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:352
+msgid "Next"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:353
+msgid "Page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:358
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:362
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:366
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:392
+msgid "Post navigation"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:395
+msgctxt "Previous post link"
+msgid ""
+"<span class=\"meta-nav\">&larr; Previous Post</span><span class=\"meta-nav-"
+"title\">%title</span>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:396
+msgctxt "Next post link"
+msgid ""
+"<span class=\"meta-nav-title\">%title</span><span class=\"meta-nav\">Next "
+"Post &rarr;</span>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:413
+msgid "Portfolio navigation"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:416
+msgid ""
+"<span class=\"meta-nav\">Previous Project</span><span class=\"meta-nav-title"
+"\"> %title</span>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:417
+msgid ""
+"<span class=\"meta-nav\">Next Project</span><span class=\"meta-nav-title\"> "
+"%title</span>"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:431
+msgid "Sticky"
+msgstr ""
+
+#. Translators: used between list items, there is a space after the comma.
+#: inc/wpdanceclaratheme/helper.php:437 inc/wpdanceclaratheme/helper.php:445
+#: inc/wpdanceclaratheme/helper.php:470
+msgid ", "
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:455
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:488
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:496
+msgid "Permalink to %s"
+msgstr ""
+
+#: inc/wpdanceclaratheme/helper.php:1343
+msgid "Register"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:36 inc/wpdanceclaratheme/metabox.php:99
+#: inc/wpdanceclaratheme/metabox.php:175 inc/wpdanceclaratheme/metabox.php:198
+msgctxt "metabox"
+msgid "Options"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:46 inc/wpdanceclaratheme/metabox.php:121
+msgid "Page Layout"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:47
+msgid ""
+"Layout of the single page. If not set (Default), it inherits values "
+"specified from <strong>Customizer &gt; Theme - Layout</strong>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:60
+msgid ""
+"Position of the featured image show on single post and archive pages. If not "
+"set (Default), it inherits values specified from <strong>Customizer &gt; "
+"Theme - Layout</strong>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:67 inc/wpdanceclaratheme/metabox.php:225
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:145
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:724
+msgid "Center"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:72 inc/wpdanceclaratheme/metabox.php:134
+msgid "Hide Title"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:73
+msgid "Show or Hide post title on the single page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:79 inc/wpdanceclaratheme/metabox.php:141
+msgid "Custom Header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:80
+msgid "Specify a custom header for the single page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:87 inc/wpdanceclaratheme/metabox.php:149
+msgid "Custom Footer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:88
+msgid "Specify a custom footer for the single page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:109
+msgid "Image Style"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:110
+msgid ""
+"Is featured image size portrail or landscape? If landscape, it takes 2 "
+"columns on archive pages. Default is portrait."
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:115
+msgid "Landscape"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:116
+msgid "Portrait"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:122
+msgid ""
+"Layout of the single portfolio page. If not set (Default), it uses layout "
+"configured in <strong>Customizer &gt; Theme - Layout &gt; Portfolio</strong>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:135
+msgid "Show or Hide portfolio title on single portfolio page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:142
+msgid "Specify a custom header for the portfolio single page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:150
+msgid "Specify a custom footer for the portfolio single page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:204
+msgid "Columns"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:205
+msgid ""
+"Number of columns (1 to 12). Please empty for default value configured in "
+"Customizer."
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:226
+msgid "Odd Left & Even Right"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:227
+msgid "Odd Right & Even Left"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:241
+msgid "Excerpt?"
+msgstr ""
+
+#: inc/wpdanceclaratheme/metabox.php:242
+msgid "Show posts exerpt instead of content on archive pages."
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:51
+msgid "HTML Block"
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:66
+msgid "VC Grid Item"
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:130
+msgid "Ubermenu configuration %s already exists. Ignore importing."
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:133
+msgid "Ubermenu configuration %s created."
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:215 inc/wpdanceclaratheme/setup.php:510
+msgid "%s already exist. Ignored import."
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:219
+msgid "%s are imported."
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:223 inc/wpdanceclaratheme/setup.php:518
+msgid "%s import failed. Please contact us for further help."
+msgstr ""
+
+#: inc/wpdanceclaratheme/setup.php:514
+msgid "%s are imported successfully."
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:65
+msgid "Advanced Excerpt"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:71
+msgid "Better Font Awesome"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:77
+msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:83
+msgid "CM Registration"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:89
+msgid "CMB2"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:95
+msgid "CMB2 Taxonomy"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:101
+msgid "Comments Widget Plus"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:107
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:113
+msgid "jQuery Colorbox"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:119
+msgid "Recent Posts Widget With Thumbnails"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:125
+msgid "Slider Revolution"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:134
+msgid "Widget CSS Classes"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:140
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:146
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:149
+msgid "WooCommerce Dropdown Cart"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:152
+msgid "WooCommerce Social Media Share Buttons"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:158
+msgid "WooSidebars"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:164
+msgid "WPBakery Visual Composer"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:172
+msgid "WPDance HTMLBlock"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:179
+msgid "WPDance Portfolio"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:186
+msgid "WPDance Testimonial"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:193
+msgid "WPDanceClaraTheme Toolkit"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:200
+msgid "YITH WooCommerce Quick View"
+msgstr ""
+
+#: inc/wpdanceclaratheme/tgmpa.php:206
+msgid "YITH WooCommerce Wishlist"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:10
+msgid "Countdown"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:12
+msgid "Show countdown box using jQuery."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:18
+msgctxt "countdown shortcode"
+msgid "Countdown To"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:20
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:29
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:37
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:45
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:53
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:61
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:69
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:227
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:236
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:244
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:252
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:260
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:268
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:276
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:287
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:295
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:303
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:311
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:319
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:327
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:335
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:343
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:351
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:359
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:367
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:375
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:383
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:391
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:399
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:407
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:415
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:423
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:431
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:439
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:447
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:455
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:463
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:471
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:479
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:487
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:495
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:503
+msgid "Settings"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:22
+msgid "Countdown until reach this value. Format: YYYY-MM-DD HH:II:SS"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:27
+msgctxt "countdown shortcode"
+msgid "Hide Weeks"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:30
+msgid "If check, don't show weeks box"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:35
+msgctxt "countdown shortcode"
+msgid "Hide Days"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:38
+msgid "If check, don't show days box"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:43
+msgctxt "countdown shortcode"
+msgid "Hide Hours"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:46
+msgid "If check, don't show hours box"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:51
+msgctxt "countdown shortcode"
+msgid "Hide Minutes"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:54
+msgid "If check, don't show minutes box"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:59
+msgctxt "countdown shortcode"
+msgid "Hide Seconds"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:62
+msgid "If check, don't show seconds box"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:67
+msgid "CSS Class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:70
+msgid "Extra CSS classes add to the element"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:75
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:34
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:520
+msgid "CSS box"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_countdown_vc.config.php:77
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:36
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:522
+msgid "Design Options"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:7
+msgid "Meta field"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:14
+msgid "URL (Link)"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:20
+msgid "Add custom link."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:24
+msgid "Field key name for link"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:30
+msgid "Enter custom field name to retrieve meta data value to make link."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:48
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:72
+msgid "Select element tag."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:49
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:73
+msgid "Select text alignment."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:50
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:74
+msgid "Enter font size."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:51
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:75
+msgid "Enter line height."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:52
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:76
+msgid "Select color for your element."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:58
+msgid "Use custom fonts?"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:61
+msgid "Enable Google fonts."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:79
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:91
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:109
+msgid "Custom fonts"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:87
+msgid "Yes theme default font family?"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:90
+msgid "Yes font family from the theme."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:105
+msgid "Select font family."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:106
+msgid "Select font styling."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:118
+msgid "Advanced Custom Field"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:124
+msgid "Advanced custom fields data from meta values of the post."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:128
+msgid "Field key name"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:130
+msgid "Enter custom field name to retrieve meta data value."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:134
+msgid "Label"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:136
+msgid "Enter label to display before key value."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:140
+msgid "Alignment"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:146
+msgid "Justify"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:148
+msgid "Select alignment."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:152
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:41
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:61
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:133
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:194
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:509
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:745
+msgid "Extra class name"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_gitem_post_meta_advanced.config.php:154
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:42
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:62
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:134
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:195
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:510
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:746
+msgid ""
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:12
+msgid "Banner Image"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:15
+msgid "Show banner image with button, text and hover effects"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:22
+msgid "Text"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:25
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:32
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:39
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:46
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:54
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:62
+msgid "Extras"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:26
+msgid "Enter content text to show on the banner."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:30
+msgid "Button Text"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:33
+msgid "Enter button text to show button on banner. Leave empty to hide button."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:37
+msgid "Button Link"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:40
+msgid "Enter URL link to page when click on the button."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:44
+msgid "Button CSS Class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:47
+msgid ""
+"Extra CSS class for button, appending to the default class 'btn'. Example: "
+"btn-primary"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:52
+msgid "Banner Style"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:55
+msgid "Choose predefined style for the banner."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:60
+msgid "Hover Effect"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes/wpdanceclaratheme_single_image_hover.config.php:63
+msgid "Choose animation effect when mouse hover the image."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:24
+msgid "Site Header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:26
+msgid "Display site info (title, tagline, logo...) on the header"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:33
+msgid "Custom Logo URL"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:34
+msgid ""
+"Specify a custom logo URL to replace default logo configured in the "
+"customizer."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:51
+msgid "User Links"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:53
+msgid "Display user's links (login, logout, register...)"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:70
+msgid "Login icon CSS class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:71
+msgid ""
+"CSS classes for Login icon. You can find icon class at <a href='http://"
+"fontawesome.io/icons/'>fontawesome.io</a>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:79
+msgid "Logout icon CSS class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:80
+msgid ""
+"CSS classes for Logout icon. You can find icon class at <a href='http://"
+"fontawesome.io/icons/'>fontawesome.io</a>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:88
+msgid "Register icon CSS class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:89
+msgid ""
+"CSS classes for Register icon. You can find icon class at <a href='http://"
+"fontawesome.io/icons/'>fontawesome.io</a>."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:114
+msgid "Navigation Menu"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:116
+msgid "Display navigation menu"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:124
+msgid "Theme Location"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:125
+msgid "Chooice theme location contains menu to show up"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:151
+msgid "Display the user's Cart in the sidebar."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:158
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:656
+msgid "Title:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:164
+msgid "Hide if cart is empty"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:170
+msgid "Show this widget on cart/checkout pages"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:176
+msgid "Popup align"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:186
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:602
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:610
+msgid "Style"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:187
+msgid "Choose dropdown button style."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:215
+msgid "Owl Carousel"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:225
+msgid "Number of Items"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:230
+msgid ""
+"This variable allows you to set the maximum amount of items displayed at a "
+"time with the widest browser width. Default: 5"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:234
+msgid "On Desktop"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:238
+msgid ""
+"This allows you to preset the number of slides visible with a particular "
+"browser width. The format is [x,y] whereby x=browser width and y=number of "
+"slides displayed. For example [1199,4] means that if(window<=1199){ show 4 "
+"slides per page} Alternatively use itemsDesktop: false to override these "
+"settings. Default: 1199,4"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:242
+msgid "On Small Desktop"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:246
+msgid "As above.. Default: 979,3"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:250
+msgid "On Tablet"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:254
+msgid "As above.. Default: 768,2"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:258
+msgid "On Small Tablet"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:262
+msgid "As above.. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:266
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:274
+msgid "On Mobile"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:270
+msgid "As above.. Default: 479,1"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:278
+msgid ""
+"This allow you to add custom variations of items depending from the width If "
+"this option is set, itemsDeskop, itemsDesktopSmall, itemsTablet, itemsMobile "
+"etc. are disabled For better preview, order the arrays by screen size, but "
+"it's not mandatory Don't forget to include the lowest available screen size, "
+"otherwise it will take the default one for screens lower than lowest "
+"available. \n"
+"\t\t\t\t\t\t\t\tExample:\n"
+"\t\t\t\t\t\t\t\t[[0, 2], [400, 4], [700, 6], [1000, 8], [1200, 10], [1600, "
+"16]]\n"
+"\t\t\t\t\t\t\t\t"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:285
+msgid "Single Item"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:289
+msgid "Display only one item. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:293
+msgid "Item Scale Up"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:297
+msgid ""
+"Option to not stretch items when it is less than the supplied items. "
+"Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:301
+msgid "Slide Speed"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:305
+msgid "Slide speed in milliseconds. Default: 200"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:309
+msgid "Pagination Speed"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:313
+msgid "Pagination speed in milliseconds. Default: 800"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:317
+msgid "Rewind Speed"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:321
+msgid "Rewind speed in milliseconds. Default: 1000"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:325
+msgid "Stop On Hover"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:329
+msgid "Stop autoplay on mouse hover. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:333
+msgid "Show Navigation"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:337
+msgid "Display 'next' and 'prev' buttons. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:341
+msgid "Navigation Text"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:345
+msgid ""
+"You can cusomize your own text for navigation. To get empty buttons use "
+"navigationText : false. Also HTML can be used here. Default: prev,next"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:349
+msgid "Rewind Nav"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:353
+msgid ""
+"Slide to first item. Use rewindSpeed to change animation speed. Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:357
+msgid "Scroll Per Page"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:361
+msgid ""
+"Scroll per page not per item. This affect next/prev buttons and mouse/touch "
+"dragging. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:365
+msgid "Pagination"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:369
+msgid "Show pagination. Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:373
+msgid "Pagination Numbers"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:377
+msgid "Show numbers inside pagination buttons. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:381
+msgid "Responsive"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:385
+msgid ""
+"You can use Owl Carousel on desktop-only websites too! Just change that to "
+"'false' to disable responsive capabilities. Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:389
+msgid "Responsive Refresh Rate"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:393
+msgid ""
+"Check window width changes every 200ms for responsive actions. Default: 200"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:397
+msgid "Responsive Base Width"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:401
+msgid ""
+"Owl Carousel check window for browser width changes. You can use any other "
+"jQuery element to check width changes for example '.owl-demo'. Owl will "
+"change only if '.owl-demo' get new width. Default: window"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:405
+msgid "Base Class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:409
+msgid ""
+"Automaticly added class for base CSS styles. Best not to change it if you "
+"don't need to. Default: owl-carousel"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:413
+msgid "Theme"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:417
+msgid ""
+"Default Owl CSS styles for navigation and buttons. Change it to match your "
+"own theme. Default: owl-theme"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:421
+msgid "Lazy Load"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:425
+msgid ""
+"Delays loading of images. Images outside of viewport won't be loaded before "
+"user scrolls to them. Great for mobile devices to speed up page loadings. "
+"IMG need special markup class='lazyOwl' and data-src='your img path'. "
+"Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:429
+msgid "Lazy Follow"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:433
+msgid ""
+"When pagination used, it skips loading the images from pages that got "
+"skipped. It only loads the images that get displayed in viewport. If set to "
+"false, all images get loaded when pagination used. It is a sub setting of "
+"the lazy load function. Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:437
+msgid "Lazy Effect"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:441
+msgid ""
+"Default is fadeIn on 400ms speed. Use false to remove that effect. Default: "
+"false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:445
+msgid "Auto Height"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:449
+msgid ""
+"Add height to owl-wrapper-outer so you can use diffrent heights on slides. "
+"Use it only for one item per page setting. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:453
+msgid "Json Path"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:457
+msgid ""
+"Allows you to load directly from a jSon file. The JSON structure you use "
+"needs to match the owl JSON structure used here. To use custom JSON "
+"structure see jsonSuccess option. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:461
+msgid "Json Success"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:465
+msgid ""
+"Success callback for $.getJSON build in into carousel. See demo with custom "
+"JSON structure. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:469
+msgid "Drag Before Anim Finish"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:473
+msgid ""
+"Ignore whether a transition is done or not (only dragging). Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:477
+msgid "Mouse Drag"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:481
+msgid "Turn off/on mouse events. Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:485
+msgid "Touch Drag"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:489
+msgid "Turn off/on touch events. Default: true"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:493
+msgid "Add Class Active"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:497
+msgid ""
+"Add 'active' classes on visible items. Works with any numbers of items on "
+"screen. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:501
+msgid "Transition Style"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:505
+msgid ""
+"Add CSS3 transition style. Works only with one item on screen. Default: false"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:530
+msgid "TagTray - Instagram Photos Stream"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:532
+msgid "Show Instagram photos stream through TagTray services."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:538
+msgctxt "tagtray shortcode"
+msgid "Gallery Code"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:540
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:548
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:557
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:566
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:575
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:584
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:593
+msgid "Configure"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:541
+msgctxt "tagtray shortcode"
+msgid "(Required) Enter gallery code provided by TagTray"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:546
+msgctxt "tagtray shortcode"
+msgid "Gallery Type"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:550
+msgctxt "tagtray shortcode"
+msgid "Gallery type 'active', 'passive' or 'carousel'."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:555
+msgctxt "tagtray shortcode"
+msgid "Overlay Type"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:559
+msgctxt "tagtray shortcode"
+msgid "Overlay type 'message', 'likes' or 'none'."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:564
+msgctxt "tagtray shortcode"
+msgid "Carousel Slide Witdh"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:567
+msgctxt "tagtray shortcode"
+msgid "Width of each slide in a carousel layout (default = 200)\n"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:573
+msgctxt "tagtray shortcode"
+msgid "Carousel Slide Max Height"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:576
+msgctxt "tagtray shortcode"
+msgid "Maximum height of each slide in a carousel layout (default = 200)\n"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:582
+msgctxt "tagtray shortcode"
+msgid "Page Size"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:585
+msgctxt "tagtray shortcode"
+msgid ""
+"Number of images on each page of the gallery, up to a maximum of 30 (default "
+"= 24)\n"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:591
+msgctxt "tagtray shortcode"
+msgid "Hide Source Icon"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:594
+msgctxt "tagtray shortcode"
+msgid ""
+"We'll display an icon over your gallery photo indicating the source of the "
+"photo (e.g. Instagram or Facebook) unless you select this option to hide "
+"that icon (default = false)\n"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:600
+msgctxt "tagtray shortcode"
+msgid "Masonry Layout?"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:603
+msgctxt "tagtray shortcode"
+msgid "Check if you want to layout with masonry js."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:608
+msgctxt "tagtray shortcode"
+msgid "CSS Class"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:611
+msgctxt "tagtray shortcode"
+msgid "Add custom CSS classes to the element'."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:647
+msgid "F2 Tag Cloud Widget"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:649
+msgid "Show tag cloud using widget F2 Tag Cloud for extra settings."
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:659
+msgid "Tag"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:664
+msgid "Minimum tag size:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:672
+msgid "Maximum tag size:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:680
+msgid "Maximum tag count (0 for no limit):"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:687
+msgid "Tag cloud format:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:691
+msgid "Flat"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:692
+msgid "List"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:697
+msgid "Order tags by:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:701
+msgid "Name"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:702
+msgid "Count"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:707
+msgid "Tag order direction:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:711
+msgid "Ascending"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:712
+msgid "Descending"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:713
+msgid "Random"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:718
+msgid "Tag cloud alignment:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:722
+msgid "Theme Default"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:731
+msgid "Padding between tags:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/vc_shortcodes_map.php:738
+msgid "Taxonomy:"
+msgstr ""
+
+#: inc/wpdanceclaratheme/woocommerce.php:112
+msgid "%s product"
+msgid_plural "%s products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/wpdanceclaratheme/woocommerce.php:131
+msgid "I saw this and thought of you! %s"
+msgstr ""
+
+#: inc/wpdanceclaratheme/woocommerce.php:143
+msgid "Send Email"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single-wpdance_portfolio.php:61
+msgid "Client"
+msgstr ""
+
+#: single-wpdance_portfolio.php:67
+msgid "Date"
+msgstr ""
+
+#: single-wpdance_portfolio.php:68
+msgid "<time class=\"entry-date\" datetime=\"%s\">%s</time>"
+msgstr ""
+
+#: single-wpdance_portfolio.php:73
+msgid "Skills"
+msgstr ""
+
+#: single-wpdance_portfolio.php:80
+msgid "Categories"
+msgstr ""
+
+#: tag.php:23
+msgid "Tag: %s"
+msgstr ""
+
+#: taxonomy-post_format.php:24
+msgid "%s Archives"
+msgstr ""
+
+#: woocommerce/archive-product.php:52
+msgid "Subcategories"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/tvlgiao/WP_Clara"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WPDanceClaraTheme WordPress Theme responsive design woocommerce support, "
+"visual composer, mega menu and many more features"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "tvlgiao"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpdance.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Teaser"
+msgstr ""

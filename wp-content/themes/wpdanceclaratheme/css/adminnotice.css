@@ -1,0 +1,20 @@
+body div.wpdanceclaratheme-adminnotice {
+	display: block;
+	padding: 10px 15px 10px 80px;
+}
+
+.wpdanceclaratheme-adminnotice:before {
+	content: 'CLARA';
+	font-size: 11px;
+	color: #fff;
+	background-color: #ec008c;
+	line-height: 1;
+	padding: 4px 10px;
+	float: left;
+	margin: -10px 0 0 -80px;
+}
+
+.wpdanceclaratheme-adminnotice-dismiss {
+	text-decoration: none;
+	float: right;
+}

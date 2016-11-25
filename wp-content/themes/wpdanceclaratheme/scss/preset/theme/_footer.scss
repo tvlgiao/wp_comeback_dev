@@ -1,0 +1,17 @@
+/**
+ * Footer Styles
+ */
+
+
+.site-footer {
+	@extend %wpdanceclaratheme_style_footer_color1;
+	@extend %wpdanceclaratheme_style_footer_bgcolor1;
+}
+
+.site-info {
+	font-size: $style_general_body_font_size * $small_scale;
+	
+	a {
+		@extend %link-plain;
+	}
+}

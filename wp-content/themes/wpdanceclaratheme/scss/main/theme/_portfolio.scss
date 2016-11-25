@@ -1,0 +1,278 @@
+/**
+ * Styling for WPDance Portfolio Plugin
+ */
+
+
+/**
+ * PORTFOLIO ENTRY STYLE FOR BOTH SINGLE PAGE AND MAIN LOOP
+ * ----------------------------------------------------------------------------
+ */
+.hentry.wpdance_portfolio {
+
+	.entry-thumbnail {
+		margin-bottom: 30px;
+	}
+
+	.wpdance-portfolio-more-images {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li img {
+			margin-bottom: 30px;
+		}
+	}
+
+	.entry-content {
+		text-align: justify;
+	}
+
+
+	.entry-meta {
+		margin: 50px 0;
+		padding-top: 50px;
+		border-top: 1px solid #ccc;
+
+		dl {
+			margin-bottom: 30px;
+		}
+
+		dt {
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+	}
+
+	.woo-social-buttons {
+		margin: 0 0 50px;
+	}
+}
+
+.portfolio-navigation {
+	.nav-links {
+		a {
+			@extend .btn;
+		}
+
+		a:first-child {
+			margin-right: 10px;
+
+		}
+	}
+
+	.meta-nav-title {
+		display: none;
+	}
+}
+
+
+/**
+ * hentry post has featured image showing
+ */
+.hentry.wpdance_portfolio.has-post-thumbnail {
+
+}
+
+
+/**
+ * PORTFOLIOS IN THE MAIN LOOP
+ * ============================================================================
+ */
+body.post-type-archive-wpdance_portfolio #content,
+body.tax-wpdance_portfolio_category #content,
+body.tax-wpdance_portfolio_client #content,
+body.tax-wpdance_portfolio_skill #content {
+
+	@mixin show_overlay {
+		left: 15px;
+		top: 15px;
+		right: 15px;
+		bottom: 15px;
+		opacity: 0.8;
+	}
+
+	@mixin hide_overlay {
+		left: 50%;
+		left: calc(50%);
+		top: 15px;
+		right: 50%;
+		right: calc(50%);
+		bottom: 15px;
+		opacity: 0;
+	}
+
+	&:hover, &:focus {
+		
+		.hentry {
+			.entry-thumbnail img {
+				// add effect here
+			}
+			&:hover, &:focus {
+				.entry-thumbnail img {
+					// add effect here
+				}
+			}
+		}
+	}
+
+
+	/**
+	 * Make columns in portfolios loop
+	 */
+	@for $i from 2 through 12 {
+		$space: fceil(10 / 1140, 4) * 100%;
+
+		.grid-#{$i} {
+			margin-left: -$space / 2;
+			margin-right: -$space / 2;
+
+
+			> .hentry.wpdance_portfolio {
+				width: 100% / $i - $space;
+				margin-left: $space / 2;
+				margin-right: $space / 2;
+
+				&.wpdance-portfolio-landscape {
+					width: 2 * 100% / $i - $space;
+				}
+
+				/**
+				 * Portfolio use masonry, we don't need clear float
+				 */
+				&.col-1 {
+					clear: none;
+				}
+			}
+		}
+	}
+
+	.hentry {
+		padding: 0;
+		margin-bottom: 10px;
+
+		.entry-thumbnail {
+			margin-bottom: 0;
+
+			img {
+				@include transition(500ms);
+				margin: 0 auto;
+				width: 100%;
+			}
+
+			a {
+				display: block;
+
+				&:after {
+					@include transition(200ms);
+					background: #fff;
+					content: ' ';
+					display: block;
+					position: absolute;
+					@include hide_overlay;
+				}
+
+				&:hover:after,
+				&:focus:after {
+					//@include show_overlay;
+				}
+			}
+		}
+
+		.entry-header {
+			@include transition(200ms);
+			left: 30px;
+			opacity: 0;
+			position: absolute;
+			right: 30px;
+			text-align: center;
+			top: 50%;
+		}
+
+		.entry-links {
+			@include transition(200ms);
+			left: 0;
+			margin-top: -50px;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 50%;
+
+			a {
+				background-color: #fff;
+				border-radius: 20px;
+				border: 1px solid;
+				display: inline-block;
+				font-size: 20px;
+				height: 40px;
+				line-height: 36px;
+				margin-right: 10px;
+				text-align: center;
+				width: 40px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&:hover, &:focus {		
+			.entry-thumbnail {
+				a:after {
+					@include show_overlay;
+				}
+			}
+
+			.entry-links {
+				opacity: 0.8;
+			}
+
+			.entry-header {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+
+
+/**
+ * ON PHONE
+ */
+@media (max-width: $screen-xs-max) {
+
+	/**
+	 * PORTFOLIOS IN THE MAIN LOOP
+	 * ========================================================================
+	 */
+	body.post-type-archive-wpdance_portfolio #content,
+	body.tax-wpdance_portfolio_category #content,
+	body.tax-wpdance_portfolio_client #content,
+	body.tax-wpdance_portfolio_skill #content {
+		
+		@for $i from 2 through 12 {
+			$space: fceil(10 / 425, 4) * 100%;
+
+			.grid-#{$i} {
+				margin-left: -$space / 2;
+				margin-right: -$space / 2;
+
+				> .hentry.wpdance_portfolio {
+					width: 100% / 2 - $space;
+					margin-left: $space / 2;
+					margin-right: $space / 2;
+
+					&.wpdance-portfolio-landscape {
+						width: 100% - $space;
+					}
+				}
+			}
+		}
+	}
+
+	.portfolio-navigation {
+		text-align: center;
+	}
+}

@@ -1,0 +1,366 @@
+/**
+ * preset/_variables_base.scss
+ *
+ * Declare all variables with default values used for ultilizing the theme's typography, colors and styles
+ */
+
+
+/**
+ * INTERNAL VARIABLES
+ */
+
+$color_num: 5 !default;
+
+$headings-line-height: 1.4 !default;
+
+$small_scale: 0.85 !default;
+$large_scale: 1.25 !default;
+
+$default_radius: 0 !default; // TODO: Add to Customizer
+$rounded_radius: 5px !default;
+
+
+/**
+ * VARIABLES SHOW IN CUSTOMIZER:
+ */
+
+$style_general_color1: #000 !default;
+$style_general_color2: #ec008c !default;
+$style_general_color3: #fff !default;
+$style_general_color4: lighten($style_general_color1, 20%) !default; // #333
+$style_general_color5: lighten($style_general_color1, 62.5%) !default; // #a0a0a0
+
+$style_general_bgcolor1: #fff !default;
+$style_general_bgcolor2: #000 !default;
+$style_general_bgcolor3: darken($style_general_bgcolor1, 3.13725%) !default; // #f7f7f7
+$style_general_bgcolor4: $style_general_color2 !default;
+$style_general_bgcolor5: #fff !default; /* unused */
+
+$style_general_bordercolor1: #000 !default;
+$style_general_bordercolor2: $style_general_color2 !default;
+$style_general_bordercolor3: $style_general_color4 !default; // #333
+$style_general_bordercolor4: lighten($style_general_bordercolor1, 93.33333%) !default; // #eee
+$style_general_bordercolor5: lighten($style_general_bordercolor1, 80%) !default; // #ccc
+$style_general_bordercolor6: #fff !default;
+
+
+$style_general_body_font_family: Lato !default;
+$style_general_body_font_size: 14px !default;
+$style_general_body_font_weight: 400 !default;
+$style_general_body_font_style: normal !default;
+$style_general_body_line_height: 1.428 !default;
+$style_general_body_text_underline: none !default;
+$style_general_body_color: $style_general_color4 !default;
+
+$style_general_h1_font_family: null !default;
+$style_general_h1_font_size: round($style_general_body_font_size * 2.6) !default;
+$style_general_h1_font_weight: null !default;
+$style_general_h1_font_style: null !default;
+$style_general_h1_line_height: $headings-line-height !default;
+$style_general_h1_text_underline: null !default;
+$style_general_h1_color: null !default;
+
+$style_general_h2_font_family: null !default;
+$style_general_h2_font_size: round($style_general_body_font_size * 2.15) !default;
+$style_general_h2_font_weight: null !default;
+$style_general_h2_font_style: null !default;
+$style_general_h2_line_height: $headings-line-height !default;
+$style_general_h2_text_underline: null !default;
+$style_general_h2_color: null !default;
+
+$style_general_h3_font_family: null !default;
+$style_general_h3_font_size: round($style_general_body_font_size * 1.7) !default;
+$style_general_h3_font_weight: null !default;
+$style_general_h3_font_style: null !default;
+$style_general_h3_line_height: $headings-line-height !default;
+$style_general_h3_text_underline: null !default;
+$style_general_h3_color: null !default;
+
+$style_general_h4_font_family: null !default;
+$style_general_h4_font_size: round($style_general_body_font_size * 1.25) !default;
+$style_general_h4_font_weight: null !default;
+$style_general_h4_font_style: null !default;
+$style_general_h4_line_height: $headings-line-height !default;
+$style_general_h4_text_underline: null !default;
+$style_general_h4_color: null !default;
+
+$style_general_h5_font_family: null !default;
+$style_general_h5_font_size: $style_general_body_font_size !default;
+$style_general_h5_font_weight: null !default;
+$style_general_h5_font_style: null !default;
+$style_general_h5_line_height: $headings-line-height !default;
+$style_general_h5_text_underline: null !default;
+$style_general_h5_color: null !default;
+
+$style_general_h6_font_family: null !default;
+$style_general_h6_font_size: round($style_general_body_font_size * 0.85) !default;
+$style_general_h6_font_weight: null !default;
+$style_general_h6_font_style: null !default;
+$style_general_h6_line_height: $headings-line-height !default;
+$style_general_h6_text_underline: null !default;
+$style_general_h6_color: null !default;
+
+$style_general_link_font_family: null !default;
+$style_general_link_font_size: null !default;
+$style_general_link_font_weight: null !default;
+$style_general_link_font_style: null !default;
+$style_general_link_line_height: null !default;
+$style_general_link_text_underline: none !default;
+$style_general_link_color: $style_general_color2 !default;
+
+$style_general_link_hover_font_family: $style_general_link_font_family !default;
+$style_general_link_hover_font_size: $style_general_link_font_size !default;
+$style_general_link_hover_font_weight: $style_general_link_font_weight !default;
+$style_general_link_hover_font_style: $style_general_link_font_style !default;
+$style_general_link_hover_line_height: $style_general_link_line_height !default;
+$style_general_link_hover_text_underline: underline !default;
+$style_general_link_hover_color: $style_general_link_color !default;
+
+
+$style_general_button_font_family: $style_general_body_font_family !default;
+$style_general_button_font_size: $style_general_body_font_size !default;
+$style_general_button_font_weight: $style_general_body_font_weight !default;
+$style_general_button_font_style: $style_general_body_font_style !default;
+$style_general_button_line_height: 20px !default; // same bootstrap button
+$style_general_button_text_underline: null !default;
+$style_general_button_color: $style_general_color3 !default;
+$style_general_button_bgcolor: $style_general_bgcolor2 !default;
+$style_general_button_bordercolor: $style_general_bgcolor2 !default;
+$style_general_button_borderradius: $default_radius !default;
+
+$style_general_button_hover_font_family: $style_general_button_font_family !default;
+$style_general_button_hover_font_size: $style_general_button_font_size !default;
+$style_general_button_hover_font_weight: $style_general_button_font_weight !default;
+$style_general_button_hover_font_style: $style_general_button_font_style !default;
+$style_general_button_hover_line_height: 20px !default; // same bootstrap button
+$style_general_button_hover_text_underline: $style_general_button_text_underline !default;
+$style_general_button_hover_color: $style_general_button_color !default;
+$style_general_button_hover_bgcolor: $style_general_button_bgcolor !default;
+$style_general_button_hover_bordercolor: $style_general_button_bordercolor !default;
+$style_general_button_hover_borderradius: $style_general_button_borderradius !default; // don't show in customizer
+
+$style_header_color1: $style_general_color1 !default;
+$style_header_color2: $style_general_color2 !default;
+$style_header_color3: $style_general_color3 !default;
+$style_header_color4: $style_general_color4 !default;
+$style_header_color5: $style_general_color5 !default; // not used
+
+$style_header_bgcolor1: $style_general_bgcolor1 !default;
+$style_header_bgcolor2: $style_general_bgcolor2 !default; 
+$style_header_bgcolor3: $style_general_bgcolor3 !default;
+$style_header_bgcolor4: $style_general_bgcolor4 !default;
+$style_header_bgcolor5: $style_general_bgcolor5 !default; // not used
+$style_header_bordercolor1: $style_general_bordercolor4 !default; // don't show in customizer
+$style_header_bordercolor2: $style_general_bordercolor2 !default; // don't show in customizer
+
+$style_footer_color1: $style_general_color1 !default;
+$style_footer_color2: $style_general_color2 !default;
+$style_footer_color3: $style_general_color3 !default;
+$style_footer_color4: $style_general_color4 !default; // not used
+$style_footer_color5: $style_general_color5 !default; // not used
+$style_footer_bgcolor1: $style_general_bgcolor1 !default;
+$style_footer_bgcolor2: $style_general_bgcolor2 !default;
+$style_footer_bgcolor3: $style_general_bgcolor3 !default;
+$style_footer_bgcolor4: $style_general_bgcolor4 !default; // not used
+$style_footer_bgcolor5: $style_general_bgcolor5 !default; // not used
+$style_footer_bordercolor1: $style_general_bordercolor4 !default; // don't show in customizer
+$style_footer_bordercolor2: $style_general_bordercolor2 !default; // don't show in customizer
+
+
+
+//
+// SITE PAGE HEADING
+//
+
+$style_heading_bgcolor: null !default;
+$style_heading_bgimage: null !default;
+
+$style_heading_title_font_family: null !default;
+$style_heading_title_font_size: round($style_general_body_font_size * 48 / 14) !default;
+$style_heading_title_font_weight: 900 !default;
+$style_heading_title_font_style: null !default;
+$style_heading_title_line_height: null !default;
+$style_heading_title_text_underline: null !default;
+$style_heading_title_text_transform: uppercase !default;
+$style_heading_title_color: null !default;
+
+$style_heading_content_font_family: null !default;
+$style_heading_content_font_size: null !default;
+$style_heading_content_font_weight: null !default;
+$style_heading_content_font_style: null !default;
+$style_heading_content_line_height: null !default;
+$style_heading_content_text_underline: null !default;
+$style_heading_content_color: null !default;
+
+
+
+//
+// POSTS IN LOOP
+//
+
+$style_loop_title_font_family: null !default;
+$style_loop_title_font_size: ($style_general_body_font_size * 24 / 14) !default;
+$style_loop_title_font_weight: 700 !default;
+$style_loop_title_font_style: null !default;
+$style_loop_title_line_height: $headings-line-height !default;
+$style_loop_title_text_underline: null !default;
+$style_loop_title_color: $style_general_color1 !default; // #000
+
+$style_loop_content_font_family: Georgia, serif !default;
+$style_loop_content_font_size: null !default;
+$style_loop_content_font_weight: null !default;
+$style_loop_content_font_style: null !default;
+$style_loop_content_line_height: 1.6 !default;
+$style_loop_content_text_underline: null !default;
+$style_loop_content_color: $style_general_color1 !default; // #000 //lighten($style_general_color1, 6.66667%) !default; // #111
+
+$style_loop_meta_font_family: null !default;
+$style_loop_meta_font_size: ($style_general_body_font_size * 11 / 14) !default;
+$style_loop_meta_font_weight: null !default;
+$style_loop_meta_font_style: null !default;
+$style_loop_meta_line_height: null !default;
+$style_loop_meta_text_underline: null !default;
+$style_loop_meta_color: $style_general_color5 !default; // #a0a0a0
+
+
+//
+// POST IN SINGLE PAGE
+//
+
+$style_single_title_font_family: null !default;
+$style_single_title_font_size: ($style_general_body_font_size * 36 / 14) !default;
+$style_single_title_font_weight: normal !default;
+$style_single_title_font_style: null !default;
+$style_single_title_line_height: null !default;
+$style_single_title_text_underline: null !default;
+$style_single_title_color: null !default;
+
+$style_single_content_font_family: null !default;
+$style_single_content_font_size: ($style_general_body_font_size * 16 / 14) !default;
+$style_single_content_font_weight: null !default;
+$style_single_content_font_style: null !default;
+$style_single_content_line_height: null !default;
+$style_single_content_text_underline: null !default;
+$style_single_content_color: null !default;
+
+$style_single_meta_font_family: null !default;
+$style_single_meta_font_size: null !default;
+$style_single_meta_font_weight: null !default;
+$style_single_meta_font_style: null !default;
+$style_single_meta_line_height: null !default;
+$style_single_meta_text_underline: null !default;
+$style_single_meta_color: null !default;
+
+
+
+//
+// PRODUCT LIST
+// 
+
+$style_product_list_title_font_family: null !default;
+$style_product_list_title_font_size: ($style_general_body_font_size * 12 / 14) !default;
+$style_product_list_title_font_weight: null !default;
+$style_product_list_title_font_style: null !default;
+$style_product_list_title_line_height: null !default;
+$style_product_list_title_text_underline: null !default;
+$style_product_list_title_color: null !default;
+
+$style_product_list_content_font_family: null !default;
+$style_product_list_content_font_size: null !default;
+$style_product_list_content_font_weight: null !default;
+$style_product_list_content_font_style: null !default;
+$style_product_list_content_line_height: null !default;
+$style_product_list_content_text_underline: null !default;
+$style_product_list_content_color: null !default;
+
+//
+// SINGLE PRODUCT
+// 
+
+$style_product_single_title_font_family: null !default;
+$style_product_single_title_font_size: ($style_general_body_font_size * 22 / 14) !default;
+$style_product_single_title_font_weight: null !default;
+$style_product_single_title_font_style: null !default;
+$style_product_single_title_line_height: null !default;
+$style_product_single_title_text_underline: null !default;
+$style_product_single_title_color: null !default;
+
+$style_product_single_content_font_family: null !default;
+$style_product_single_content_font_size: null !default;
+$style_product_single_content_font_weight: null !default;
+$style_product_single_content_font_style: null !default;
+$style_product_single_content_line_height: null !default;
+$style_product_single_content_text_underline: null !default;
+$style_product_single_content_color: null !default;
+
+//
+// WIDGETS
+//
+
+$style_widget_title_font_family: null !default;
+$style_widget_title_font_size: ($style_general_body_font_size * 16 / 14) !default;
+$style_widget_title_font_weight: null !default;
+$style_widget_title_font_style: null !default;
+$style_widget_title_line_height: null !default;
+$style_widget_title_text_underline: null !default;
+$style_widget_title_color: $style_general_color1 !default;
+$style_widget_title_bgcolor: $style_general_bgcolor1 !default;
+
+$style_widget_content_font_family: null !default;
+$style_widget_content_font_size: null !default;
+$style_widget_content_font_weight: null !default;
+$style_widget_content_font_style: null !default;
+$style_widget_content_line_height: null !default;
+$style_widget_content_text_underline: null !default;
+$style_widget_content_color: null !default;
+$style_widget_content_bgcolor: null !default;
+$style_widget_content_bordercolor: $style_general_bordercolor5 !default;
+
+//
+// BREADCRUMBS
+//
+
+$style_breadcrumb_parent_font_family: null !default;
+$style_breadcrumb_parent_font_size: ($style_general_body_font_size * 11 / 14) !default;
+$style_breadcrumb_parent_font_weight: $style_general_body_font_weight !default;
+$style_breadcrumb_parent_font_style: null !default;
+$style_breadcrumb_parent_line_height: null !default;
+$style_breadcrumb_parent_text_underline: null !default;
+$style_breadcrumb_parent_color: $style_general_color4 !default;
+
+$style_breadcrumb_current_font_family: null !default;
+$style_breadcrumb_current_font_size: $style_breadcrumb_parent_font_size !default;
+$style_breadcrumb_current_font_weight: bold !default;
+$style_breadcrumb_current_font_style: null !default;
+$style_breadcrumb_current_line_height: null !default;
+$style_breadcrumb_current_text_underline: null !default;
+$style_breadcrumb_current_color: null !default;
+
+
+//
+// MAIN MENU
+//
+
+$style_menu_root_font_family: $style_general_body_font_family !default;
+$style_menu_root_font_size: $style_general_body_font_size !default;
+$style_menu_root_font_weight: $style_general_body_font_weight !default;
+$style_menu_root_font_style: $style_general_body_font_style !default;
+$style_menu_root_line_height: $style_general_body_line_height !default;
+$style_menu_root_text_underline: $style_general_body_text_underline !default;
+$style_menu_root_color1: $style_general_color4 !default;
+$style_menu_root_color2: $style_general_color2 !default;
+$style_menu_root_bgcolor1: transparent !default;
+$style_menu_root_bgcolor2: $style_general_bgcolor3 !default;
+$style_menu_root_bordercolor: $style_general_bordercolor5 !default;
+
+$style_menu_sub_font_family: $style_menu_root_font_family !default;
+$style_menu_sub_font_size: $style_menu_root_font_size * 12 / 14 !default;
+$style_menu_sub_font_weight: $style_menu_root_font_weight !default;
+$style_menu_sub_font_style: $style_menu_root_font_style !default;
+$style_menu_sub_line_height: $style_menu_root_line_height !default;
+$style_menu_sub_text_underline: $style_menu_root_text_underline !default;
+$style_menu_sub_color1: $style_general_color4 !default;
+$style_menu_sub_color2: $style_general_color2 !default;
+$style_menu_sub_bgcolor1: $style_menu_root_bgcolor2 !default;
+$style_menu_sub_bgcolor2: $style_general_color3 !default;
+$style_menu_sub_bordercolor: $style_menu_root_bordercolor !default;

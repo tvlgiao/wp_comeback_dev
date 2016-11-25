@@ -1,0 +1,14 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="translate">wpdance_portfolio_more_images</custom-field>
+        <custom-field action="translate">wpdance_portfolio_related_posts</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">wpdance_portfolio</custom-type>
+    </custom-types>    
+    <taxonomies>
+        <taxonomy translate="1">wpdance_portfolio_category</taxonomy>
+        <taxonomy translate="1">wpdance_portfolio_client</taxonomy>
+        <taxonomy translate="1">wpdance_portfolio_skill</taxonomy>
+    </taxonomies>
+</wpml-config>

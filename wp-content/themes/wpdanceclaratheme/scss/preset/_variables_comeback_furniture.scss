@@ -1,0 +1,111 @@
+
+/**
+ * VARIABLES FROM BASE
+ * Define here to be available for interit by other variables
+ */
+
+$style_general_color1: #000 !default;
+
+$style_general_body_font_family: 'Open Sans' !default;
+$style_general_body_font_size: 13px !default;
+$style_general_body_font_weight: 400 !default;
+
+
+// ======================================================================================
+// DEFINE VARIABLES FOR THIS PRESET:
+// 
+
+
+
+//
+// GENERAL
+// ----------------------------------------------------------------------------
+// 
+
+// Main background color
+$style_general_bgcolor1: #f8f8f8 !default;
+
+// Other background colors
+$style_general_bgcolor3: #ffffff !default;
+
+
+// The Main Secondary Color
+$style_general_color2: #bca480 !default;
+
+//
+// HEADER
+// ----------------------------------------------------------------------------
+// 
+
+ // Background Color of the Top Header
+$style_header_bgcolor2: $style_general_color2 !default;
+
+
+// Text Color of the Top Header
+// Already same as the base
+// $style_header_color3: #ffffff !default;
+
+
+// Line color on the Header section
+$style_header_bordercolor1: #dbdbdb !default;
+
+
+
+//
+// MENU
+// ----------------------------------------------------------------------------
+// 
+
+// Main Menu - Root Level - Font Size: 13px
+$style_menu_root_font_size: $style_general_body_font_size !default;
+
+// Main Menu - Root Level - Font Weight
+$style_menu_root_font_weight: bold !default;
+
+// Main Menu - Root Level - Text Color
+$style_menu_root_color1: #4c4c4c !default;
+
+
+// Main Men - Sub Level - Font Size : 12px
+$style_menu_sub_font_size: $style_general_body_font_size * 12 / 13 !default;
+
+// Main Men - Sub Level - Font Weight : sample body
+$style_menu_sub_font_weight: $style_general_body_font_weight !default;
+
+
+//
+// FOOTER
+// ----------------------------------------------------------------------------
+// 
+
+// Footer main text color
+$style_footer_color1: #969696 !default;
+
+// Footer text color of heading
+$style_footer_color4: #ffffff !default;
+
+// Footer main background color
+$style_footer_bgcolor1: #0d0d0d !default;
+
+// Background color of the bottom footer
+$style_footer_bgcolor3: #000000 !default;
+
+// Border Line color
+$style_footer_bordercolor1: #787878 !default;
+
+
+//
+// PRODUCTS
+// 
+
+$style_product_list_title_font_size: ($style_general_body_font_size * 12 / 13) !default;
+$style_product_list_title_font_weight: 600 !default;
+
+
+//
+// BLOG POSTS
+// 
+
+$style_loop_content_font_family: 'Open Sans' !default;
+$style_loop_meta_font_size: $style_general_body_font_size !default;
+$style_loop_meta_color: lighten($style_general_color1, 50%); // #666666

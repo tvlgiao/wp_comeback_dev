@@ -1,0 +1,47 @@
+/**
+ * Headers Styles
+ */
+
+
+#site-logo {
+	max-width: 100%;
+
+	
+}
+
+.header-main {
+	/**
+	 * Phone
+	 */
+	@media (max-width: $screen-xs-max) {
+		text-align: center;
+	}
+}
+
+.site-header {
+	margin-bottom: 30px;
+}
+
+/**
+ * Fix for dropdown cart in top-header not show
+ */
+.site-header .top-header,
+.site-header .top-header.vc_row[data-vc-full-width] {
+	overflow: visible;
+}
+
+
+/**
+ * DEFAULT HEADER
+ * ============================================================================
+ */
+.header-default {
+
+	.header-section-1 {
+		padding: 5px 0;
+	}
+
+	.header-section-2 {
+		margin-bottom: 10px;
+	}
+}

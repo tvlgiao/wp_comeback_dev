@@ -1,0 +1,412 @@
+/**
+ * Styling for Posts
+ */
+
+
+
+.hentry {
+	padding: 20px 0;
+}
+
+/**
+ * hentry only for Post type
+ */
+.hentry.post {
+	margin-bottom: 20px;
+}
+
+/**
+ * Page Template: Teaser
+ */
+body.page-template-page-teaser {
+	min-height: 100%;
+	
+	.hentry {
+		padding: 0;
+	}
+
+	.entry-meta {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin: 0;
+	}
+}
+
+
+
+
+/**
+ * Make columns in posts loop
+ */
+@for $i from 2 through 12 {
+	$space: 20 / 1140 * 100%;
+
+	#content .grid-#{$i} {
+		@include clearfix;
+
+		margin-left: -$space / 2;
+		margin-right: -$space / 2;
+
+
+		> .hentry {
+			@include clearfix;
+			float: left;
+			width: 100% / $i - $space;
+			margin-left: $space / 2;
+			margin-right: $space / 2;
+
+			&.col-1 {
+				clear: both;
+			}
+
+			&.col-#{$i} {
+				margin-right: 0;
+			}
+
+		}
+	}
+}
+
+.entry-header {
+	margin-bottom: 15px;
+}
+
+.entry-thubmail img {
+	margin-bottom: 0 auto 20px;
+}
+
+.entry-meta {
+	margin: 0 0 15px;
+
+	.featured-post {
+		display: none;
+	}
+
+	.comments-link {
+		display: inline;
+	}
+
+	.date,
+	.categories-links,
+	.tags-links,
+	.author,
+	.comments-link,
+	.edit-link {
+		a:first-child:before {
+			display: none;
+		}
+	}
+}
+
+footer.entry-meta {
+	margin: 0;
+}
+
+
+
+.entry-content,
+.entry-summary {
+
+	img.alignright, .wp-caption.alignright {
+		margin-right: 0;
+	}
+
+	img.alignleft, .wp-caption.alignleft {
+		margin-left: 0;
+	}
+
+	table {
+		border-collapse: collapse;
+		td, th {
+			padding: 5px;
+		}
+	}
+}
+
+
+.paging-navigation {
+	.nav-links {
+		text-transform: uppercase;
+	}
+	
+	a {
+
+	}
+
+	.nav-next {
+
+	}
+
+	.nav-previous {
+
+	}
+}
+
+
+.post-navigation {
+	.nav-links {
+		[rel="prev"],
+		[rel="next"] {
+			width: calc(50% - 15px);
+			display: inline-block;
+		}
+	}
+
+	.meta-nav {
+		padding: 10px 30px;
+		border: 1px solid #eee;
+		display: inline-block;
+	}
+
+	.meta-nav-title {
+		display: none;
+	}
+}
+
+
+
+
+/**
+ * Post Type Gallery
+ */
+@for $i from 1 through 9 {
+	.gallery-columns-#{$i} {
+		width: 100%;
+		
+		$space: 20 / 750 * 100%;
+		.gallery-item {
+			width: (100% - $space * ($i - 1)) / $i;
+			margin: 0 $space 20px 0;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+/**
+ * hentry post has featured image showing
+ */
+.hentry.post.has-post-thumbnail {
+	@include clearfix;
+	
+	// $space: 20 / 750 * 100%;
+	$space: 15px;
+
+
+	&.post-thumbnail-left,
+	&.post-thumbnail-right,
+	&.post-thumbnail-leftright,
+	&.post-thumbnail-rightleft {
+		.entry-thumbnail {
+			max-width: 50%;
+			margin-top: -20px;
+		}
+
+		.entry-meta {
+			clear: none;
+		}
+	}
+
+	&.post-thumbnail-left,
+	&.post-thumbnail-leftright,
+	&.post-thumbnail-rightleft.even {
+		.entry-thumbnail {
+			float: left;
+			padding-left: 0;
+			padding-right: $space;
+		}
+
+		.entry-meta,
+		.entry-title,
+		.entry-summary {
+			margin-left: 50%;
+			margin-left: calc(50% + #{$space});
+			margin-right: 0;
+		}
+	}
+
+	&.post-thumbnail-right,
+	&.post-thumbnail-rightleft,
+	&.post-thumbnail-leftright.even {
+		.entry-thumbnail {
+			float: right;
+			padding-left: $space;
+			padding-right: 0;
+		}
+
+		.entry-meta,
+		.entry-title,
+		.entry-summary {
+			margin-left: 0;
+			margin-right: 50%;
+			margin-right: calc(50% + #{$space});
+		}
+	}
+
+	&.post-thumbnail-center {
+		.entry-thumbnail {
+			margin-top: 20px;
+		}
+	}
+}
+
+
+/**
+ * Phone
+ */
+@media (max-width: $screen-xs-max) {
+
+	/**
+	 * POSTS IN THE MAIN LOOP
+	 * ========================================================================
+	 */
+	
+	@for $i from 2 through 12 {
+		#content .grid-#{$i} > .hentry {
+			width: 100%;
+		}
+	}
+
+	.hentry.post {
+
+		/**
+		 * Make entry content has align justify on phone
+		 */
+		.entry-summary,
+		.entry-content {
+			text-align: justify;
+		}
+
+		/**
+		 * Make Post Image full width on phone
+		 */
+		&.has-post-thumbnail {
+			
+			&.post-thumbnail-left,
+			&.post-thumbnail-right,
+			&.post-thumbnail-leftright,
+			&.post-thumbnail-rightleft,
+			&.post-thumbnail-rightleft.even,
+			&.post-thumbnail-leftright.even {
+				.entry-thumbnail {
+					float: none;
+					width: 100%;
+					max-width: none;
+					margin-top: 0;
+					padding: 0;
+				}
+
+				.entry-meta,
+				.entry-title,
+				.entry-summary {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+/**
+ * COMMENTS REPLY AND COMMENT FORM
+ * ============================================================================
+ */
+
+.comments-title, 
+.comment-reply-title {
+	@extend .wpdanceclaratheme-seperating-h3;
+}
+
+.comment-body {
+	padding: $space-md;
+	margin-bottom: $space-md;
+}
+
+.comment-author {
+	width: $avatar-width;
+	max-width: $avatar-width;
+	text-align: center;
+
+	.avatar {
+		width: 100%;
+		height: auto;
+	}
+
+	.fn {
+		font-weight: inherit;
+	}
+}
+
+.comment-metadata {
+	padding-right: $avatar-width + $space-md;
+}
+
+.comment-metadata, 
+.comment-awaiting-moderation, 
+.comment-content {
+	width: -webkit-calc(100% - #{$avatar-width + $space-md});
+	width: calc(100% - #{$avatar-width + $space-md});
+}
+
+.comment-list .reply {
+	position: absolute;
+	right: $space-md;
+	width: auto;
+	max-width: 100px;
+}
+
+
+
+.comment-form {
+	.comment-notes {
+		margin-bottom: 15px;
+	}
+
+	.comment-form-comment {
+		margin-bottom: 15px;
+	}
+
+	.comment-form-author, 
+	.comment-form-email, 
+	.comment-form-url {
+		width: 30%;
+		margin-bottom: 30px;
+		float: left;
+	}
+
+	.comment-form-email, 
+	.comment-form-url {
+		margin-left: 5%;
+	}
+
+	[for="author"], 
+	[for="email"], 
+	[for="url"], 
+	[for="comment"] {
+		float: none;
+		width: 100%;
+		display: block;
+	}
+
+	input[type="text"], 
+	input[type="email"], 
+	input[type="url"] {
+		width: 100%;
+		max-width: none;
+	}
+
+	.form-submit {
+		clear: both;
+	}
+
+	input[type="submit"] {
+		text-transform: uppercase;
+	}
+}

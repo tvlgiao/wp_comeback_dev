@@ -1,0 +1,288 @@
+/**
+ * DEFINE SHOW HELPERS
+ */
+
+@mixin ubermenu_default_typo {
+	@include font(
+		$style_menu_root_font_family,
+		$style_menu_root_font_size,
+		$style_menu_root_font_weight,
+		$style_menu_root_font_style,
+		$style_menu_root_line_height,
+		$style_menu_root_text_underline);
+	@include style_menu_root_color1;
+
+	@include font(
+		$style_menu_sub_font_family,
+		$style_menu_sub_font_size,
+		$style_menu_sub_font_weight,
+		$style_menu_sub_font_style,
+		$style_menu_sub_line_height,
+		$style_menu_sub_text_underline);
+	@include style_menu_sub_color1;
+
+	text-transform: uppercase;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@include style_menu_root_color2;
+		@include style_menu_root_bgcolor2;
+		@include style_menu_sub_color2;
+		@include style_menu_sub_bgcolor2;
+	}
+}
+
+
+
+/**
+ * ON ALL SCREEN
+ * ============================================================================
+ */
+
+.ubermenu.ubermenu-skin-none {
+	/**
+	 * HORIZONTAL MENU
+	 * ========================================================================
+	 */
+	&.ubermenu-horizontal {
+
+		/**
+		 * ALL LEVEL MENUS
+		 * --------------------------------------------------------------------
+		 */
+		
+		/**
+		 * Menu item links
+		 */
+		.ubermenu-target {
+			@include ubermenu_default_typo;
+		}
+
+		/**
+		 * Close button showed on mobile
+		 */
+		.ubermenu-retractor {
+			@include ubermenu_default_typo;
+		}
+
+
+		/**
+		 * Custom content text block
+		 */
+		.ubermenu-content-block {
+			@include font(
+				$style_menu_sub_font_family,
+				$style_menu_sub_font_size,
+				$style_menu_sub_font_weight,
+				$style_menu_sub_font_style,
+				$style_menu_sub_line_height,
+				$style_menu_sub_text_underline);
+		}
+
+
+		/**
+		 * ROOT LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		.ubermenu-nav {
+
+			> .ubermenu-item {
+
+				> .ubermenu-target {
+					@include font(
+						$style_menu_root_font_family,
+						$style_menu_root_font_size,
+						$style_menu_root_font_weight,
+						$style_menu_root_font_style,
+						$style_menu_root_line_height,
+						$style_menu_root_text_underline);
+					@include style_menu_root_color1;
+					@include style_menu_root_bgcolor1;
+					border: 1px solid transparent;
+				}
+
+				&.ubermenu-active > .ubermenu-target,
+				> .ubermenu-target:hover,
+				> .ubermenu-target:focus {
+					@include style_menu_root_color2;
+					@include style_menu_root_bgcolor2;
+					@include style_menu_root_bordercolor;
+				}
+			}
+		}
+
+
+		/**
+		 * SUB LEVEL MENU
+		 * --------------------------------------------------------------------
+		 */
+		.ubermenu-submenu {
+			@include style_menu_sub_bgcolor1;
+
+			/**
+			 * DROP DOWN MENU
+			 */
+			&.ubermenu-submenu-drop {
+				border: 1px solid $style_menu_sub_bordercolor;
+			}
+
+			/**
+			 * MENU ITEM: HEADER
+			 */
+			.ubermenu-item-header.ubermenu-has-submenu-stack > .ubermenu-target {
+				@include style_menu_sub_color2;
+				border-bottom: 1px solid $style_menu_sub_bordercolor;
+			}
+		}
+
+		/**
+		 * MENU ITEM: GROUP
+		 */
+		.ubermenu-tabs-group {
+			@include style_menu_sub_bordercolor;
+		}
+
+	} // &.ubermenu-horizontal
+
+
+	/**
+	 * MENU ITEM HAS ICON
+	 */
+	@mixin icon-style($size) {
+		font-size: $size;
+		line-height: $size;
+	}
+	.ubermenu-item-layout-icon_left .ubermenu-icon {
+		@include icon-style($style_general_body_font_size * 16 / 12);
+
+		@if ($style_menu_root_font_size) {
+			@include icon-style($style_menu_root_font_size * 16 / 12);
+		}
+	}
+	.ubermenu-submenu .ubermenu-item-layout-icon_left .ubermenu-icon {
+		@if ($style_menu_sub_font_size) {
+			@include icon-style($style_menu_sub_font_size * 16 / 12);
+		}
+	}
+
+} // .ubermenu.ubermenu-skin-none
+
+
+
+
+
+/**
+ * ON PHONE & TABLET
+ * ============================================================================
+ */
+@media (max-width: $screen-sm-max) {
+
+	/**
+	 * MENU TOGGLE
+	 */
+	.ubermenu-responsive-toggle.ubermenu-skin-none {
+		@include font(
+			$style_menu_root_font_family,
+			$style_menu_root_font_size,
+			$style_menu_root_font_weight,
+			$style_menu_root_font_style,
+			$style_menu_root_line_height,
+			$style_menu_root_text_underline);
+		@include style_menu_root_color1;
+		@include style_menu_root_bgcolor1;
+
+		border: 1px solid $style_menu_root_bordercolor;
+		text-transform: uppercase;
+
+		&:hover,
+		&:active,
+		&:focus,
+		&.ubermenu-responsive-toggle-open {
+			@include style_menu_root_color2;
+			@include style_menu_root_bgcolor2;
+		}
+	}
+
+
+	.ubermenu.ubermenu-responsive.ubermenu-skin-none {
+
+		/**
+		 * HORIZONTAL MENU
+		 * ====================================================================
+		 */
+		&.ubermenu-horizontal {
+			border: 1px solid $style_menu_root_bordercolor;
+
+			/**
+			 * ROOT LEVEL MENU
+			 * ----------------------------------------------------------------
+			 */
+			.ubermenu-nav {
+
+				> .ubermenu-item {
+
+					> .ubermenu-target {
+						border-width: 0 0 1px 0;
+						@include style_menu_root_bordercolor;
+					}
+
+					&:last-child > .ubermenu-target {
+						border-bottom: 0;
+					}
+
+					&.ubermenu-active > .ubermenu-target {
+						@include style_menu_root_color2;
+						@include style_menu_root_bgcolor2;
+					}
+				}
+			} // .ubermenu-nav
+
+
+			/**
+			 * SUB LEVEL MENU
+			 * --------------------------------------------------------------------
+			 */
+			
+			/**
+			 * TAB GROUP
+			 */
+			.ubermenu-tab {
+				> .ubermenu-target {
+					@include style_menu_sub_bordercolor;
+				}
+			}
+			.ubermenu-tabs > .ubermenu-tabs-group > .ubermenu-tab {
+				> .ubermenu-tab-content-panel {
+					@include style_menu_sub_bordercolor;
+				}
+			}
+
+
+		} // &.ubermenu-horizontal
+
+	} // .ubermenu.ubermenu-skin-none
+} // @media (max-width: $screen-sm-max)
+
+
+
+
+/**
+ * ON DESKTOP
+ * ============================================================================
+ */
+@media (min-width: $screen-md-min) {
+	.ubermenu.ubermenu-skin-none {
+
+		/**
+		 * HORIZONTAL MENU
+		 * ====================================================================
+		 */
+		&.ubermenu-horizontal {
+
+
+			
+		} // &.ubermenu-horizontal
+	} // .ubermenu.ubermenu-skin-none
+} // @media (min-width: $screen-sm-min)
+

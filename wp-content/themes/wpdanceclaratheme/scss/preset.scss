@@ -1,0 +1,59 @@
+/**
+ * @preset.scss
+ *
+ * Compile at the runtime by SCSS-PHP
+ *
+ * Keep SCSS code as simple as possible, SCSS-PHP does not fully support SCSS syntax
+ */
+
+
+// Files imported automatically by the theme:
+// 
+// @import [settings];
+// @import 'preset/variables_default|01|02|...';
+// @import 'preset/variables_base';
+// @import [preset variables -> classnames]
+// --------------------------------------------
+
+@import 'preset/bootstrap_variables';
+@import 'bootstrap/assets/stylesheets/bootstrap/variables';
+
+@import 'preset/functions';
+
+@import 'mixins';
+@import 'preset/mixins';
+
+@import 'bootstrap/assets/stylesheets/bootstrap/mixins/buttons';
+@import 'bootstrap/assets/stylesheets/bootstrap/mixins/forms';
+
+
+// ----------------------------------------------------------------------------
+// ADD PRESET SCSS CODE BELOW
+//
+// Keep SCSS code as simple as possible, SCSS-PHP does not fully support SCSS syntax
+// ----------------------------------------------------------------------------
+
+@import 'preset/theme/helper';
+@import 'preset/theme/base';
+@import 'preset/theme/bootstrap';
+@import 'preset/theme/header';
+@import 'preset/theme/footer';
+@import 'preset/theme/post';
+@import 'preset/theme/widget';
+@import 'preset/theme/nav';
+@import 'preset/theme/shortcodes';
+@import 'preset/theme/portfolio';
+@import 'preset/theme/testimonial';
+
+
+@import 'preset/theme/visualcomposer';
+@import 'preset/theme/woocommerce';
+@import 'preset/theme/ubermenu';
+@import 'preset/theme/smsb';
+
+
+// File import automatically by the theme:
+//
+// @import 'preset/theme/preset_[name]'
+
+

@@ -1,0 +1,21 @@
+/**
+ * Styling for plugin WooCommerce Social Sharing Buttons
+ */
+
+.woo-social-buttons > .custom {
+	a {
+
+		@include style_general_bgcolor2;
+		@include style_general_color3;
+
+		&:hover,
+		&:focus {
+			@if ($style_general_link_color) {
+				background-color: $style_general_link_color;
+			}
+			@else {
+				@include style_general_bgcolor4;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+ORDER OF SCSS LOADING:
+
+
+1. MAIN:
+	1.1. main/_variables.scss
+	1.2. _mixins.scss
+	1.3. main/layout/*
+	1.4. main/module/*
+
+2. PRESET:
+	2.1. preset/_variables_[selected].scss
+	2.2. [settings]
+	2.3. preset/_variables_base.scss
+	2.4. preset.scss
+
+3. CUSTOM:
+	3.1. custom.scss

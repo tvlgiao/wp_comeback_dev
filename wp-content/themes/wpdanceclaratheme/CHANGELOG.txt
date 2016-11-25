@@ -1,0 +1,6 @@
+2016-09-24 - Version 1.0.1:
+- [feature] Added new design Home 08 - Healthcare & Yoga. Preset Healthcare
+- [feature] Added a new preset Interior, page Home 07, Header 07, Footer 07
+
+2016-09-30 - Version 1.0.1:
+- First Release.

@@ -1,0 +1,657 @@
+/**
+ * Widgets Style
+ */
+
+
+
+/**
+ * COMMON WIDGETS
+ * ----------------------------------------------------------------------------
+ */
+
+.widget {
+	padding: 0;
+}
+
+/**
+ * Use .widget-inner (instead of .widget) to support space between widgets
+ * and add border to widget
+ */
+.widget-inner {
+	padding: 20px;
+
+	.widget-title {
+		margin: -30px 0 20px;
+		
+		span {
+			display: inline-block;
+			padding: 0 5px;
+		}
+	}
+}
+
+
+
+
+/**
+ * SEARCH WIDGET
+ * ----------------------------------------------------------------------------
+ */
+
+.search-form {
+	label {
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+}
+
+.wpdanceclaratheme-search-form-xl {
+	.search-form {
+		display: inline-block;
+		padding: 10px 20px;
+		border: 1px solid #ccc;
+
+		.search-field {
+			padding: 20px;
+			border: none;
+			box-shadow: none;
+			width: 500px;
+			max-width: 70%;
+		}
+
+		.search-submit {
+			padding: 10px 30px;
+			max-width: 30%;
+		}
+	}	
+}
+
+
+.vc_wp_search.style-dropdown .search-form {
+	label {
+		width: auto;
+		position: relative;
+	}
+
+	label::before {
+		content: '\f002';
+		display: inline-block;
+		font-family: FontAwesome;
+		font-size: 1.2857em;
+
+		padding: 15px 20px;
+
+		background-color: transparent;
+		transition: all 500ms;
+		transition-delay: 500ms;
+	}
+
+	label:hover::before,
+	label:focus::before,
+	label.focus::before {
+		background-color: #fff;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+		transition: all 200ms;
+		transition-delay: 0;
+	}
+
+	.search-field {
+		position: absolute;
+		width: 250px;
+		padding: 15px 20px;
+
+		border-color: transparent;
+		background-color: #fff;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+		opacity: 0;
+		transition: opacity 500ms;
+		transition-delay: 500ms;
+	}
+
+	label:hover .search-field,
+	.search-field:focus {
+		opacity: 1;
+		transition: opacity 200ms;
+		transition-delay: 0;
+	}
+
+	.search-submit {
+		display: none;
+	}
+
+}
+
+.vc_wp_search.style-dropdown-right .search-form .search-field {
+	right: 0;
+}
+
+/**
+ * On Phone
+ */
+@media (max-width: $screen-xs-max) {
+	.vc_wp_search.style-dropdown .search-form {
+		label {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+
+			background-color: transparent;
+			border: 1px solid #ccc;
+		}
+
+		label::before,
+		label:hover::before,
+		label:focus::before,
+		label.focus::before {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
+		.search-field {
+			position: static;
+			flex: 1;
+			box-shadow: none;
+			background-color: transparent;
+
+			opacity: 1;
+		}
+	}
+}
+
+
+
+/**
+ * POST CATEGORIES WIDGET
+ * ----------------------------------------------------------------------------
+ */
+.widget_categories {
+	li {
+		@include clearfix;
+		text-align: right;
+		padding: 10px 0;
+
+		a {
+			float: left;
+			padding-right: 10px;
+		}
+	}
+
+	.children {
+
+		li:first-child {
+			margin-top: 15px;
+		}
+
+		a:before {
+			content: '\25A0';
+			display: inline-block;
+			padding-right: 5px;
+		}
+	}
+}
+
+
+
+
+
+/**
+ * POST ARCHIVES BY DATE WIDGET
+ * ----------------------------------------------------------------------------
+ */
+.widget_archive {
+	@extend .widget_categories;
+}
+
+
+
+/**
+ * RECENT POSTS WITH THUMBNAILS WIDGET
+ * ----------------------------------------------------------------------------
+ */
+.rpwwt-widget {
+	
+	.widget li {
+		margin: 0;
+		padding: 20px 0;
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	/**
+	 * Thumbnail
+	 */
+	.widget ul li img {
+		margin: 0 10px 10px 0;
+		max-width: 100%;
+	}
+
+	.rpwwt-post-title {
+		display: block;
+		margin: 0 0 10px 0;
+	}
+
+	.rpwwt-post-author,
+	.rpwwt-post-categories,
+	.rpwwt-post-date,
+	.rpwwt-post-comments-number {
+		display: inline-block;
+		padding-right: 20px;
+	}
+
+	.rpwwt-post-excerpt {
+		margin: 10px 0;
+	}
+}
+
+
+
+
+/**
+ * RECENT COMMENTS PLUS WIDGET
+ * ----------------------------------------------------------------------------
+ */
+.comments_widget_plus {
+	.cwp-li {
+		padding: 10px 0;
+	}
+
+	.cwp-comment-excerpt {
+		margin-top: 10px;
+	}
+}
+
+
+/**
+ * A TEXT WIDGET - SPECIAL USED FOR SHOW/HIDE SIDEBAR'S CONTENTS
+ * ----------------------------------------------------------------------------
+ */
+.widget.sidebar-toggle {
+	.widget-inner {
+		padding: 0;
+	}
+
+	.widget-title {
+		margin: 0;
+		text-align: left;
+		padding: 20px;
+
+		&:after {
+			content: "\f196";
+			font-family: FontAwesome;
+			float: right;
+			font-size: 16px;
+			line-height: 1;
+		}
+
+		span {
+			padding: 0;
+		}
+	}
+
+	&.sidebar-toggled-on {
+		.widget-title {
+			&:after {
+				content: "\f147";
+			}
+		}
+	}
+}
+
+
+
+/**
+ * CALENDAR WIDGET
+ * ----------------------------------------------------------------------------
+ */
+.widget_calendar {
+
+	caption {
+		margin-bottom: 10px;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	td, 
+	th {
+		padding: 5px 0;
+	}
+
+
+
+	tfoot td:first-child {
+		text-align: left;
+	}
+
+	tfoot td.last-child {
+		text-align: right;
+	}
+
+}
+
+
+
+/**
+ * WOOCOMMERCE DROPDOWN CART WIDGET & SHORTCODE
+ * ----------------------------------------------------------------------------
+ */
+.widget_shopping_mini_cart {
+
+	@mixin reset_style {
+		.dropdown-cart-button {
+			background: none;
+			border: 0;
+			min-height: auto;
+			padding: 0;
+
+			.dropdown-total {
+				background: none;
+				color: inherit;
+				display: inline-block;
+				font-size: inherit;
+				line-height: inherit;
+				padding: 0;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	/**
+	 * STYLE: DEFAULT (TEXT ONLY)
+	 */
+	&.style-default {
+		@include reset_style;
+	}
+
+
+	/**
+	 * STYLE: ICON & QTY
+	 */
+	&.style-icon-qty {
+		.dropdown-cart-button {
+			background: none;
+			border: 0;
+			min-height: 0;
+			padding: 0;
+			
+
+			.dropdown-total {
+				/**
+				 * Hide all text inside and show square box
+				 */
+				text-indent: -99999px;
+				position: relative;
+				background: #000;
+				border-radius: 5px;
+				color: #fff;
+				text-align: center;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+
+				&:hover,
+				&:focus {
+					background: #fff;
+					color: #000
+				}
+
+				/**
+				 * Show icon 'cart'
+				 */
+				&:after {
+					font-family: FontAwesome;
+					content: '\f291';
+					font-size: 16px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					line-height: 50px;
+					text-indent: 0;
+				}
+
+				/**
+				 * Show qty in a black circle
+				 */
+				.dropdown-cart-qty {
+					position: absolute;
+					top: -10px;
+					left: 14px; // 50% - 12px
+					text-indent: 0;
+					background: #000;
+					color: #fff;
+					border-radius: 50%;
+					width: 22px;
+					height: 22px;
+					line-height: 22px;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+
+	/**
+	 * STYLE: ICON LEFT
+	 */
+	&.style-icon-left {
+		@include reset_style;
+
+		.dropdown-cart-button .dropdown-total:before {
+			content: '\f290';
+			font-family: FontAwesome;
+			font-size: 1.2857em;
+			display: inline;
+			padding-right: 10px;
+		}
+	}
+
+}
+
+.dropdown-cart-button {
+
+	// Fix z-index higher than UberMenu z-index
+	z-index: 110 !important; 
+}
+
+
+.dropdown-cart-button {
+	.dropdown {
+		padding: 10px;
+		
+		.cart_list {
+			li {
+				min-height: 50px;
+				padding: 0 0 10px;
+			}
+
+			img {
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			a {
+				padding: 0 0 0 50px;
+				margin: 0 0 10px;
+			}
+
+			dl {
+				padding-left: 50px;
+				max-width: 75%;
+				border: 0;
+
+				dd {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/**
+ * WIDGETS INSIDE SIDE-HEADER SECTION
+ * ============================================================================
+ */
+.site-header {
+
+	/**
+	 * COMMON WIDGET IN SITE-HEADER SECTION
+	 */
+	.widget-inner {
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
+	}
+
+	/**
+	 * VC_ELEMENTS WHEN SHOWING ON SITE-HEADER SECTION
+	 */
+	.widget,
+	.wpb_button, 
+	.wpb_content_element, 
+	ul.wpb_thumbnails-fluid>li {
+		margin-bottom: 0;
+	}
+
+	/**
+	 * WIDGET SEARCH FORM WHEN PLACED IN SITE-HEADER SECTION
+	 */
+	.search-form {
+		@include clearfix;
+		label {
+			float: left;
+			width: 75%;
+			font-size: 0.875em;
+		}
+		.search-field {
+			background: transparent;
+			float: left;
+			width: 100%;
+			font-size: inherit;
+			padding: 3px 6px;
+			height: auto;
+		}
+
+		.search-submit {
+			float: left;
+			width: 25%;
+			font-size: 0.875em;
+			padding: 3px 6px;
+		}
+	}
+
+	/**
+	 * WIDGET SEARCH - STYLE PLAIN
+	 */
+	.style-plain .search-form {
+		label {
+			width: 100%;
+		}
+		label::before {
+			content: '\f002';
+			font-family: FontAwesome;
+			font-size: 1.2857em;
+			display: inline;
+			width: 30px;
+			line-height: 1.55em;
+		}
+
+		.search-field {
+			border: 0;
+			box-shadow: none;
+			width: 80%;
+			width: calc(100% - 30px);
+			float: none;
+			display: inline;
+			vertical-align: top;
+		}
+		.search-submit {
+			display: none;
+		}
+	}
+
+
+
+
+	/**
+	 * DROPDOWN MINI CART WIDGET ON SITE-HEADER SECTION
+	 */
+	.widget_shopping_mini_cart {
+
+		.widgettitle {
+			color: inherit;
+			display: inline-block;
+			font: inherit;
+			margin: 0;
+		}
+
+		.widget_shopping_mini_cart_content {
+			display: inline-block;
+		}
+	}
+
+}
+
+
+/**
+ * WIDGETS INSIDE "BEFORE CONTENT" SIDEBAR
+ * ============================================================================
+ */
+#sidebar_wpdanceclaratheme_before_content {
+	margin-left: -10px;
+	margin-right: -10px;
+
+	/**
+	 * COMMON WIDGETS WHEN SHOW ON "BEFORE CONTENT" SIDEBAR
+	 */
+	.widget {
+		padding: 0 10px;
+
+		input {
+			max-width: 100%;
+		}
+	}
+
+	.widget-inner {
+		padding: 20px 10px;
+	}
+}
+
+
+
+/**
+ * On Phone
+ */
+@media (max-width: $screen-xs-max) {
+
+	/**
+	 * WIDGETS INSIDE "BEFORE CONTENT" SIDEBAR
+	 * ========================================================================
+	 */
+	#sidebar_wpdanceclaratheme_before_content {
+		/**
+		 * Bypass javascript set equal height of all widgets
+		 */
+		.widget-inner {
+			height: auto !important;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,124 @@
+
+
+
+/**
+ * ON ALL SCREEN
+ * ============================================================================
+ */
+
+.ubermenu.ubermenu-skin-none .ubermenu-item-layout-icon_left {
+	
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+
+	/**
+	 * Make icons bigger
+	 */
+	.ubermenu-icon {
+		flex: 0;
+	}
+
+	/**
+	 * Fix long text break line problem if having icon
+	 */
+	> .ubermenu-target-title {
+		flex: 1;
+	}
+}
+
+
+/**
+ * ON PHONE & TABLET
+ * ============================================================================
+ */
+@media (max-width: $screen-sm-max) {
+
+	/**
+	 * MENU TOGGLE
+	 */
+	.ubermenu-responsive-toggle.ubermenu-skin-none {
+		.fa {
+			float: right;
+			margin-right: 0;
+			line-height: inherit;
+		}
+	}
+}
+
+
+
+
+
+/**
+ * ON DESKTOP
+ * ============================================================================
+ */
+@media (min-width: $screen-md-min) {
+	.ubermenu.ubermenu-skin-none {
+
+
+		/**
+		 * HORIZONTAL MENU
+		 * ====================================================================
+		 */
+		&.ubermenu-horizontal {
+
+			/**
+			 * ROOT LEVEL MENU
+			 * ----------------------------------------------------------------
+			 */
+			.ubermenu-nav {
+				display: table;
+				margin: 0 auto;
+				min-width: 75%;
+
+				> .ubermenu-item {
+					display: table-cell;
+					float: none;
+
+					> .ubermenu-target {
+						display: block;
+						text-align: center;
+						padding: 15px 40px;
+
+						@at-root {
+							.ubermenu.ubermenu-skin-none.ubermenu-horizontal.ubermenu-sub-indicators {
+								> .ubermenu-nav {
+									> .ubermenu-item.ubermenu-has-submenu-drop {
+										> .ubermenu-target {
+											&:after {
+												display: none;
+											}
+
+											.ubermenu-target-text:after {
+												content: "\f107";
+												display: inline-block;
+												font-family: FontAwesome;
+												line-height: inherit;
+												margin-top: -0.7em;
+												padding-left: 10px;
+												position: absolute;
+												top: 50%;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&.ubermenu-has-submenu-drop {
+
+					}
+				}
+			}
+
+			
+		} // &.ubermenu-horizontal
+
+	} // .ubermenu.ubermenu-skin-none
+
+} // @media (min-width: $screen-sm-min)
+
+

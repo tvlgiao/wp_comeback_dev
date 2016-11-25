@@ -1,0 +1,9 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="translate">wpdance_htmlblock_addtional_note</custom-field>
+        <custom-field action="translate">wpdance_htmlblock_addtional_preview</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">wpdance_htmlblock</custom-type>
+    </custom-types>    
+</wpml-config>

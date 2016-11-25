@@ -1,0 +1,491 @@
+/**
+ * Styling for Visual Composer elements
+ */
+
+
+@media (max-width: $screen-xs-max) {
+	.vc_column_container {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+/**
+ * VC Shortcode: Seperator with Text
+ * Let seperator line has color same parent element when having class '*bordercolor*'
+ */
+.vc_separator[class*="bordercolor"] {
+	* {
+		border-color: inherit;
+	}
+	.vc_sep_line {
+		border-color: inherit !important;	
+	}
+}
+
+
+/**
+ * VC Row: When any class 'bordercolor' set, apply border color for inner div as well
+ */
+.vc_column_container[class*="bordercolor"] > .vc_column-inner {
+	border-color: inherit !important;
+}
+
+
+/**
+ * VC Single Image / Banner Image: Fix issue when having class 'img-fullwidth'
+ */
+@mixin _vc_fix_wpb_single_image_fullwidth {
+	&.wpb_single_image {
+		.vc_figure {
+			display: block;
+		}
+		.vc_single_image-wrapper {
+			display: block;
+		}
+	}
+}
+.img-fullwidth {
+	@include _vc_fix_wpb_single_image_fullwidth;
+}
+
+@media (max-width: $screen-xs-max) {
+	.fullwidth-xs {
+		@include _vc_fix_wpb_single_image_fullwidth;
+	}
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.fullwidth-sm {
+		@include _vc_fix_wpb_single_image_fullwidth;
+	}
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	.fullwidth-md {
+		@include _vc_fix_wpb_single_image_fullwidth;
+	}
+}
+@media (min-width: $screen-lg-min) {
+	.fullwidth-lg {
+		@include _vc_fix_wpb_single_image_fullwidth;
+	}
+}
+
+
+
+
+/**
+ * Grid Item: 
+ * - WPDanceClaraTheme - Image Top
+ * - WPDanceClaraTheme - Image Left
+ * - WPDanceClaraTheme - Image Right
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-grid-item-image-top,
+.wpdanceclaratheme-grid-item-image-left,
+.wpdanceclaratheme-grid-item-image-right {
+	.vc_gitem-zone-a, .vc_gitem-zone-b {
+		.vc_gitem-row-position-top {
+			position: static;
+		}
+	}
+	.vc_gitem-zone {
+		overflow: visible;;
+	}
+}
+
+/**
+ * On Phone
+ */
+@media (max-width: $screen-xs-max) {
+	body .vc_grid-item-zone-c-left .vc_gitem-zone-c, 
+	body .vc_grid-item-zone-c-right .vc_gitem-zone-c,
+	body .vc_grid-item-zone-c-right .vc_gitem-animated-block {
+		width: 100%;
+	}
+}
+
+
+.style-navigation-top-right .vc_grid.vc_grid-owl-theme .vc_grid-owl-nav,
+.style-navigation-top-right .vc_grid.vc_grid-owl-theme:hover .vc_grid-owl-nav {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	
+	.vc_grid-owl-next, 
+	.vc_grid-owl-prev {
+		opacity: 1;
+		filter: alpha(opacity=100);
+		top: -50px;
+		right: 0;
+		left: auto;
+	}
+
+	.vc_grid-owl-prev {
+		right: 30px;
+	}
+
+	.disabled {
+		display: block !important;
+		opacity: .5;
+	}
+}
+
+
+/**
+ * Fix VC Grid Item Button has not border bottom
+ */
+.vc_grid .vc_gitem-link.vc_btn3.vc_btn3-style-outline {
+	border-bottom: 2px solid transparent;
+}
+
+
+/**
+ * Fix long-text Post Meta Category break down the line when showing on Grid Item
+ */
+.wpdanceclaratheme_post_meta_category.vc_grid-filter.vc_grid-filter-center {
+	text-align: inherit;
+	display: inline;
+
+	> .vc_grid-filter-item {
+		display: inline;
+	}
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+
+/**
+ * Grid Item: Comeback Furniture - Featured Post
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-furniture-featured-post
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-grid-item-comeback-furniture-featured-post {
+
+	.vc_gitem-post-data {
+		text-shadow: 0 0 2px rgba(0, 0, 0, .3)
+	}
+
+	.vc_btn3.vc_btn3-style-outline {
+		padding: 10px 30px;
+		text-shadow: 0 0 2px rgba(0, 0, 0, .3);
+
+	}
+
+	.vc_gitem-post-data-source-post_author {
+		margin-top: 10px;
+	}
+
+	.vc_gitem-zone-a .vc_gitem-row-position-middle {
+		top: auto;
+		bottom: 10px;
+	}
+
+	.vc-gitem-zone-height-mode-auto.vc-gitem-zone-height-mode-auto-16-9:before {
+		background: rgba(255,255,255,0);
+		background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 49%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(49%, rgba(255,255,255,0)), color-stop(50%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.8)));
+		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 49%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+		background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 49%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+		background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 49%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 49%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
+
+		opacity: 0.5;
+		transition: opacity 200ms;
+	}
+
+	&:hover,
+	&:focus,
+	&.focus {
+		.vc-gitem-zone-height-mode-auto.vc-gitem-zone-height-mode-auto-16-9:before {
+			opacity: 1;
+			background: rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+
+
+/**
+ * Grid Item: Comeback Furniture - Listed Post
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-furniture-listed-post
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-grid-item-comeback-furniture-listed-post {
+
+	.vc_gitem-row-position-top > .vc_gitem-col {
+		padding-left: 70px;
+
+		// Icon
+		.vc_icon_element {
+			float: left;
+			margin-left: -70px;
+		}
+	}
+}
+
+
+/**
+ * Grid Item: Comeback Perfume - Post Image Top
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-perfume-post-image-top
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-grid-item-comeback-perfume-post-image-top {
+	.hgroup {
+		padding-right: 50px;
+
+		// Common meta data elements
+		.vc_gitem-post-data {
+			display       : inline-block;
+			padding-right : 20px;
+			margin-bottom : 0;
+
+			> * {
+				display : inline-block;
+			}
+
+			&::before {
+				font-family   : FontAwesome;
+				display       : inline-block;
+				padding-right : 10px;
+			}
+		}
+
+
+		// Comment
+		.vc_gitem-post-data-source-wpdanceclaratheme_post_comment_count::before {
+			content: '\f27b';
+		}
+
+		// Category
+		.vc_gitem-post-data-source-post_categories::before {
+  			content: '\f115';
+		}
+
+		// Date
+		.vc_gitem-post-data-source-wpdanceclaratheme_post_date_advanced {
+			position         : absolute;
+			bottom           : 0;
+			right            : 0;
+			width            : 50px;
+			height           : 50px;
+			background-color : #cccccc;
+			padding          : 10px;
+			
+			display          : flex;
+			align-items      : center;
+			justify-content  : center;
+			
+			> * {
+				text-align: center !important;
+			}
+		}
+	}
+}
+
+
+/**
+ * Grid Item: Comeback MediaCenter - Post Image Top
+ * 
+ * .wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top {
+	
+	// Post Title
+	.vc_gitem-post-data-source-post_title > * {
+		margin-bottom: 0;
+	}
+
+	// Meta group
+	.hgroup {
+		// Common meta data elements
+		.vc_gitem-post-data {
+			display       : inline-block;
+			padding-right : 20px;
+			margin-bottom : 0;
+
+			> * {
+				display : inline-block;
+			}
+
+			&::before {
+				font-family   : FontAwesome;
+				display       : inline-block;
+				padding-right : 10px;
+			}
+		}
+
+		// Author
+		.vc_gitem-post-data-source-post_author::before {
+			content: '\f007';
+		}
+
+		// Comment
+		.vc_gitem-post-data-source-wpdanceclaratheme_post_comment_count::before {
+			content: '\f27b';
+		}
+
+		// Category
+		.vc_gitem-post-data-source-post_categories::before {
+			content: '\f115';
+		}
+
+		// Date
+		.vc_gitem-post-data-source-wpdanceclaratheme_post_date_advanced::before {
+			content: '\f073';
+		}
+	}
+}
+
+
+/**
+ * VC Tabs .vc_tta-tabs
+ * ----------------------------------------------------------------------------
+ */
+
+.wpdanceclaratheme-tabs-style-1.vc_tta-tabs[class*="vc_tta-color-"][class*="vc_tta-style-"] {
+	.vc_tta-panel-body {
+		padding: 30px 0;
+	}
+}
+
+
+.wpdanceclaratheme-tabs-style-2.vc_tta.vc_general {
+	.vc_tta-tab > a {
+		padding: 10px 20px;
+	}
+
+	.vc_tta-panel-body {
+		padding: 0;
+	}
+}
+
+
+
+/**
+ * VC Image Carousel
+ * ----------------------------------------------------------------------------
+ */
+
+.wpb_images_carousel.style-nav-circle-white .vc_images_carousel .vc_carousel-control {
+	.icon-next, 
+	.icon-prev {
+		background-color: #fff;
+		border-radius: 50%;
+
+		&:hover,
+		&:focus {
+			background-color: #000;
+			color: #fff
+		}
+	}
+}
+
+
+
+
+/**
+ * Our Banner Image VC Shortcode
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme_single_image_hover {
+
+	.vc_single_image-wrapper {
+		overflow: hidden;
+	}
+
+	img {
+		@include prefixed(transition-duration, 200ms);
+		@include prefixed(transition-property, 'transform, filter');
+	}
+
+	@mixin hover_img($key, $value) {
+		&:hover, &:focus, &.focus {
+			img {
+				@include prefixed(#{$key}, #{$value});
+			}
+		}
+	}
+
+	&.hover_effect_zoom_in {
+		@include hover_img(transform, scale(1.2))
+	}
+
+	&.hover_effect_zoom_in_rot15 {
+		@include hover_img(transform, scale(1.2) rotate(-15deg));
+	}
+
+	&.hover_effect_blur {
+		@include hover_img(filter, blur(2px) contrast(120%));
+	}
+
+	&.hover_effect_darker {
+		@include hover_img(filter, brightness(80%));
+	}
+
+	&.hover_effect_brighter {
+		@include hover_img(filter, brightness(120%));
+	}
+
+	&.hover_effect_sepia {
+		@include hover_img(filter, sepia(30%));
+	}
+
+	&.hover_effect_grayscale {
+		@include hover_img(filter, grayscale(100%));
+	}
+
+
+	&.banner_style_comeback_1 {
+
+		figure {
+			position: relative;
+		}
+
+		.content-wrapper {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50px;
+			text-align: center;
+		}
+
+		.content {
+			margin-bottom: 15px;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 80px;
+				height: 2px;
+				margin: 10px auto 0;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			.main {
+			}
+		}
+
+		.btn-default {
+			padding: 10px 30px;
+			background-color: transparent;
+			border: 2px solid;
+
+			&:hover {
+			}
+		}
+	}
+}

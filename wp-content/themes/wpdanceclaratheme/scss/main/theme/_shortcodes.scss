@@ -1,0 +1,156 @@
+
+
+.site-header .wpdanceclaratheme-user-links {
+	@include list-unstyled;
+	@include list-inline;
+	
+	margin: 0;
+
+	.cmreg-login-button {
+		padding: 0;
+		background: transparent;
+		border-radius: 0;
+		font: inherit;
+	}
+}
+
+
+.wpdanceclaratheme-owlcarousel {
+	.owl-buttons {
+		position : absolute;
+		top      : 50%;
+		width    : 100%;
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+		}
+
+		.owl-prev {
+			left: 0;
+
+			&:before {
+				content: "\f104"; // fa-chevron-left
+			}
+		}
+		
+		.owl-next {
+			right: 0;
+
+			&:after {
+				content: "\f105"; // fa-chevron-right
+			}
+		}
+	}
+
+	.owl-theme .owl-controls {
+		margin-top: 0;
+		
+		.owl-buttons div {
+			margin        : 0;
+			padding       : 0;
+			font-size     : 50px;
+			border-radius : 0;
+			height        : 50px;
+			width         : 50px;
+			font-family   : 'FontAwesome';
+			line-height   : 50px;
+			top           : -25px;
+		}
+	}
+
+
+	/**
+	 * Style Navigation at top right corner
+	 */
+	&.style-navigation-top-right .owl-theme .owl-controls .owl-buttons {
+		top: -80px;
+
+		div {
+			font-size: 20px;
+			height: 30px;
+			width: 30px;
+			line-height: 30px;
+			top: 0;
+			left: auto;
+			right: auto;
+			border-radius: 50%;
+		}
+
+		.owl-next {
+			right: 0;
+		}
+		.owl-prev {
+			right: 35px;
+		}
+	}
+
+	/**
+	 * Style Navigation outside left most and right most
+	 */
+	&.style-navigation-outer-left-right .owl-theme .owl-controls .owl-buttons {
+		div {
+			top: -50px;
+		}
+
+		.owl-next {
+			right: -50px;
+		}
+
+		.owl-prev {
+			left: -50px;
+		}
+	}
+}
+
+/**
+ * Phone
+ */
+@media (max-width: $screen-xs-max) {
+	.wpdanceclaratheme-owlcarousel.style-navigation-top-right .owl-theme .owl-controls .owl-buttons {
+		top: 10px;
+		right: 20px;
+		width: auto;
+	}
+}
+
+
+
+
+.wpdanceclaratheme-countdown {
+	// display: flex;
+	// flex-direction: row;
+	// justify-content: center;
+	// align-items: center;
+	display: inline-block;
+	min-height: 170px;
+
+	> span {
+		// display: flex;
+		// flex-direction: row;
+		// justify-content: center;
+		// align-items: center;
+		display: inline-block;
+		padding: 40px 25px;
+		min-width: 150px;
+		min-height: 170px;
+		border: 1px solid #ccc;
+		margin-right: 50px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		.val {
+			display: block;
+			font-size: 60px;
+		}
+
+		.txt {
+			display: block;
+			font-size: 18px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+	}
+}

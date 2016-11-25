@@ -1,0 +1,245 @@
+@import 'mixins/woocommerce';
+
+@mixin wpdanceclaratheme-seperating-h3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+/**
+ * HOVER CSS MIXINS
+ * ============================================================================
+ */
+
+@mixin hardwareAccel() {
+	// Improve performance on mobile/tablet devices
+	@include prefixed(transform, translateZ(0));
+}
+
+@mixin improveAntiAlias() {
+	// Improve aliasing on mobile/tablet devices
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin fontSmooth() {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin forceBlockLevel() {
+	// Transforms need to be block-level to work
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@mixin hoverHacks() {
+	@include forceBlockLevel();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+	@include fontSmooth();
+}
+
+
+@mixin hover-do-effect($container: null) {
+	@if $container == null {
+		$container: '.wpdanceclaratheme-hover-container';
+	}
+
+	&#{$container}:hover,
+	&#{$container}:focus {
+		@content;
+	}
+
+	@at-root {
+		#{$container}:hover &,
+		#{$container}:focus & {
+			@content;
+		}
+	}
+}
+
+
+
+
+
+/* Buzz Out */
+@include keyframes(wpdanceclaratheme-hover-buzz-out) {
+	10% {
+		@include prefixed(transform, translateX(3px) rotate(2deg));
+	}
+
+	20% {
+		@include prefixed(transform, translateX(-3px) rotate(-2deg));
+	}
+
+	30% {
+		@include prefixed(transform, translateX(3px) rotate(2deg));
+	}
+
+	40% {
+		@include prefixed(transform, translateX(-3px) rotate(-2deg));
+	}
+
+	50% {
+		@include prefixed(transform, translateX(2px) rotate(1deg));
+	}
+
+	60% {
+		@include prefixed(transform, translateX(-2px) rotate(-1deg));
+	}
+
+	70% {
+		@include prefixed(transform, translateX(2px) rotate(1deg));
+	}
+
+	80% {
+		@include prefixed(transform, translateX(-2px) rotate(-1deg));
+	}
+
+	90% {
+		@include prefixed(transform, translateX(1px) rotate(0));
+	}
+
+	100% {
+		@include prefixed(transform, translateX(-1px) rotate(0));
+	}
+}
+
+
+
+
+
+@mixin hover-effect-grow($container: null) {
+	@include hoverHacks();
+	@include prefixed(transition-duration, 500ms);
+	@include prefixed(transition-property, transform);
+
+	@include hover-do-effect($container) {
+		@include prefixed(transform, scale(1.1));
+	}
+}
+
+
+
+
+@mixin hover-effect-buzz-out($container: null) {
+	@include hoverHacks();
+
+	@include hover-do-effect($container) {
+		@include prefixed(animation-name, wpdanceclaratheme-hover-buzz-out);
+		@include prefixed(animation-duration, .75s);
+		@include prefixed(animation-timing-function, linear);
+		@include prefixed(animation-iteration-count, 1);
+	}
+}
+
+
+@mixin hover-effect-border2($container: null) {
+	@include hoverHacks();
+	@include prefixed(transition, all 500ms);
+
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		border: 3px solid rgba(255, 255, 255, .8);
+		@include prefixed(transform, scale(0));
+	}
+
+	&::before {
+		border-top: 0;
+		border-right: 0;
+		@include prefixed(transform-origin, 0 100%);
+	}
+
+	&::after {
+		border-bottom: 0;
+		border-left: 0;
+		@include prefixed(transform-origin, 100% 0);
+	}
+
+	@include hover-do-effect($container) {
+		&::before,
+		&::after {
+			@include prefixed(transform, scale(1));
+		}
+	}
+}
+
+
+
+@mixin create-hover-effect-bg-darker($element, $container: null, $opacity: 0.1, $bgcolor: #000000) {
+
+	#{$element} {
+		position: relative;
+		@include prefixed(transform-style, preserve-3d);
+	}
+
+	#{$element}::before,
+	#{$element}::after {
+		@include hoverHacks();
+		@include prefixed(transition-duration, 500ms);
+		@include prefixed(transition-property, transform);
+		@include prefixed(transform, scale3d(0, 0, 1));
+
+		content: ' ' !important;
+		display: block !important;
+		visibility: visible !important;
+		position: absolute !important;
+		top: 0 !important;
+		bottom: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		height: 100% !important;
+		width: 100% !important;
+		border-radius: inherit;
+		background: $bgcolor;
+		opacity: 0.3;
+		z-index: -1;
+	}
+
+	#{$element}::before {
+		@include prefixed(transform-origin, 0 0);
+	}
+
+	#{$element}::after {
+		@include prefixed(transform-origin, 100% 100%);
+	}
+	
+	@if $container == null {
+		$container: '.wpdanceclaratheme-hover-container';
+	}
+
+	#{$container}#{$element}:hover::before,
+	#{$container}#{$element}:focus::before,
+	#{$container}#{$element}.focus::before,
+	#{$container}#{$element}:hover::after,
+	#{$container}#{$element}:focus::after,
+	#{$container}#{$element}.focus::after {
+		@include prefixed(transform, scale3d(1, 1, 1));
+	}
+
+	@at-root {
+		#{$container}:hover #{$element}::before,
+		#{$container}:focus #{$element}::before,
+		#{$container}.focus #{$element}::before,
+		#{$container}:hover #{$element}::after,
+		#{$container}:focus #{$element}::after,
+		#{$container}.focus #{$element}::after {
+			@include prefixed(transform, scale3d(1, 1, 1));
+		}
+	}
+}
+

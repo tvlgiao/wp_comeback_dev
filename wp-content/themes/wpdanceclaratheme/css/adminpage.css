@@ -1,0 +1,85 @@
+
+.wpdanceclaratheme_walkthrough_page .card {
+	padding-left: 80px;
+}
+
+.wpdanceclaratheme_walkthrough_page .card.hide-done {
+	display: none;
+}
+
+.wpdanceclaratheme_walkthrough_page .card .inside.hide {
+	display: none;
+}
+
+.wpdanceclaratheme_walkthrough_page .card .hndler {
+	cursor: pointer;
+	padding-right: 40px;
+	position: relative;
+}
+.wpdanceclaratheme_walkthrough_page .card .hndler:after {
+	right: 0;
+	font: 400 30px/1 dashicons;
+	speak: none;
+	display: inline-block;
+	padding: 0;
+    top: -5px;
+    position: absolute;
+	-webkit-font-smoothing: antialiased;
+ 	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none!important;
+	content: "\f140";
+}
+
+.wpdanceclaratheme_walkthrough_page .card .hndler.open:after {
+	content: '\f142';
+}
+
+
+.wpdanceclaratheme_walkthrough_page .main-icon.dashicons {
+	float: left;
+	margin-left: -70px;
+	font-size: 55px;
+	color: #00a0d2;
+}
+
+.wpdanceclaratheme_walkthrough_page .main-icon.dashicons.dashicons-yes {
+	color: green;
+}
+
+.wpdanceclaratheme_walkthrough_page .main-icon.dashicons.dashicons-no {
+	color: red;
+}
+
+.wpdanceclaratheme_walkthrough_page .main-icon.dashicons.dashicons-warning {
+	color: orange;
+}
+
+.wpdanceclaratheme_walkthrough_page .main-instruction {
+	color: red;
+}
+
+.wpdanceclaratheme_walkthrough_page li {
+	margin-left: 20px;
+	list-style-type: disc;
+}
+
+.wpdanceclaratheme_walkthrough_page .rating {
+	color: #fec42d;
+}
+
+.wpdanceclaratheme_walkthrough_page figure {
+	margin: 0 0 30px;
+}
+
+.wpdanceclaratheme_walkthrough_page figcaption {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.wpdanceclaratheme_walkthrough_page img + figcaption {
+	margin-top: 0.5em;
+}
+
+
+
