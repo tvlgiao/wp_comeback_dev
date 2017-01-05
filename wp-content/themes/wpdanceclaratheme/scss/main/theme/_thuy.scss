@@ -1,0 +1,329 @@
+/**
+ * PRODUCT ITEM - STYLE 11
+ *
+ * When hover, show details & buttons.
+  See home-comeback-flowers
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-11 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+		    overflow: hidden;
+		  	@include transition(all 500ms ease);
+		    -moz-backface-visibility: hidden;
+		    -webkit-backface-visibility: hidden;
+		    backface-visibility: hidden;
+		    text-align: center;
+		    @media (min-width: $screen-lg-min){
+		    	min-height: 375px;
+		    }
+			/**
+			 * Hover button
+			 */
+			.wpdanceclaratheme-product-buttons {
+			    z-index: 50;
+			    text-align: center;
+			    display: inline-block;
+			    clear: both;
+			    @include transition(all 500ms ease);
+			    transform: scale(0, 0);
+			    -moz-transform: scale(0, 0);
+			    -webkit-transform: scale(0, 0);
+			    -moz-backface-visibility: hidden;
+			    -webkit-backface-visibility: hidden;
+			    backface-visibility: hidden;
+			    height: 0;
+			    opacity: 0;
+			    filter: alpha(opacity=0);
+			    display: none;
+			}
+			.wpdanceclaratheme-product-details {
+				padding: 10px;
+			}
+			&:hover {
+			    z-index: 99;
+			    box-shadow: 0 0 10px #d4d4d4;
+			    -webkit-transform: translateY(-4px);
+			    -moz-transform: translateY(-4px);
+			    transform: translateY(-4px);
+			    -moz-backface-visibility: hidden;
+			    -webkit-backface-visibility: hidden;
+			    backface-visibility: hidden;
+				.wpdanceclaratheme-product-buttons {
+					transform: scale(1, 1);
+				    -moz-transform: scale(1, 1);
+				    -webkit-transform: scale(1, 1);
+				    height: 100%;
+				    opacity: 1;
+				    filter: alpha(opacity=100);
+				    display: block;
+				}
+			}
+
+
+			@mixin btn_icon_only {
+				padding : 10px;
+				bottom  : 15px;
+				border: 1px solid;
+				@include transition(all 500ms ease);
+			}
+
+			@mixin btn_icon_text {
+				padding : 10px 15px;
+				bottom  : 15px;
+				border: 1px solid;
+				@include transition(all 500ms ease);
+			}
+
+			/**
+			 * Button Add to cart
+			 */
+			.add_to_cart_button {
+				@include btn_icon_text;
+				left  : 30px;
+				width : auto;
+				&.added {
+					&:after {
+						display: none;
+					}
+				}
+			}
+			.added_to_cart .wc-forward {
+				display: none;
+			}
+			/**
+			 * Button Quickview
+			 */
+			.yith-wcqv-button {
+				@include btn_icon_only;
+				right : 70px;
+			}
+
+			/**
+			 * Button Wishlist
+			 */ 
+			.yith-wcwl-add-button{
+				@include btn_icon_only;
+				right : 29px
+			}
+
+			/**
+			 * Button wishlist already added
+			 */
+			.yith-wcwl-wishlistexistsbrowse a,
+			.yith-wcwl-wishlistaddedbrowse a {
+				@include btn_icon_only;
+				right : 29px
+			}
+			
+
+			$lb_w: 40px;
+
+			/**
+			 * Label Onsale: diamond shape
+			 */
+			.onsale {
+				top             : 15px;
+				right           : 15px;
+				width           : $lb_w;
+				height          : $lb_w;
+				line-height     : $lb_w;
+				padding         : 0;
+				background      : none;
+
+				@include prefixed(transform-style, preserve-3d);
+
+				&::before {
+					content          : '';
+					display          :block;
+					position         :absolute;
+					top              : 0;
+					bottom           : 0;
+					width            : 100%;
+					height           : 100%;
+					border-radius    : 5px;
+					background-color : #333;
+					z-index          : -1;
+
+					@include prefixed(transform, rotate(45deg));
+					@include prefixed(transform-origin, 50%);
+				}
+			}
+		}
+	}
+}
+
+/**
+* WIDGET SEARCH - STYLE PLAIN BORDER
+*/
+.site-header {
+	.style-plain-1 .search-form {
+		label {
+			width: 80%;
+			position: relative;
+			@media(max-width: $screen-xs-max) {
+				width: 100%;
+			}
+		}
+		label::after {
+			content: '\f002';
+			font-family: FontAwesome;
+			font-size: 1.2857em;
+			display: inline;
+			width: 30px;
+			line-height: 1.55em;
+			position: absolute;
+			right: 25px;
+			top: 8px;
+		}
+
+		.search-field {
+			border: 0;
+			box-shadow: none;
+			width: 80%;
+			width: calc(100% - 30px);
+			float: left;
+			display: inline;
+			vertical-align: top;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid;
+			@include border-radius(5px);
+		}
+		.search-submit {
+			display: none;
+		}
+	}
+}
+ /**
+ * WooCommerce custom_heading - style Heading01
+ * ----------------------------------------------------------------------------
+ */
+  .site-main {
+ 	.vc_custom_heading{
+ 		&.heading01 {
+ 			display: inline-block;
+		    border-bottom: 2px solid;
+		    padding-bottom: 13px;
+		    margin-bottom: 27px;
+ 		}
+ 	}
+ }
+ /**
+ * PRODUCTS LIST - STYLE 3 - Block best sellers
+ *
+ * Show image on left width 25%
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-3 {
+	$style_pt_bordercolor1: #e1e1e1;
+ 	.woocommerce {
+	 	ul.products{
+	 		background: #ffffff;
+	 		padding: 20px;
+	 		border: 1px solid $style_pt_bordercolor1;
+	 		margin-bottom: 0;
+	 		li {
+	 			border-bottom: 1px solid $style_pt_bordercolor1;
+	 			padding-bottom: 30px;
+	 			&:last-child {
+	 				border-bottom: 0;
+	 				padding-bottom: 0;
+	 				margin-bottom: 0;
+	 			}
+	 			.wpdanceclaratheme-product-buttons {
+	 				display: none;
+	 			}
+	 		}
+	 	}
+ 	}
+}
+/**
+ * On responsive
+ */
+.wpdanceclaratheme-products-layout-11{
+		ul.products {
+			/**
+			 * A product item in grid / list
+			 */
+			li.product {
+				/**
+				* Button Add to cart
+				*/
+				.add_to_cart_button {
+					@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) { // on tablet
+						font-size: 0!important;
+						padding: 10px;
+						left: 15px;
+						&:before {
+							padding-right: 0;
+						}
+					}
+					@media(max-width: $screen-xs-max){ // on moblie (<=767px)
+						font-size: 0!important;
+						padding: 10px;
+						&:before {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+			/**
+				* Button quicksearch
+			*/
+			.yith-wcqv-button {
+				@media(max-width: $screen-xs-max){ // on moblie (<=767px)
+					display: none;
+				}
+			}
+		}
+}
+
+/**
+ * Our Banner Image VC Shortcode
+ * ----------------------------------------------------------------------------
+ */
+ .wpdanceclaratheme_single_image_hover {
+	img {
+		@include transition(all 1s ease);
+	}
+}
+/**
+ * hover brand logo
+ * ----------------------------------------------------------------------------
+ */
+.vc_images_carousel {
+	.vc_carousel-slideline-inner {
+		.vc_inner {
+			img {
+				@include transition(all 500ms ease);
+				&:hover{
+					@include prefixed(transform, scale(1.1));
+				}
+			}
+		}
+	}
+}
+/**
+ * min-height of banner-right
+ * ----------------------------------------------------------------------------
+ */
+.banner-middle{
+	> .vc_column-inner {
+		min-height: 340px;
+	}
+}
+/**
+ * Dropdown block cart on moblie
+ * ----------------------------------------------------------------------------
+ */
+.dropdown-cart-button .dropdown.dropdown-right {
+	@media(max-width: $screen-xs-max){ 
+	    right: 50%;
+	    left: auto;
+	    @include prefixed(transform, translate(50%,0));
+	}
+}

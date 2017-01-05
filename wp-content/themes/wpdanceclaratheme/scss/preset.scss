@@ -10,12 +10,13 @@
 // Files imported automatically by the theme:
 // 
 // @import [settings];
-// @import 'preset/variables_default|01|02|...';
-// @import 'preset/variables_base';
-// @import [preset variables -> classnames]
+//	@import 'preset/variables_default|01|02|...';
+//	@import 'preset/variables_base';
+//	@import [preset variables -> classnames];
 // --------------------------------------------
 
 @import 'preset/bootstrap_variables';
+
 @import 'bootstrap/assets/stylesheets/bootstrap/variables';
 
 @import 'preset/functions';

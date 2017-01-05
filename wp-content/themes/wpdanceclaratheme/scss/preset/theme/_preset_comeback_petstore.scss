@@ -1,0 +1,206 @@
+ /**
+ * Add seperator | between list inline items on the Header section
+ */
+.site-header {
+	.list-inline {
+		li::after {
+			content: '|';
+			display: inline;
+			padding-left: 10px;
+		}
+		li:last-child::after {
+			content: '';
+			padding-left: 0;
+		}
+	}
+	.wpdanceclaratheme-user-links.inline {
+		li::after {
+			content: '|';
+			display: inline;
+			padding-left: 10px;
+		}
+	}
+}
+ /**
+ * banner-right-pet
+ */
+.banner-right-pet {
+	$yellow: #f9dc05;
+	h2,h4{
+		&.vc_custom_heading {
+			line-height: 1;
+		}
+	}
+	.btn.btn-outline3 {
+		background: $yellow;
+	    border-color: $yellow;
+	    border-radius: 4px;
+	    margin-top: 10px;
+	    color: $style_general_color1;
+	    text-transform: capitalize;
+	    font-weight: bold;
+	    transition :all 500ms ease;
+	    &:hover{
+	    	background: $style_general_bgcolor3;
+	    }
+	}
+	.wpdanceclaratheme-hover-bg-darker{
+		min-height: 200px;
+	}
+}
+/**
+ * min-height of banner-right
+ * ----------------------------------------------------------------------------
+ */
+.banner-middle{
+	$color-yellow: #f9dc05;
+	button.vc_btn3.vc_btn3-color-black.vc_btn3-style-outline{
+		background: $color-yellow;
+	    font-weight: bold;
+	    border-color: $color-yellow;
+	    padding: 12px 30px;
+	    font-size: 14px;
+	}
+}
+/**
+ * WooCommerce Products
+ * ----------------------------------------------------------------------------
+ */
+.woocommerce ul.products li.product {
+	@include style_general_bgcolor3;
+
+	h3 {
+		padding: 2em 0 1em;
+	}
+
+	.wpdanceclaratheme-product-details {
+		.star-rating {
+			font-size: 9px;
+			letter-spacing: 0.2em;
+			margin-bottom: 1em;
+
+			@at-root .woocommerce .star-rating {
+				color: #ffad10;
+				width: 6.4em;
+			}
+		}
+
+		.price {
+			font-size: 1em;
+			margin-bottom: 2em;
+		}
+	}
+	
+}
+
+ /**
+ * WooCommerce custom_heading
+ * ----------------------------------------------------------------------------
+ */
+ 
+ .site-main {
+ 	.vc_custom_heading{
+ 		&.heading01 {
+ 			color: $style_general_color1;
+ 			border-bottom-color: $style_hd_bordercolor1;
+ 		}
+ 	}
+ }
+
+/**
+ * Show blog (title)
+ * ----------------------------------------------------------------------------
+ */
+ .wpdanceclaratheme_post_title{
+ 	font-size: 15px;
+ 	text-transform: none;
+ 	color: $style_general_color1;
+ 	font-weight: bold;
+ 	&:hover{
+ 		color: $style_general_color2;
+ 	}
+ }
+.wpdanceclaratheme-grid-item-comeback-mediacenter-post-image-top{
+ 	.vc_gitem-post-data-source-post_excerpt{
+		color: #7e7e7e;
+	}
+	.hgroup .vc_gitem-post-data {
+		text-transform: none;
+		color: #7e7e7e;
+	}
+	.vc_gitem_row > .vc_gitem-col{
+		padding: 15px 0;
+	}
+}
+ 
+/**
+ * Form search
+ * ----------------------------------------------------------------------------
+ */
+.site-header{
+ 	.style-plain-1 {
+ 		.search-form {
+ 			.search-field {
+ 				background: $style_general_bgcolor3;
+ 				border-color: $style_header_bordercolor1;
+ 			}
+ 		}
+ 	}
+}
+/**
+ * Fwidget_shopping_mini_cart_content
+ * ----------------------------------------------------------------------------
+*/
+.widget_shopping_mini_cart {
+	.widget_shopping_mini_cart_content {
+		background: $style_header_bgcolor2;
+	    color: $style_header_color3;
+	    padding: 8px 15px;
+	    border-radius: 5px;
+	    .dropdown-cart-button .dropdown-total {
+	    	text-transform: uppercase;
+	    	&:before {
+	    		color: $style_header_color3;
+	    	}
+	    }
+	} 
+}
+/**
+ * Hover/focus menu-item
+ * ----------------------------------------------------------------------------
+ */
+.ubermenu.ubermenu-skin-none.ubermenu-horizontal .ubermenu-nav > .ubermenu-item > .ubermenu-target{
+	color: $style_header_color3;
+	border: none;
+
+}
+/**
+ * Hover icon social
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme_style_footer_color1:hover {
+	color: $style_footer_color4;
+}
+/**
+ * Bg onsale
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-11 ul.products li.product .onsale::before{
+	background: $style_general_color2;
+}
+/**
+ * prev/next 
+ * ----------------------------------------------------------------------------
+ */
+.style-navigation-top-right .vc_grid.vc_grid-owl-theme .vc_grid-owl-nav , 
+.style-navigation-top-right .vc_grid.vc_grid-owl-theme:hover .vc_grid-owl-nav {
+	.vc_grid-owl-prev,.vc_grid-owl-prev,
+	.vc_grid-owl-next,.vc_grid-owl-next{
+		top: -39px;
+		right: 10px;
+	}
+	.vc_grid-owl-prev,.vc_grid-owl-prev{
+		right: 40px;
+	}
+
+}

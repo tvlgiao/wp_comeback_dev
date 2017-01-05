@@ -9,7 +9,7 @@ class Config {
 	const VERSION = '1.0.1';
 
 	const CSS_DEV_MODE = false;
-	// const CSS_DEV_MODE = true;
+	//const CSS_DEV_MODE = true;
 
 	const PHP_DEV_MODE = false;
 	// const PHP_DEV_MODE = true;
@@ -51,6 +51,8 @@ class Config {
 		'comeback_perfume',
 		'comeback_mediacenter',
 		'comeback_furnish',
+		'comeback_flowers',
+		'comeback_petstore'
 	);
 
 	public static $menu_locations = array(

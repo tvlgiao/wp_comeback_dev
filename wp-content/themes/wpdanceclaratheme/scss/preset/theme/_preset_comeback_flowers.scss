@@ -1,0 +1,186 @@
+ /**
+ * Add seperator | between list inline items on the Header section
+ */
+.site-header {
+	.list-inline {
+		li::after {
+			content: '|';
+			display: inline;
+			padding-left: 10px;
+		}
+		li:last-child::after {
+			content: '';
+			padding-left: 0;
+		}
+	}
+	.wpdanceclaratheme-user-links.inline {
+		li::after {
+			content: '|';
+			display: inline;
+			padding-left: 10px;
+		}
+	}
+}
+
+/**
+ * WooCommerce Products
+ * ----------------------------------------------------------------------------
+ */
+ .woocommerce ul.products li.product {
+ 	@include style_general_bgcolor3;
+
+	.wpdanceclaratheme-product-details h3 {
+		font-size: $style_general_body_font_size;
+	 	font-weight: 500;
+	 	padding-bottom: 10px;
+	 	&:hover{
+	 		color: $style_general_color2;
+	 	}
+	}
+
+	.wpdanceclaratheme-product-details {
+		.star-rating {
+			font-size: 11px;
+			letter-spacing: 0.2em;
+			margin-bottom: 1em;
+
+			@at-root .woocommerce .star-rating {
+				color: #ffad10;
+				width: 6.4em;
+			}
+		}
+
+		.price {
+			font-size: $style_general_body_font_size;
+			font-weight: bold;
+		}
+	}
+ }
+ /**
+ * WooCommerce custom_heading
+ * ----------------------------------------------------------------------------
+ */
+ 
+ .site-main {
+ 	.vc_custom_heading{
+ 		&.heading01 {
+ 			color: $style_general_color1;
+ 			border-bottom-color: $style_hd_bordercolor1;
+ 		}
+ 	}
+ }
+
+ /**
+ * PRODUCT ITEM - STYLE 11
+ *
+ * When hover, show details & buttons.
+  See home-comeback-flowers
+ * ----------------------------------------------------------------------------
+ */
+html .wpdanceclaratheme-products-layout-11 {
+	ul.products {
+		/**
+		 * A product item in grid / list
+		 */
+		li.product {
+			border: 1px solid $style_pt_bordercolor1;
+			&:hover{
+				box-shadow: 0 0 10px #d4d4d4;
+				.yith-wcwl-wishlistexistsbrowse a ,
+				.yith-wcwl-wishlistexistsbrowse a:hover{
+					border-color: $style_general_color2;
+					border-radius: 4px;
+					background: transparent;
+					color: $style_general_color2;
+				}
+			}
+			.add_to_cart_button,
+			.yith-wcqv-button ,
+			.yith-wcwl-add-button {
+				border-radius: 4px;
+				border-color: $style_general_color2;
+				&:hover {
+					background: transparent;
+					color:  $style_general_color2;
+					border-color: $style_general_color2;
+					border-radius: 4px;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Caption of banner // Site flowers
+ * ----------------------------------------------------------------------------
+ */
+.banner_style_comeback_1 {
+	&.banner-top-right {
+		a.btn {
+			background: $style_general_color2;
+			color: white;
+			border-radius:5px;
+			font-size: 15px;
+			font-weight: bold;
+			border-color: $style_general_color2;
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}
+/**
+ * Form search
+ * ----------------------------------------------------------------------------
+ */
+.site-header{
+ 	.style-plain-1 {
+ 		.search-form {
+ 			.search-field {
+ 				background: $style_general_bgcolor3;
+ 				border-color: $style_header_bordercolor1;
+ 			}
+ 		}
+ 	}
+}
+/**
+ * Fwidget_shopping_mini_cart_content
+ * ----------------------------------------------------------------------------
+*/
+.widget_shopping_mini_cart {
+	.widget_shopping_mini_cart_content {
+		background: $style_header_bgcolor2;
+	    color: $style_header_color3;
+	    padding: 8px 15px;
+	    border-radius: 5px;
+	    .dropdown-cart-button .dropdown-total {
+	    	text-transform: uppercase;
+	    	&:before {
+	    		color: $style_header_color3;
+	    	}
+	    }
+	} 
+}
+/**
+ * Hover/focus menu-item
+ * ----------------------------------------------------------------------------
+ */
+.ubermenu.ubermenu-skin-none.ubermenu-horizontal .ubermenu-nav > .ubermenu-item > .ubermenu-target{
+	color: $style_header_color3;
+	border: none;
+
+}
+/**
+ * Hover icon social
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme_style_footer_color1:hover {
+	color: $style_footer_color4;
+}
+/**
+ * Bg onsale
+ * ----------------------------------------------------------------------------
+ */
+.wpdanceclaratheme-products-layout-11 ul.products li.product .onsale::before{
+	background: $style_general_color2;
+}

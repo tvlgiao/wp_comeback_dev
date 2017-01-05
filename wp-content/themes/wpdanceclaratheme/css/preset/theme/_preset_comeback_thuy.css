@@ -1,0 +1,13 @@
+/**
+ * Add seperator | between list inline items on the Header section
+ */
+.site-header .list-inline li::after,
+.site-header .wpdanceclaratheme-user-links.inline li::after {
+  content: '|';
+  display: inline;
+  padding-left: 10px; }
+
+.site-header .list-inline li:last-child::after,
+.site-header .wpdanceclaratheme-user-links.inline li:last-child::after {
+  content: '';
+  padding-left: 0; }
